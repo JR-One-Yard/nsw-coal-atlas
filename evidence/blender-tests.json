@@ -1,7 +1,7 @@
 {
   "date": "2026-09-11",
   "version": "5.2.1 LTS",
-  "objects": 62,
+  "objects": 65,
   "checks": [
     {
       "name": "Blender file reopens with a camera and 150-second timeline",
@@ -62,6 +62,26 @@
     {
       "name": "Every chapter has a nonempty rendered evidence image",
       "passed": true
+    },
+    {
+      "name": "Detailed local terrain preserves all browser elevation samples",
+      "passed": true
+    },
+    {
+      "name": "Published geological map is packed in the editable file",
+      "passed": true
+    },
+    {
+      "name": "Surface fault traces preserve source provenance and remain distinct from seam models",
+      "passed": true
+    },
+    {
+      "name": "Published feature metadata is embedded",
+      "passed": true
+    },
+    {
+      "name": "Compiled coal evidence retains original IDs and matching marker centres with explicit limitations",
+      "passed": true
     }
   ],
   "cameraPositions": [
@@ -91,5 +111,5 @@
       38.20000076293945
     ]
   ],
-  "blendSHA256": "4f87422765319aca8f3d1ca1455657a8b5dc599ac4cf6e4175465ced20f67de0"
+  "blendSHA256": "0a9da61ea27caf3bd8ec1f36303f60ff85de191802026723815d420680f821b0"
 }
