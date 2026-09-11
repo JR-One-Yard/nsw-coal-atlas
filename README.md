@@ -1,75 +1,81 @@
 # Beneath the Coast — NSW Coal Atlas
 
-An interactive journey from **Illawarra → Sydney → Lake Macquarie → Newcastle → Hunter Valley**, with an editable Blender scene and a complete guided camera tour.
+A geology-led educational atlas connecting the NSW landscape, rock succession, underground coal and industry. Version 2 adds published Illawarra surface geology, a five-step geological field guide, linked cross-sections and a statewide mine inventory.
 
-**This is an educational reconstruction.** Terrain is sampled elevation data, mine points come from GSNSW, and coal-use classifications cite operator/government sources. All subsurface sheets have conceptual geometry. They are not surveyed seam surfaces, resource estimates, or mine plans.
+**Surface mapping is published geological interpretation. Underground coal geometry remains illustrative.** The sections intersect the actual 3D meshes, but this consistency does not validate their assumed depths, dips or footprints.
 
-## Open it
+## Open and explore
 
-- **Interactive viewer:** double-click `launch.command` on this Mac. Keep its terminal window open. Alternatively run `python3 scripts/serve.py` in this directory.
-- **Blender:** open `blender/NSW-Coal-Atlas.blend` (also in `dist/downloads/`). Blender 5.2.1 LTS is installed in `/Applications/Blender.app`.
-- **Recorded walkthrough:** `dist/downloads/NSW-Coal-Flythrough.mp4` is a recording of the actual browser tour, without audio. Optional spoken narration is available in the interactive viewer where the browser provides speech synthesis.
-- **Evidence and workarounds:** `HANDOVER.md` and `evidence/`.
+Double-click `launch.command`, or run `python3 scripts/serve.py`. Use the local server rather than opening `dist/index.html` directly. All runtime libraries and data are bundled; source links require internet.
 
-All runtime JavaScript and datasets are bundled. The local viewer needs no API keys, account, map subscription or internet connection after download. Source links naturally require internet. Do not double-click `dist/index.html`: browsers restrict data loading from `file://`; use the launcher.
+1. Choose **Explore Illawarra** to follow the five-step geology guide.
+2. Use **Inspect surface** to read mapped formation, lithology, age and source feature ID.
+3. Open **Rock sequence** to explore the simplified succession, younger to older. Row heights do not represent thickness or time.
+4. Open **Cross-section** for four regional presets, coordinate endpoints or a line drawn on terrain. Select a seam in the section to select the same layer in 3D. Switch between true scale and vertical fit, inspect elevations, or export an attributed SVG.
+5. Toggle **Mapped fault traces**, ground opacity and vertical exaggeration. **Separate coal layers** is a diagram aid; section elevations retain the unseparated model.
+6. Switch underground colours between geological unit, coal use and evidence level. Thermal, metallurgical and unclassified filters remain independent.
+7. Open **NSW mines** to search 35 downloaded coal registry records, filter region/product, inspect sources and export filtered CSV. Covered mines link back into the regional 3D scene.
 
-## Explore
+The original five-chapter, 150-second coastal flythrough remains available, with play/pause, scrub, speed and optional browser speech. The new field guide is text-led. On mobile, use **Layers** to open controls; the section explanation can be expanded. Drag to orbit, pinch or scroll to zoom, and right-drag to pan.
 
-- Drag to orbit, scroll to zoom, right-drag to pan. On touch screens use the normal orbit/pinch controls.
-- **Start flythrough** plays a 150-second guided journey. Pause, scrub, or jump to any chapter. Space toggles play/pause when a form control is not focused.
-- **Thermal / Metallurgical / Unclassified** are independent switches. Mixed producers appear under either applicable use. Switch all off to show the empty state.
-- **Ground opacity** reveals the subsurface. **Vertical scale** exaggerates elevation and depth together. **East–west cutaway** clips the terrain and geological sheets from the east.
-- Select a seam, mine or destination using the scene, the feature list, or **Jump to a feature**. Read the associated source evidence and documented coal products.
-- Enable **Coal journeys** for schematic source-to-destination links, or **Recorded coal boreholes** for thinned exploration locations and total drilled depths.
-- On mobile, open **Layers** for controls and close the feature panel to return to the map.
-- **Sources & assumptions** explains the limitations and provides downloads, including the Blender file.
+Version 2.1 adds **Borehole evidence**: search 569 boreholes and inspect 4,955 preferred formation-top picks from Geoscience Australia's ABSUC 2024 v2. Logs retain measured depth (MD), AHD elevation, drilling reference and compiler flags. Selecting a surface unit now highlights its mapped exposures, and fault crossings in a section expose their original map descriptions.
 
-## Coverage
+In a section, enable **Reported coal tops within 1 km**. Diamonds represent nearby source picks projected onto the section; their offset and borehole are identified. Known horizontal/deviated holes are excluded, but the remaining records are not confirmed vertical. Model height references have not been reconciled to AHD. Open a diamond to inspect the underlying borehole. These are compiled interpretations, not independently checked core logs or validated surfaces.
 
-The model window is 150.45–152.05°E, 34.65–32.45°S. It includes the requested coastal journey and an inland Hunter extension, not the entirety of NSW. The mine inventory includes all 15 coal point records returned by the GSNSW operating-mine layer within this window, plus historical Balmain. This does not mean every historical or current mine in the region is represented by the registry.
+## Coverage and evidence
 
-Eight geological layers: Bulli, Balgownie, Wongawilli; a buried Illawarra Coal Measures envelope under Sydney; Wallarah, Great Northern, Fassifern; and a composite Hunter coal-bearing horizon. Sydney and Hunter envelopes are not named individual seams.
+| Content | Coverage | Evidence / limitation |
+| --- | --- | --- |
+| Surface geology | Illawarra: 150.55–151.12°E, 34.56–34.02°S; 2,004 source polygons | GSNSW NSW Seamless Geology, rasterized to 1,600 × 1,600 pixels for display and lookup. Boundaries are approximate at that resolution. |
+| Surface faults | 1,884 source features, 3,774 displayed line segments inside the local extent | Published traces, draped 5 m above terrain for visibility. No subsurface fault dip or throw is reconstructed. |
+| Local elevation | 257 × 257 samples, 66,049 vertices | Mapzen Terrarium z11 tile source. Sampling density is not a claim of survey accuracy. Replaces the coarser regional surface within its rectangle. |
+| Regional terrain | Illawarra → Sydney → Lake Macquarie → Newcastle → Hunter | 193 × 289 samples; 150.45–152.05°E, 34.65–32.45°S. |
+| Underground | Eight illustrative surfaces | Bulli, Balgownie, Wongawilli; buried Illawarra Coal Measures envelope; Wallarah, Great Northern, Fassifern; Hunter composite horizon. The last two envelopes are not individually mapped seams. |
+| Drilling | 1,017 representative locations from 5,262 corridor records | Original recorded total-depth sticks; independent of the new ABSUC evidence and not used to fit seams. |
+| Borehole stratigraphy | 569 boreholes; 4,955 preferred tops and 4,479 preferred bases, 5,105 unique records | ABSUC 2024 v2; GDA94 coordinates and original MD/AHD references. Tops/bases selected independently. Suspect bases are retained as flags, never used as accepted interval ends. |
+| Industry inventory | All 35 COAL records in the downloaded statewide registry | A dated registry inventory, not an exhaustive live catalogue. Operator/group associations for 33; missing attributes remain explicit. |
+| Regional mine scene | 15 registry mines plus historical Balmain, five destinations, 12 supply links | Source-linked point records and schematic connections. Statewide inventory entries outside the model remain in the 2D inventory. |
 
-There are 16 mine records, five destination facilities, 12 schematic supply links, and 1,017 displayed boreholes spatially thinned from 5,262 corridor records. Thinning keeps one representative record in each ~0.02° cell (deepest available total-depth record). Raw selected source records are retained in `cache/` locally and reproducibly downloadable.
+Production records for Moolarben, Mount Thorley Warkworth and Ulan are stored once per complex with reporting period and basis. Approved capacity is separately labelled and is not actual output. Operator/group associations do not automatically establish legal ownership. Region labels are editorial groupings, not official boundary polygons.
 
-## Blender
+## Downloadable presentation
 
-The scene contains 62 objects, the shared mesh geometry, 12× vertical exaggeration, chapter labels, source notes and a 1–1800 frame camera animation at 12 fps. Frame 1 starts in Illawarra; markers identify the five stops.
+- `dist/downloads/NSW-Coal-Atlas.blend`: editable Blender scene, matching browser seam vertices, detailed mapped terrain with packed texture, source metadata, separate published fault-trace collection and compiled coal-top markers. The markers are initially hidden, not deviation-corrected and have no fitted connection to the seam sheets. Vertical exaggeration is baked at 12×. The fault collection is initially hidden and intended for viewport inspection; its edges are not renderable tubes.
+- `dist/downloads/NSW-Coal-Flythrough.mp4`: version 2 silent recording of the complete interactive regional tour. The newer borehole tools are demonstrated in the live viewer, not this movie. This tour does not demonstrate every new field-guide tool.
+- Cross-section **Export SVG**: portable figure with source attribution, model caveat and vertical scale.
 
-The Outliner collections separate met, thermal, mixed-use and unclassified layers. When manually filtering in Blender, include **Mixed-use horizons** under either met or thermal. The browser provides the automatic filter logic.
+Blender has five camera markers over frames 1–1800 at 12 fps. Its embedded **READ ME — atlas evidence and controls** explains collections and opacity. Both regional and local terrain opacity must be changed together; the regional material uses a mask to avoid duplicate surfaces. Seam ribbon thickness is for visibility only.
 
-The ground material uses alpha 0.28; change the Terrain material's Principled BSDF alpha for opacity. The narrow Solidify ribbon on seam meshes is purely for visibility, not real coal thickness. **READ ME — atlas evidence and controls** is embedded in Blender's text data.
-
-Rebuild from the shared JSON:
-
-```sh
-/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python scripts/build_blender.py -- --render-stills
-```
-
-`--render-animation` additionally renders the full offline animation as PNG frames. The included MP4 is the actual interactive tour recording, not this costly offline Cycles render.
-
-## Data and reproducibility
-
-- `dist/data/atlas.json`: model meshes, feature records, coal-use tags and source notes.
-- `dist/data/terrain.json`: regional elevation samples.
-- `dist/data/nsw-operating-mines.geojson`: GSNSW downloaded point layer.
-- `scripts/acquire.py`: fetches public datasets and pinned Three.js 0.180.0; requires Python and Pillow. Stores download hashes.
-- `scripts/build_data.py`: deterministic conceptual model and curated source associations. No hidden fitting or machine-generated geological claims.
-- `scripts/build_blender.py`: builds Blender from the same mesh arrays.
-- `dist/model.js`: shared filter rules used by the browser and model tests.
-
-To refresh the raw download snapshot, preserve the existing `cache/` and outputs for audit before removing only the cached datasets you intend to refresh. The acquisition script deliberately reuses existing downloads. A refresh alone does not validate changing mine status or coal products; review operator evidence too.
-
-The browser has optional WebMCP feature detection. Native WebMCP was unavailable in the verification browser; this does not affect normal controls. No external AI service is used.
-
-## Verify
+## Reproduce and verify
 
 ```sh
-node scripts/test.mjs
+python3 scripts/acquire_geology.py
+python3 scripts/build_industry.py
+python3 scripts/acquire_boreholes.py
+node scripts/compare_boreholes.mjs
+npm test
+# With a server on http://127.0.0.1:8765:
+node scripts/verify_ui.mjs
+node scripts/verify_geology.mjs
+/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python scripts/build_blender.py -- --render-stills
+/Applications/Blender.app/Contents/MacOS/Blender --background blender/NSW-Coal-Atlas.blend --python-exit-code 1 --python scripts/verify_blender.py
+node scripts/validate_static.mjs
 ```
 
-Browser verification uses Playwright and the installed Google Chrome. The verification scripts currently reference the bundled Codex Playwright runtime on this Mac; on another machine, replace that module path with a local Playwright installation. Run a local server on port 8765 before `node scripts/verify_ui.mjs`.
+Python acquisition needs Pillow; Blender builds need Blender. Browser scripts currently use this Mac's Codex-bundled Playwright and installed Chrome paths; adapt those two paths on another machine. Copy a rebuilt Blender scene from `blender/` to `dist/downloads/` before delivery.
+
+`acquire_geology.py` retrieves paginated WFS features and caches original responses before rasterization. Download URLs and hashes are in `evidence/geology-downloads.json`. It reuses cached downloads; review and preserve old evidence before refreshing a snapshot. `build_industry.py` records curated operator evidence separately from source registry attributes. `acquire.py` and `build_data.py` rebuild the original regional terrain and conceptual model.
+
+Core files: `dist/geology-model.js` contains mesh intersection and terrain sampling; `dist/geology.js` supplies the mapped view, section and field guide; `dist/industry.js` supplies the statewide inventory. `dist/data/atlas.json` retains the original seam geometry and provenance.
+
+## Next geological work
+
+The next substantial improvement is a **validated local underground section**. Published compiled picks are now acquired, but need checking against original logs, deviation surveys, surveyed contacts and structural constraints, with coordinate/height datums reconciled. Preserve observations separately from interpolated surfaces and test against withheld observations. Then expand detailed surface mapping and geology-led stories to Newcastle/Lake Macquarie and Hunter. The current upper-unit column establishes order; it does not reconstruct their subsurface boundaries.
+
+`acquire_boreholes.py` downloads and filters a ~744 MB national archive into a 1.8 MB regional subset. The archive remains in the ignored cache. `compare_boreholes.mjs` records 416 provisional comparisons without changing any geometry; these are not validated model errors.
+
+See `HANDOVER.md` for remaining work, verification and delivery status.
 
 ## Attribution
 
-GSNSW downloadable data: **CC BY 4.0**, Geological Survey of New South Wales. Terrain: **Mapzen / Tilezen terrain tiles on AWS**, including underlying SRTM and other elevation sources; full attribution at https://www.mapzen.com/rights/. Three.js: MIT, license bundled in `dist/vendor/THREE-LICENSE.txt`. Operator/government prose is summarised and linked in the atlas. All reconstructions and schematic connections are explicitly identified.
+GSNSW NSW Seamless Geology and mine records: CC BY 4.0, Geological Survey of New South Wales. Terrain: Mapzen / Tilezen terrain tiles on AWS, including SRTM and other underlying sources; https://www.mapzen.com/rights/. Stratigraphic context: Australian Government Bioregional Assessments, linked in the viewer. ABSUC: Vizy and Rollet (2024), Geoscience Australia, https://doi.org/10.26186/149324, CC BY 4.0; regional underlying sources GSNSW_2021 and GA_NDP_31_10_2022, CC BY 4.0. Three.js: MIT, licence in `dist/vendor/THREE-LICENSE.txt`. Operator material is summarized and linked to its source.

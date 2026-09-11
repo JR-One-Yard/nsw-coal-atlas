@@ -1,10 +1,30 @@
 {
-  "created": "2026-09-11T05:07:40.108Z",
+  "created": "2026-09-11T08:02:16.947Z",
   "files": [
     {
+      "file": "dist/.DS_Store",
+      "bytes": 6148,
+      "sha256": "b0fedd24829880756d473c494af8d87188b0059f5b029676f4ab1a1b6aae2484"
+    },
+    {
       "file": "dist/app.js",
-      "bytes": 24643,
-      "sha256": "a0658464cab3e2c2ce57fdf5097605e69e63ac6bfb8d0f8a2d8c3b790c21b55d"
+      "bytes": 26180,
+      "sha256": "e1bc4735a3b723115a63df5fa33be908a2df645f119a3403632760f5170f468a"
+    },
+    {
+      "file": "dist/atlas-v2.css",
+      "bytes": 13075,
+      "sha256": "e83b6c4e3fe63774186158c934791866f161d741cc7c0f26f3481ce136530909"
+    },
+    {
+      "file": "dist/borehole-model.js",
+      "bytes": 1188,
+      "sha256": "f334f12c2675c8b5c009c3ab20bf45377d306e077b4e177769e882a1382dcbbf"
+    },
+    {
+      "file": "dist/boreholes.js",
+      "bytes": 7514,
+      "sha256": "4cc6a14f992737b54dea15e522cc1d583db0187c50d425b06d39626ba3bc3af6"
     },
     {
       "file": "dist/data/atlas.json",
@@ -12,9 +32,39 @@
       "sha256": "bee94a0ee2018dc51b45a9c9173807d322534d8c512664998a73a05f99aff27c"
     },
     {
+      "file": "dist/data/borehole-picks.json",
+      "bytes": 1907055,
+      "sha256": "2036e492fd565d852ba2b310984a0de952d185f2baec7886bce6f73b8c58ddd4"
+    },
+    {
+      "file": "dist/data/illawarra-surface-index.bin",
+      "bytes": 5120000,
+      "sha256": "a2c81ac6f7f53b105348d4827789ba7760f57419dc098babc2043c99109fc949"
+    },
+    {
+      "file": "dist/data/illawarra-surface.png",
+      "bytes": 169929,
+      "sha256": "ffcaf7d38380c1640a4245d35e956ef48aa937ded0e45d045534dc75623aeef1"
+    },
+    {
+      "file": "dist/data/illawarra-terrain.json",
+      "bytes": 353791,
+      "sha256": "06d921e47bb4d82b73bf2cb8d0c1ed1605be2d678b45605dc3ab0dc0078e6ba3"
+    },
+    {
+      "file": "dist/data/industry.json",
+      "bytes": 35639,
+      "sha256": "ef762e5523d9c86f73a3c5dd237a5db5d30e07bc4c1b809870c35a393e1405b6"
+    },
+    {
       "file": "dist/data/nsw-operating-mines.geojson",
       "bytes": 22042,
       "sha256": "6e84cd7bab9bc651e26b4544d9b84d6474d931ddb02afc337cf49da064042897"
+    },
+    {
+      "file": "dist/data/surface-geology.json",
+      "bytes": 2552778,
+      "sha256": "38ad2adc6b717b9488e0c82079859811c9c8848764121991d35c62a779544a59"
     },
     {
       "file": "dist/data/terrain.json",
@@ -23,18 +73,33 @@
     },
     {
       "file": "dist/downloads/NSW-Coal-Atlas.blend",
-      "bytes": 2390212,
-      "sha256": "4f87422765319aca8f3d1ca1455657a8b5dc599ac4cf6e4175465ced20f67de0"
+      "bytes": 7792517,
+      "sha256": "0a9da61ea27caf3bd8ec1f36303f60ff85de191802026723815d420680f821b0"
     },
     {
       "file": "dist/downloads/NSW-Coal-Flythrough.mp4",
-      "bytes": 9342269,
-      "sha256": "7394818d56e1e7582d5ca15f9607393ed9722d47d5e67ca2ec3cf4583db4a10d"
+      "bytes": 7194216,
+      "sha256": "2f075cb12186223c40d2204017f167ebbb5e04544da9e1ebfc10242b7a48937e"
+    },
+    {
+      "file": "dist/geology-model.js",
+      "bytes": 7493,
+      "sha256": "42487dd89efdd6538ebb01e0943761bb6efe5863da3b6ecf814b92558c60dbab"
+    },
+    {
+      "file": "dist/geology.js",
+      "bytes": 36878,
+      "sha256": "48594157f448caf87807329021e73365c70f30cc46334325d5477d8dbbefa2a9"
     },
     {
       "file": "dist/index.html",
-      "bytes": 5266,
-      "sha256": "0ab05fe7a6399e62598618175be7299ad339dcf19eaac2bf278027377c5a8046"
+      "bytes": 5688,
+      "sha256": "edc7cc5b71702f1c880d5c7d8c8c7201a2e3f8ef8f81762a413f72848f4560f9"
+    },
+    {
+      "file": "dist/industry.js",
+      "bytes": 8696,
+      "sha256": "6b02f53fc2828ffd3aa0120b810f52ee7b3ebb564af07383653ad1fc100a1da2"
     },
     {
       "file": "dist/model.js",
