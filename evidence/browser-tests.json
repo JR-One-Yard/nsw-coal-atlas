@@ -1,0 +1,155 @@
+{
+  "date": "2026-09-11T00:18:52.999Z",
+  "checks": [
+    {
+      "name": "WebGL renders a populated scene",
+      "passed": true
+    },
+    {
+      "name": "Thermal-only checkbox filtering updates rendered meshes and markers",
+      "passed": true
+    },
+    {
+      "name": "Met-only checkbox filtering preserves the mixed-product mine",
+      "passed": true
+    },
+    {
+      "name": "All filters off shows an honest empty state",
+      "passed": true
+    },
+    {
+      "name": "Seam selector limits connected mines and transport",
+      "passed": true
+    },
+    {
+      "name": "Opacity and cutaway controls affect scene materials and clipping",
+      "passed": true
+    },
+    {
+      "name": "Sydney chapter shows an unclassified formation and deep-mine context",
+      "passed": true
+    },
+    {
+      "name": "Myuna selection exposes its documented power-station connection",
+      "passed": true
+    },
+    {
+      "name": "Borehole layer toggles independently",
+      "passed": true
+    },
+    {
+      "name": "Flythrough starts, advances and pauses",
+      "passed": true
+    },
+    {
+      "name": "Scrubbing reaches the Newcastle and final Hunter chapters",
+      "passed": true
+    },
+    {
+      "name": "Sources modal contains model limitations and closes with Escape",
+      "passed": true
+    },
+    {
+      "name": "All viewport and script assets loaded without errors",
+      "passed": true
+    },
+    {
+      "name": "Mobile opens on the landscape with no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile layer drawer supports filtering",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "badResponses": [],
+  "webmcp": {
+    "documentSupported": false,
+    "navigatorSupported": false
+  },
+  "finalState": {
+    "ready": true,
+    "state": {
+      "met": false,
+      "thermal": true,
+      "unknown": true,
+      "showMines": true,
+      "showRoutes": false,
+      "showBores": false,
+      "showLabels": true,
+      "opacity": 35,
+      "exaggeration": 12,
+      "slice": 100,
+      "seam": "all"
+    },
+    "selected": "bulli",
+    "playing": false,
+    "progress": 0,
+    "chapter": 0,
+    "visibleSeams": [
+      "central",
+      "wallarah",
+      "greatnorthern",
+      "fassifern",
+      "hunter"
+    ],
+    "visibleMines": [
+      "mandalong",
+      "myuna",
+      "mtw",
+      "ashton",
+      "bloomfield",
+      "bulga",
+      "chainvalley",
+      "hvo",
+      "ravensworth",
+      "rixscreek",
+      "wambo",
+      "unitedwambo",
+      "balmain"
+    ],
+    "visibleRoutes": [
+      "myuna-eraring",
+      "mandalong-eraring",
+      "mandalong-vales",
+      "mtw-newcastleport",
+      "ashton-newcastleport",
+      "ravensworth-newcastleport",
+      "rixscreek-newcastleport",
+      "chainvalley-vales"
+    ],
+    "frameCount": 142,
+    "triangles": 252652,
+    "renderedSeams": [
+      "central",
+      "wallarah",
+      "greatnorthern",
+      "fassifern",
+      "hunter"
+    ],
+    "renderedMines": [
+      "mandalong",
+      "myuna",
+      "mtw",
+      "ashton",
+      "bloomfield",
+      "bulga",
+      "chainvalley",
+      "hvo",
+      "ravensworth",
+      "rixscreek",
+      "wambo",
+      "unitedwambo",
+      "balmain",
+      "pkct",
+      "eraring",
+      "vales",
+      "newcastleport"
+    ],
+    "renderedRoutes": [],
+    "boreVisible": false,
+    "groundOpacity": 0.35,
+    "clipX": 1000
+  }
+}

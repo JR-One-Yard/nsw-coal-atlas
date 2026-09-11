@@ -1,0 +1,8 @@
+import {createRequire} from 'node:module';import fs from 'node:fs';
+const req=createRequire('/Users/jamesroberts/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/package.json');const {chromium}=req('playwright');
+const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',args:['--enable-webgl','--ignore-gpu-blocklist']});
+const context=await browser.newContext({viewport:{width:1600,height:1000},recordVideo:{dir:'evidence/recordings',size:{width:1600,height:1000}}});const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:8765/',{waitUntil:'networkidle'});await page.waitForFunction(()=>window.coalAtlas?.getState().frameCount>5);await page.waitForTimeout(1800);await page.locator('#showRoutes').check();await page.locator('#play').click();
+console.log('Recording the complete 150-second interactive journey.');
+await page.waitForFunction(()=>window.coalAtlas.getState().progress>=1,null,{timeout:240000});
+const state=await page.evaluate(()=>window.coalAtlas.getState());await page.waitForTimeout(1000);const video=page.video();await context.close();await video.saveAs('evidence/guided-tour.webm');await browser.close();fs.writeFileSync('evidence/tour-recording.json',JSON.stringify({date:new Date().toISOString(),completed:state.progress===1,finalChapter:state.chapter,errors,framesRendered:state.frameCount,method:'Screen recording of actual browser flythrough; no audio'},null,2));console.log('Full tour complete',state.progress,state.chapter);

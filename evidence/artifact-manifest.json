@@ -1,0 +1,70 @@
+{
+  "created": "2026-09-11T05:07:40.108Z",
+  "files": [
+    {
+      "file": "dist/app.js",
+      "bytes": 24643,
+      "sha256": "a0658464cab3e2c2ce57fdf5097605e69e63ac6bfb8d0f8a2d8c3b790c21b55d"
+    },
+    {
+      "file": "dist/data/atlas.json",
+      "bytes": 1138336,
+      "sha256": "bee94a0ee2018dc51b45a9c9173807d322534d8c512664998a73a05f99aff27c"
+    },
+    {
+      "file": "dist/data/nsw-operating-mines.geojson",
+      "bytes": 22042,
+      "sha256": "6e84cd7bab9bc651e26b4544d9b84d6474d931ddb02afc337cf49da064042897"
+    },
+    {
+      "file": "dist/data/terrain.json",
+      "bytes": 342289,
+      "sha256": "5135b5bde48594656eb0f515a4c4730d5e67294ac44c9b31c5e6c9693e4bcd59"
+    },
+    {
+      "file": "dist/downloads/NSW-Coal-Atlas.blend",
+      "bytes": 2390212,
+      "sha256": "4f87422765319aca8f3d1ca1455657a8b5dc599ac4cf6e4175465ced20f67de0"
+    },
+    {
+      "file": "dist/downloads/NSW-Coal-Flythrough.mp4",
+      "bytes": 9342269,
+      "sha256": "7394818d56e1e7582d5ca15f9607393ed9722d47d5e67ca2ec3cf4583db4a10d"
+    },
+    {
+      "file": "dist/index.html",
+      "bytes": 5266,
+      "sha256": "0ab05fe7a6399e62598618175be7299ad339dcf19eaac2bf278027377c5a8046"
+    },
+    {
+      "file": "dist/model.js",
+      "bytes": 1665,
+      "sha256": "c9533e48f996d044e68e22e7f5abbc7b35d5949375fa0c083ef32f5b3cdb6e65"
+    },
+    {
+      "file": "dist/style.css",
+      "bytes": 8409,
+      "sha256": "0c058c1b266a6b2778f99bcef20cdc4cf4571c177c303c1043e250f602d0d478"
+    },
+    {
+      "file": "dist/vendor/OrbitControls.js",
+      "bytes": 38703,
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c"
+    },
+    {
+      "file": "dist/vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "file": "dist/vendor/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    {
+      "file": "dist/vendor/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+cache/
+.sites-runtime/
+node_modules/
+__pycache__/
+*.blend1
+blender/
+evidence/recordings/
+evidence/*.webm
+evidence/*.mp4
+*.tar.gz
+*.zip
+.DS_Store

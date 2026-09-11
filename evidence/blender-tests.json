@@ -1,0 +1,95 @@
+{
+  "date": "2026-09-11",
+  "version": "5.2.1 LTS",
+  "objects": 62,
+  "checks": [
+    {
+      "name": "Blender file reopens with a camera and 150-second timeline",
+      "passed": true
+    },
+    {
+      "name": "All 8 browser geological layers exist as editable meshes",
+      "passed": true
+    },
+    {
+      "name": "Bulli Seam vertices match browser geometry at 12x vertical scale",
+      "passed": true
+    },
+    {
+      "name": "Balgownie Seam vertices match browser geometry at 12x vertical scale",
+      "passed": true
+    },
+    {
+      "name": "Wongawilli Seam vertices match browser geometry at 12x vertical scale",
+      "passed": true
+    },
+    {
+      "name": "Buried Illawarra Coal Measures vertices match browser geometry at 12x vertical scale",
+      "passed": true
+    },
+    {
+      "name": "Wallarah Seam vertices match browser geometry at 12x vertical scale",
+      "passed": true
+    },
+    {
+      "name": "Great Northern Seam vertices match browser geometry at 12x vertical scale",
+      "passed": true
+    },
+    {
+      "name": "Fassifern Seam vertices match browser geometry at 12x vertical scale",
+      "passed": true
+    },
+    {
+      "name": "Hunter coal-bearing horizons vertices match browser geometry at 12x vertical scale",
+      "passed": true
+    },
+    {
+      "name": "All 16 mine records and 5 destinations exist",
+      "passed": true
+    },
+    {
+      "name": "Sources and limitations are embedded in the Blender file",
+      "passed": true
+    },
+    {
+      "name": "Each tour chapter has a timeline marker",
+      "passed": true
+    },
+    {
+      "name": "Camera moves north from Illawarra to Hunter",
+      "passed": true
+    },
+    {
+      "name": "Every chapter has a nonempty rendered evidence image",
+      "passed": true
+    }
+  ],
+  "cameraPositions": [
+    [
+      22.989900588989258,
+      -127.11640167236328,
+      42.20000076293945
+    ],
+    [
+      47.466766357421875,
+      -73.59600067138672,
+      44.20000076293945
+    ],
+    [
+      69.0433349609375,
+      17.867599487304688,
+      30.200000762939453
+    ],
+    [
+      86.88725280761719,
+      32.16559600830078,
+      34.20000076293945
+    ],
+    [
+      38.50578308105469,
+      59.735198974609375,
+      38.20000076293945
+    ]
+  ],
+  "blendSHA256": "4f87422765319aca8f3d1ca1455657a8b5dc599ac4cf6e4175465ced20f67de0"
+}

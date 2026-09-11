@@ -1,0 +1,1 @@
+{"name":"nsw-coal-atlas","version":"1.0.0","private":true,"type":"module","description":"Interactive educational coal atlas and editable Blender scene","scripts":{"test":"node scripts/test.mjs","serve":"python3 scripts/serve.py","verify:browser":"node scripts/verify_ui.mjs"}}

@@ -1,0 +1,10 @@
+import {createRequire} from 'node:module';
+import fs from 'node:fs';
+const require=createRequire('/Users/jamesroberts/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/package.json');
+const {chromium}=require('playwright');
+const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',args:['--enable-webgl','--ignore-gpu-blocklist']});
+const page=await browser.newPage({viewport:{width:1600,height:1000},deviceScaleFactor:1});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:8765/',{waitUntil:'networkidle'});await page.waitForFunction(()=>window.coalAtlas?.getState().frameCount>5,{timeout:30000});
+await page.waitForTimeout(1900);await page.screenshot({path:'evidence/01-illawarra.png'});
+console.log(JSON.stringify({status:await page.evaluate(()=>window.coalAtlas.getState()),errors},null,2));
+await browser.close();

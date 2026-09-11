@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-11T00:17:54.042Z",
+  "checks": [
+    {
+      "name": "Full model has all five journey chapters and eight geological layers",
+      "passed": true
+    },
+    {
+      "name": "All-use filter includes sixteen mine records",
+      "passed": true
+    },
+    {
+      "name": "Thermal-only retains mixed producer and excludes met-only mines",
+      "passed": true
+    },
+    {
+      "name": "Met-only retains mixed producer and excludes thermal-only mines",
+      "passed": true
+    },
+    {
+      "name": "Unknown Sydney formation is not misclassified as met or thermal",
+      "passed": true
+    },
+    {
+      "name": "All coal-use switches off produces an empty result",
+      "passed": true
+    },
+    {
+      "name": "Single-seam selection keeps only connected mines and routes",
+      "passed": true
+    },
+    {
+      "name": "Every triangle index refers to finite model vertices",
+      "passed": true
+    },
+    {
+      "name": "Terrain has complete finite elevation grid and meaningful relief",
+      "passed": true
+    },
+    {
+      "name": "Every route joins existing features with compatible products",
+      "passed": true
+    },
+    {
+      "name": "Every model feature cites existing source IDs",
+      "passed": true
+    },
+    {
+      "name": "Northern stratigraphic order is preserved at every grid vertex",
+      "passed": true
+    },
+    {
+      "name": "Southern stratigraphic order is preserved at every grid vertex",
+      "passed": true
+    },
+    {
+      "name": "Borehole evidence exists, is spatially thinned, and has plausible coordinates",
+      "passed": true
+    },
+    {
+      "name": "Projection puts Newcastle north of Wollongong and uses metres consistently",
+      "passed": true
+    },
+    {
+      "name": "Tour timestamp supports the full 150 seconds",
+      "passed": true
+    }
+  ]
+}
