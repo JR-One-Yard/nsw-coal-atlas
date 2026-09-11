@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-11T16:55:15.087Z",
+  "datasetSnapshot": "2026-09-11",
+  "viewports": [
+    {
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "checks": [
+    {
+      "name": "Overview shows distinct complex production and explicit snapshot coverage",
+      "passed": true
+    },
+    {
+      "name": "Operator portfolio and destination buttons filter the inventory",
+      "passed": true
+    },
+    {
+      "name": "Shortlist persists across filters, caps selection and compares shared complexes honestly",
+      "passed": true
+    },
+    {
+      "name": "Comparison CSV includes selected operations, source URLs and production basis",
+      "passed": true
+    },
+    {
+      "name": "Comparison survives a page reload and malformed saved data is tolerated",
+      "passed": true
+    },
+    {
+      "name": "Keyboard tab navigation opens Revenue lab and calculates the documented formula",
+      "passed": true
+    },
+    {
+      "name": "Invalid input clears stale results and valid zero volume returns zero",
+      "passed": true
+    },
+    {
+      "name": "Reported volume presets retain source and edits become manual assumptions",
+      "passed": true
+    },
+    {
+      "name": "Scenario export includes assumptions, units, source and nine sensitivity cases",
+      "passed": true
+    },
+    {
+      "name": "Empty filters show missing production without stale totals",
+      "passed": true
+    },
+    {
+      "name": "Mobile commercial views stay within the viewport and scenario controls remain usable",
+      "passed": true
+    },
+    {
+      "name": "Returning to geology preserves the atlas and all assets load cleanly",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "badResponses": []
+}

@@ -1,4 +1,4 @@
-# NSW Coal Atlas — version 2.1 handover
+# NSW Coal Atlas — version 2.2 handover
 
 11 September 2026. The local project now leads with geology: published Illawarra surface mapping, finer terrain, a five-step field guide, a stratigraphic column and sections linked to the displayed underground meshes. The statewide industry inventory complements this presentation.
 
@@ -25,7 +25,7 @@
 
 The eight underground sheets are unchanged illustrative geometry. Published compiled coal-unit picks have now been acquired, but original logs have not been independently checked and no surfaces have been fitted to them. The displayed drilling sticks show total drilled depth, not coal. The section tool makes the assumptions easier to inspect; it does not make their local depths authoritative.
 
-Highest-value next work:
+Deferred geological opportunities (the user has explicitly prioritised commercial insight instead):
 
 1. Validate a small set of the acquired Illawarra coal picks against original logs and deviation surveys, then construct a defensible section with mapped contacts and fault constraints. Record original coordinates, height datum, lithology interval, uncertainty and source page for every observation. Compare the resulting model to independent observations.
 2. Acquire detailed geological constraints for Newcastle/Lake Macquarie and Hunter. The Hunter Bioregional Assessment describes an existing regional 3D framework; its documentation was reviewed, but its model files were not acquired here.
@@ -75,3 +75,15 @@ Source URLs, feature IDs and download hashes are retained. These provide a start
 Two reviewed source artefacts are corrected in the regional terrain; provenance is in `dist/data/terrain-corrections.json`. Eight offline tests, three targeted browser checks and two additional Blender checks bring the current total to 96. The correction is present in the rebuilt Blender download and refreshed regional movie. No seam geometry was altered.
 
 Production publication was requested, but the connected Sites account returned `NOT_FOUND` for the project ID in `.openai/hosting.json`. The hosting configuration is preserved; a GitHub push alone must not be reported as a successful site deployment.
+
+## Commercial increment — 12 September 2026
+
+Implemented a filtered commercial overview, four-operation comparison shortlist, operator portfolios, destination relationship filtering and gross-revenue price/volume/FX scenarios. Existing geology remains available. Production stays at whole-complex basis, missing values remain missing and reporting periods are retained. Rechecked the Yancoal 2025 report and Glencore Ulan production page and attached the direct Yancoal report citation.
+
+The pure commercial model and browser reports each contain 12 checks. Together with the earlier verified terrain, geology and Blender checks, the current set totals 120. The Blender and MP4 downloads retain the corrected geology presentation; they do not reproduce the new commercial dashboard. The ten later commercial ideas are planned, not implemented.
+
+## Resume verification — 12 September 2026
+
+Finished the comparison destination wording browser verification. The twelve commercial browser scenarios now also exercise denied storage, shortlist removal, keyboard operator filtering and all three mobile tabs. All 52 model/unit checks pass; the retained overall suite count remains 120. Refreshed the 29-file artifact manifest and closed the first five br features plus their ten child tasks. Ten later commercial features remain planned.
+
+The configured original Sites project is accessible again in this session with owner-only access. The earlier NOT_FOUND blocker no longer reproduces. Publication success must be confirmed by a terminal Sites deployment result; account access alone is not deployment.

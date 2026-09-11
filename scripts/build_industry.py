@@ -73,9 +73,11 @@ for r in records:
     if 'Bengalla' in r['name']:r['ownership']='New Hope Group 80%; Taipower 20% (operator page).'
     if r['complexId']=='ulan':r['ownership']='Glencore 100% (Ulan complex).'
 
+sources['yancoal2025'] = dict(id='yancoal2025',title='Yancoal 2025 report — operations overview',url='https://www.yancoal.com.au/wp-content/uploads/2026/04/Yancoal-P4-Report-2025.pdf',note='Calendar 2025 ROM and saleable production on 100% complex basis; rechecked 12 September 2026.')
+
 complexes={
- 'moolarben':dict(name='Moolarben complex',saleableMt=19.1,romMt=21.6,period='Calendar 2025',basis='100% operation; open cut and underground combined',source='mtw'),
- 'mtw':dict(name='Mount Thorley Warkworth complex',saleableMt=11.8,romMt=17.7,period='Calendar 2025',basis='100% operation; integrated complex',source='mtw'),
+ 'moolarben':dict(name='Moolarben complex',saleableMt=19.1,romMt=21.6,period='Calendar 2025',basis='100% operation; open cut and underground combined',source='yancoal2025'),
+ 'mtw':dict(name='Mount Thorley Warkworth complex',saleableMt=11.8,romMt=17.7,period='Calendar 2025',basis='100% operation; integrated complex',source='yancoal2025'),
  'ulan':dict(name='Ulan Coal complex',saleableMt=10.044,romMt=None,period='Calendar 2025',basis='Ulan Underground and Ulan West combined',source='ulan'),
 }
 out=dict(version=2,date='2026-09-11',records=sorted(records,key=lambda r:r['name']),complexes=complexes,

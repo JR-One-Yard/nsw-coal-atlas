@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-11T16:54:38.164Z",
+  "checks": [
+    {
+      "name": "Product buckets and operator groups account for every registry record exactly once",
+      "passed": true
+    },
+    {
+      "name": "Production counts each complex once and keeps coverage explicit",
+      "passed": true
+    },
+    {
+      "name": "Different reporting periods are never silently combined",
+      "passed": true
+    },
+    {
+      "name": "Missing production and empty filters remain missing rather than zero output",
+      "passed": true
+    },
+    {
+      "name": "Operator, product, region and query filters intersect without losing unverified operators",
+      "passed": true
+    },
+    {
+      "name": "Destination filtering uses actual recorded relationships and distinct mine counts",
+      "passed": true
+    },
+    {
+      "name": "Shortlists discard malformed, stale and duplicate IDs and are capped at four",
+      "passed": true
+    },
+    {
+      "name": "Revenue units and FX direction agree with hand-calculated amounts",
+      "passed": true
+    },
+    {
+      "name": "Zero volume and zero price are valid while malformed scenarios fail",
+      "passed": true
+    },
+    {
+      "name": "Comparison preserves complex basis, periods, missing values and primary source links",
+      "passed": true
+    },
+    {
+      "name": "CSV quotes separators and neutralizes formula prefixes including leading whitespace",
+      "passed": true
+    },
+    {
+      "name": "Every production profile has a finite nonnegative value and resolvable source",
+      "passed": true
+    }
+  ]
+}

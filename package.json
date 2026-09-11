@@ -1,13 +1,14 @@
 {
   "name": "nsw-coal-atlas",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": true,
   "type": "module",
   "description": "Interactive educational coal atlas and editable Blender scene",
   "scripts": {
-    "test": "node scripts/test.mjs && node scripts/test_geology.mjs && node scripts/test_boreholes.mjs && python3 scripts/test_terrain.py",
+    "test": "node scripts/test.mjs && node scripts/test_geology.mjs && node scripts/test_boreholes.mjs && python3 scripts/test_terrain.py && node scripts/test_commercial.mjs",
     "serve": "python3 scripts/serve.py",
     "verify:browser": "node scripts/verify_ui.mjs",
-    "verify:geology": "node scripts/verify_geology.mjs"
+    "verify:geology": "node scripts/verify_geology.mjs",
+    "verify:commercial": "node scripts/verify_commercial.mjs"
   }
 }

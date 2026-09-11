@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-11T16:15:02.470Z",
+  "date": "2026-09-11T16:38:58.785Z",
   "checks": [
     {
       "name": "WebGL renders a populated scene",
@@ -119,7 +119,7 @@
       "rixscreek-newcastleport",
       "chainvalley-vales"
     ],
-    "frameCount": 153,
+    "frameCount": 148,
     "camera": [
       22.989899903569494,
       43.85,

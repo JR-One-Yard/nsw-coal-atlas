@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-09-11T16:39:39.323060+00:00",
+  "purpose": "Primary-source recheck for the commercial increment; not a live market-data feed",
+  "sources": [
+    {
+      "url": "https://www.yancoal.com.au/wp-content/uploads/2026/04/Yancoal-P4-Report-2025.pdf",
+      "scope": "2025 operations overview, 100% operation basis",
+      "values": {
+        "Moolarben saleable Mt": 19.1,
+        "Moolarben ROM Mt": 21.6,
+        "Mount Thorley Warkworth saleable Mt": 11.8,
+        "Mount Thorley Warkworth ROM Mt": 17.7
+      }
+    },
+    {
+      "url": "https://www.glencore.com.au/operations-and-projects/coal/current-operations/ulan-coal",
+      "scope": "Ulan Coal 2025 contribution, Ulan Underground and Ulan West complex",
+      "values": {
+        "saleable tonnes": 10044000
+      }
+    }
+  ],
+  "scenarioDefaults": "User-editable assumptions, not sourced market quotes. Gross revenue excludes costs, royalties, taxes and hedging."
+}
