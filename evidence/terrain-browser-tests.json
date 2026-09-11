@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-11T16:16:11.828Z",
+  "checks": [
+    {
+      "name": "Served terrain removes the Yarra Bay spike and preserves the correction source",
+      "passed": true
+    },
+    {
+      "name": "Sydney chapter renders the corrected terrain at default and stronger vertical scales",
+      "passed": true
+    },
+    {
+      "name": "Correction provenance is available from Sources and no browser exception occurred",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

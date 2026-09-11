@@ -1,0 +1,37 @@
+{
+  "date": "2026-09-11T16:16:06.626795+00:00",
+  "checks": [
+    {
+      "name": "test_changed_source_and_shifted_grid_require_new_review",
+      "passed": true
+    },
+    {
+      "name": "test_known_source_spike_and_pit_are_detected",
+      "passed": true
+    },
+    {
+      "name": "test_malformed_elevation_grid_is_rejected",
+      "passed": true
+    },
+    {
+      "name": "test_new_positive_or_negative_extreme_blocks_acquisition",
+      "passed": true
+    },
+    {
+      "name": "test_only_reviewed_samples_change_and_inputs_are_preserved",
+      "passed": true
+    },
+    {
+      "name": "test_real_relief_and_remaining_bathymetry_are_not_smoothed",
+      "passed": true
+    },
+    {
+      "name": "test_reapplication_is_idempotent",
+      "passed": true
+    },
+    {
+      "name": "test_yarra_bay_is_zero_and_references_retained",
+      "passed": true
+    }
+  ]
+}

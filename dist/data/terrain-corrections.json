@@ -1,0 +1,67 @@
+{
+  "reviewedAt": "2026-09-11T16:13:19.981115+00:00",
+  "grid": {
+    "bounds": [
+      150.45,
+      -34.65,
+      152.05,
+      -32.45
+    ],
+    "nx": 193,
+    "ny": 289
+  },
+  "originalTerrainSHA256": "5135b5bde48594656eb0f515a4c4730d5e67294ac44c9b31c5e6c9693e4bcd59",
+  "source": "Geoscience Australia DEM_SRTM_1Second_2024, layer 3, point identify at native geographic coordinates; independently served DEM, not necessarily independent underlying SRTM observations.",
+  "dataset": "https://pid.geoscience.gov.au/dataset/ga/72759",
+  "licence": "\u00a9 Commonwealth of Australia (Geoscience Australia) 2024, CC BY 4.0",
+  "limitations": "Targeted replacement of two reviewed source artefacts. No inferred bathymetry, broad smoothing, seam refitting or complete terrain accuracy certification. The GA service returns zero at these water locations.",
+  "corroboratingGeography": "https://www.randwick.nsw.gov.au/facilities-and-recreation/beaches-and-coast/beachside-areas/yarra-bay-beachside-area",
+  "corrections": [
+    {
+      "column": 89,
+      "row": 140,
+      "originalMetres": -1284.0,
+      "lon": 151.19166666666666,
+      "lat": -33.519444444444446,
+      "url": "https://services.ga.gov.au/gis/rest/services/DEM_SRTM_1Second_2024/MapServer/identify?f=json&geometry=151.19166666666666%2C-33.519444444444446&geometryType=esriGeometryPoint&sr=4326&layers=all%3A3&tolerance=0&mapExtent=151.18666666666667%2C-33.52444444444445%2C151.19666666666666%2C-33.51444444444444&imageDisplay=1000%2C1000%2C96&returnGeometry=false",
+      "response": {
+        "results": [
+          {
+            "layerId": 3,
+            "layerName": "DEM_SRTM_1Second_2024",
+            "displayFieldName": "",
+            "attributes": {
+              "Stretch.Pixel Value": "0.000000"
+            }
+          }
+        ]
+      },
+      "id": "hawkesbury-water-surface",
+      "replacementMetres": 0.0,
+      "reason": "Isolated source artefact inconsistent with neighbouring samples and independently checked GA DEM. Zero represents the DEM water surface, not a measured seabed elevation."
+    },
+    {
+      "column": 93,
+      "row": 200,
+      "originalMetres": 826.0,
+      "lon": 151.225,
+      "lat": -33.977777777777774,
+      "url": "https://services.ga.gov.au/gis/rest/services/DEM_SRTM_1Second_2024/MapServer/identify?f=json&geometry=151.225%2C-33.977777777777774&geometryType=esriGeometryPoint&sr=4326&layers=all%3A3&tolerance=0&mapExtent=151.22%2C-33.98277777777778%2C151.23%2C-33.97277777777777&imageDisplay=1000%2C1000%2C96&returnGeometry=false",
+      "response": {
+        "results": [
+          {
+            "layerId": 3,
+            "layerName": "DEM_SRTM_1Second_2024",
+            "displayFieldName": "",
+            "attributes": {
+              "Stretch.Pixel Value": "0.000000"
+            }
+          }
+        ]
+      },
+      "id": "yarra-bay-water-surface",
+      "replacementMetres": 0.0,
+      "reason": "Isolated source artefact inconsistent with neighbouring samples and independently checked GA DEM. Zero represents the DEM water surface, not a measured seabed elevation."
+    }
+  ]
+}

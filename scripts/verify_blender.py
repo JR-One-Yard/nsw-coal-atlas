@@ -16,6 +16,9 @@ for fr in [1,451,901,1350,1800]:scene.frame_set(fr);positions.append(list(scene.
 check('Camera moves north from Illawarra to Hunter',positions[-1][1]>positions[0][1])
 check('Every chapter has a nonempty rendered evidence image',all((R/'evidence'/('blender-'+n+'.png')).stat().st_size>10000 for n in ['illawarra','sydney','lake-macquarie','newcastle','hunter']))
 lt=json.loads((R/'dist/data/illawarra-terrain.json').read_text())
+regional=json.loads((R/'dist/data/terrain.json').read_text());land=bpy.data.objects['NSW elevation · Mapzen Terrarium z9']
+check('Regional terrain matches corrected source samples including Yarra Bay at sea level',len(land.data.vertices)==regional['nx']*regional['ny'] and all(abs(v.co.z-max(0,regional['elevations'][i])/1000*12)<.001 for i,v in enumerate(land.data.vertices)) and abs(land.data.vertices[200*193+93].co.z)<.001)
+check('Reviewed terrain correction provenance is embedded',json.loads(bpy.data.texts['Reviewed terrain corrections.json'].as_string())==json.loads((R/'dist/data/terrain-corrections.json').read_text()))
 local=bpy.data.objects['Illawarra detailed terrain · GSNSW surface geology']
 check('Detailed local terrain preserves all browser elevation samples',len(local.data.vertices)==lt['nx']*lt['ny'] and all(abs(v.co.z-max(0,lt['elevations'][i])/1000*12)<.001 for i,v in enumerate(local.data.vertices)))
 check('Published geological map is packed in the editable file',any(i.packed_file and i.name.startswith('illawarra-surface') for i in bpy.data.images))

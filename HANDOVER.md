@@ -69,3 +69,9 @@ The updated Blender download includes the published surface map and source metad
 ABSUC source: https://doi.org/10.26186/149324. Methodology and data schemas: https://d28rz98at9flks.cloudfront.net/149324/149324_00_1.pdf, especially pp. 5 and 9. Acquisition hashes and subset counts are in `evidence/borehole-downloads.json`.
 
 Source URLs, feature IDs and download hashes are retained. These provide a starting point for the next scientific increment without overstating what is already reconstructed.
+
+## Terrain fix delivered — 12 September 2026
+
+Two reviewed source artefacts are corrected in the regional terrain; provenance is in `dist/data/terrain-corrections.json`. Eight offline tests, three targeted browser checks and two additional Blender checks bring the current total to 96. The correction is present in the rebuilt Blender download and refreshed regional movie. No seam geometry was altered.
+
+Production publication was requested, but the connected Sites account returned `NOT_FOUND` for the project ID in `.openai/hosting.json`. The hosting configuration is preserved; a GitHub push alone must not be reported as a successful site deployment.

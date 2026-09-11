@@ -79,3 +79,9 @@ See `HANDOVER.md` for remaining work, verification and delivery status.
 ## Attribution
 
 GSNSW NSW Seamless Geology and mine records: CC BY 4.0, Geological Survey of New South Wales. Terrain: Mapzen / Tilezen terrain tiles on AWS, including SRTM and other underlying sources; https://www.mapzen.com/rights/. Stratigraphic context: Australian Government Bioregional Assessments, linked in the viewer. ABSUC: Vizy and Rollet (2024), Geoscience Australia, https://doi.org/10.26186/149324, CC BY 4.0; regional underlying sources GSNSW_2021 and GA_NDP_31_10_2022, CC BY 4.0. Three.js: MIT, licence in `dist/vendor/THREE-LICENSE.txt`. Operator material is summarized and linked to its source.
+
+## Terrain correction — 12 September 2026
+
+The isolated Yarra Bay peak (826 m) and a Hawkesbury water-area pit (−1,284 m) were replaced with zero-valued samples checked against Geoscience Australia’s DEM service. `dist/data/terrain-corrections.json` preserves coordinates, original values, responses and attribution. Zero represents the DEM water surface, not measured seabed depth. `scripts/terrain_quality.py` applies this reviewed ledger during acquisition and rejects new isolated extremes for review. It does not smooth the terrain.
+
+Run `python3 scripts/test_terrain.py` and `node scripts/verify_terrain.mjs` for the targeted regression checks. The Blender scene and regional movie were regenerated after correction. The complete current verification set contains 96 checks.

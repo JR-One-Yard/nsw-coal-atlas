@@ -2,6 +2,7 @@
 from pathlib import Path
 import urllib.request, json, math, concurrent.futures, hashlib
 from PIL import Image
+from terrain_quality import corrected_terrain
 ROOT=Path(__file__).resolve().parents[1]
 D=ROOT/'dist/data'; V=ROOT/'dist/vendor'; C=ROOT/'cache'
 C.mkdir(exist_ok=True)
@@ -44,6 +45,7 @@ for j in range(ny):
         lon=west+(east-west)*i/(nx-1);x,y=tile(lon,lat)
         r,g,b=tiles[int(x),int(y)].getpixel((int(x%1*256),int(y%1*256)))
         heights.append(round(r*256+g+b/256-32768,1))
-(D/'terrain.json').write_text(json.dumps({'bounds':[west,south,east,north],'nx':nx,'ny':ny,'elevations':heights,'source':'Mapzen / Tilezen terrain tiles on AWS; Terrarium z9','attribution':'Mapzen terrain tiles: © Mapzen, data from SRTM and other sources; see https://www.mapzen.com/rights/','note':'Regional resampling; elevation metres. Not survey-grade. Heights below sea level retained.'},separators=(',',':')))
+terrain = corrected_terrain({'bounds':[west,south,east,north],'nx':nx,'ny':ny,'elevations':heights,'source':'Mapzen / Tilezen terrain tiles on AWS; Terrarium z9'})
+(D/'terrain.json').write_text(json.dumps(terrain,separators=(',',':')))
 (ROOT/'evidence/downloads.json').write_text(json.dumps(receipts,indent=2))
 print('Terrain complete:',len(heights),'samples',min(heights),max(heights),flush=True)

@@ -1,5 +1,5 @@
 import fs from 'node:fs';import assert from 'node:assert/strict';import path from 'node:path';import crypto from 'node:crypto';
-const root='dist';const files=[];function walk(p){for(const e of fs.readdirSync(p,{withFileTypes:true})){const f=path.join(p,e.name);if(e.isDirectory())walk(f);else files.push(f);}}walk(root);
+const root='dist';const files=[];function walk(p){for(const e of fs.readdirSync(p,{withFileTypes:true})){if(e.name==='.DS_Store')continue;const f=path.join(p,e.name);if(e.isDirectory())walk(f);else files.push(f);}}walk(root);
 const index=fs.readFileSync('dist/index.html','utf8');for(const m of index.matchAll(/(?:src|href)="(\.\/[^"#?]+)"/g))assert(fs.existsSync(path.join(root,m[1])),m[1]);
 assert(fs.statSync('dist/downloads/NSW-Coal-Atlas.blend').size>100000);assert(!files.some(f=>fs.statSync(f).size>25*1024*1024),'Cloudflare single asset limit');
 const manifest=files.map(file=>({file,bytes:fs.statSync(file).size,sha256:crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')}));fs.writeFileSync('evidence/artifact-manifest.json',JSON.stringify({created:new Date().toISOString(),files:manifest},null,2));console.log('Static entrypoint, local links, Blender download, asset size and SHA-256 manifest checked:',files.length,'files');

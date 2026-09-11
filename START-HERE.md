@@ -13,4 +13,4 @@ The underground coal surfaces remain illustrative. Real surface mapping and mode
 
 The earlier [private hosted viewer](https://nsw-coal-underground-atlas.post-12-5421.chatgpt.site) still contains the previous version. This local upgrade has not been deployed there.
 
-Version 2.1: 83 model, browser and Blender checks passed. The latest packaged download is NSW-Coal-Atlas-v2.1.zip in the parent folder.
+Version 2.1: 96 model, terrain, browser and Blender checks passed after the 12 September terrain correction. Use the files in this repository for the corrected terrain and downloads; the older ZIP in the parent folder predates the correction.

@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Interactive educational coal atlas and editable Blender scene",
   "scripts": {
-    "test": "node scripts/test.mjs && node scripts/test_geology.mjs && node scripts/test_boreholes.mjs",
+    "test": "node scripts/test.mjs && node scripts/test_geology.mjs && node scripts/test_boreholes.mjs && python3 scripts/test_terrain.py",
     "serve": "python3 scripts/serve.py",
     "verify:browser": "node scripts/verify_ui.mjs",
     "verify:geology": "node scripts/verify_geology.mjs"

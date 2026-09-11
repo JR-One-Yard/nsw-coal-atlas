@@ -64,6 +64,14 @@
       "passed": true
     },
     {
+      "name": "Regional terrain matches corrected source samples including Yarra Bay at sea level",
+      "passed": true
+    },
+    {
+      "name": "Reviewed terrain correction provenance is embedded",
+      "passed": true
+    },
+    {
       "name": "Detailed local terrain preserves all browser elevation samples",
       "passed": true
     },
@@ -111,5 +119,5 @@
       38.20000076293945
     ]
   ],
-  "blendSHA256": "0a9da61ea27caf3bd8ec1f36303f60ff85de191802026723815d420680f821b0"
+  "blendSHA256": "dc17d0c5502707fa1e90c56a8eb00674ec2b54e2a398666a7f84f0bff3f9e69c"
 }

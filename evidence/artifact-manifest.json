@@ -1,15 +1,10 @@
 {
-  "created": "2026-09-11T08:02:16.947Z",
+  "created": "2026-09-11T16:25:59.401Z",
   "files": [
     {
-      "file": "dist/.DS_Store",
-      "bytes": 6148,
-      "sha256": "b0fedd24829880756d473c494af8d87188b0059f5b029676f4ab1a1b6aae2484"
-    },
-    {
       "file": "dist/app.js",
-      "bytes": 26180,
-      "sha256": "e1bc4735a3b723115a63df5fa33be908a2df645f119a3403632760f5170f468a"
+      "bytes": 26279,
+      "sha256": "b75b5a9894957811a77db6e6543b7902fdbcd73f8f755bddf3c7cf0a505e50c1"
     },
     {
       "file": "dist/atlas-v2.css",
@@ -28,8 +23,8 @@
     },
     {
       "file": "dist/data/atlas.json",
-      "bytes": 1138336,
-      "sha256": "bee94a0ee2018dc51b45a9c9173807d322534d8c512664998a73a05f99aff27c"
+      "bytes": 1138362,
+      "sha256": "f2fce5f20ba8e3ba585f5158d7056b59ed2d9e0b103223a6eb0bc32de70f578c"
     },
     {
       "file": "dist/data/borehole-picks.json",
@@ -67,19 +62,24 @@
       "sha256": "38ad2adc6b717b9488e0c82079859811c9c8848764121991d35c62a779544a59"
     },
     {
+      "file": "dist/data/terrain-corrections.json",
+      "bytes": 3107,
+      "sha256": "45853df6e1c45bdae192cf021a7de5a1a811340395bb4972f1bb1ccc7e5ca698"
+    },
+    {
       "file": "dist/data/terrain.json",
-      "bytes": 342289,
-      "sha256": "5135b5bde48594656eb0f515a4c4730d5e67294ac44c9b31c5e6c9693e4bcd59"
+      "bytes": 342743,
+      "sha256": "b56a1d8d184b4a60e3ae77a0d3e2072a85e139b6b5b587b257daf3c22e57a84d"
     },
     {
       "file": "dist/downloads/NSW-Coal-Atlas.blend",
-      "bytes": 7792517,
-      "sha256": "0a9da61ea27caf3bd8ec1f36303f60ff85de191802026723815d420680f821b0"
+      "bytes": 7795248,
+      "sha256": "dc17d0c5502707fa1e90c56a8eb00674ec2b54e2a398666a7f84f0bff3f9e69c"
     },
     {
       "file": "dist/downloads/NSW-Coal-Flythrough.mp4",
-      "bytes": 7194216,
-      "sha256": "2f075cb12186223c40d2204017f167ebbb5e04544da9e1ebfc10242b7a48937e"
+      "bytes": 15139218,
+      "sha256": "c2555c2ac67649c862b32bd8f5e5a54a85ee3d1ce53add63e278475b0d491caf"
     },
     {
       "file": "dist/geology-model.js",
