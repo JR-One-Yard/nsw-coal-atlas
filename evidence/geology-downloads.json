@@ -1,0 +1,128 @@
+[
+  {
+    "url": "https://gs-seamless.geoscience.nsw.gov.au/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geology%3Afaults_nsw&outputFormat=application%2Fjson&srsName=EPSG%3A4326&count=1000&startIndex=0&bbox=150.55%2C-34.56%2C151.12%2C-34.02%2Curn%3Aogc%3Adef%3Acrs%3AOGC%3A1.3%3ACRS84",
+    "file": "cache/geology/faults-0.geojson",
+    "bytes": 713109,
+    "sha256": "aeea983ccb3cbec1b5a03d57df568573e5ead94b99680fb49d2a2d698c1808da"
+  },
+  {
+    "url": "https://gs-seamless.geoscience.nsw.gov.au/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geology%3Afaults_nsw&outputFormat=application%2Fjson&srsName=EPSG%3A4326&count=1000&startIndex=1000&bbox=150.55%2C-34.56%2C151.12%2C-34.02%2Curn%3Aogc%3Adef%3Acrs%3AOGC%3A1.3%3ACRS84",
+    "file": "cache/geology/faults-1000.geojson",
+    "bytes": 633867,
+    "sha256": "a905a0367357497067c7a899d01e445d8ea709ede64220e59f639f7e392a83e9"
+  },
+  {
+    "url": "https://gs-seamless.geoscience.nsw.gov.au/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geology%3Arock_units_nsw&outputFormat=application%2Fjson&srsName=EPSG%3A4326&count=1000&startIndex=0&bbox=150.55%2C-34.56%2C151.12%2C-34.02%2Curn%3Aogc%3Adef%3Acrs%3AOGC%3A1.3%3ACRS84",
+    "file": "cache/geology/surface-0.geojson",
+    "bytes": 5847822,
+    "sha256": "54f8c515b782653bc6058cc7c55774966d634bcd25bed4815b1754baa2a08c0f"
+  },
+  {
+    "url": "https://gs-seamless.geoscience.nsw.gov.au/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geology%3Arock_units_nsw&outputFormat=application%2Fjson&srsName=EPSG%3A4326&count=1000&startIndex=1000&bbox=150.55%2C-34.56%2C151.12%2C-34.02%2Curn%3Aogc%3Adef%3Acrs%3AOGC%3A1.3%3ACRS84",
+    "file": "cache/geology/surface-1000.geojson",
+    "bytes": 5357349,
+    "sha256": "95efa763b8de06804401749c65816f62d4d68a22ba371d21222e4f8ccbaff5ff"
+  },
+  {
+    "url": "https://gs-seamless.geoscience.nsw.gov.au/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geology%3Arock_units_nsw&outputFormat=application%2Fjson&srsName=EPSG%3A4326&count=1000&startIndex=2000&bbox=150.55%2C-34.56%2C151.12%2C-34.02%2Curn%3Aogc%3Adef%3Acrs%3AOGC%3A1.3%3ACRS84",
+    "file": "cache/geology/surface-2000.geojson",
+    "bytes": 158569,
+    "sha256": "9299c14427243079582d9df7ac3d7ee8c7cbab4d8e0cfa91779f9ac944956d5c"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1880/1230.png",
+    "file": "cache/geology/terrain-11-1880-1230.png",
+    "bytes": 49795,
+    "sha256": "4bd6b52f44960097d4d74fef4772c96033d6b397bc900b7ae9ac3291939c9901"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1880/1231.png",
+    "file": "cache/geology/terrain-11-1880-1231.png",
+    "bytes": 49462,
+    "sha256": "5c20a8bf4ec1e3f962e2c3643b7761d2f436550e7b2cf6f105b3d4bd95b3088e"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1880/1232.png",
+    "file": "cache/geology/terrain-11-1880-1232.png",
+    "bytes": 52397,
+    "sha256": "19154164dd4075900fe87ed80bb7648dfad3d1711829c9d67ffc292ce2e0f0de"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1880/1233.png",
+    "file": "cache/geology/terrain-11-1880-1233.png",
+    "bytes": 47756,
+    "sha256": "6b1b4ae952387aad796b6c4ea2d6248bb053ca167f1c75aef4083acf1688ba7b"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1881/1230.png",
+    "file": "cache/geology/terrain-11-1881-1230.png",
+    "bytes": 39864,
+    "sha256": "9584b7823ec01180ab3858f1db85181e5842704cd3056d2957f104ec33daa578"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1881/1231.png",
+    "file": "cache/geology/terrain-11-1881-1231.png",
+    "bytes": 47046,
+    "sha256": "8858323d1830b9d4b3c965343d062dedd49723cc7b4c631e050f5531850c5543"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1881/1232.png",
+    "file": "cache/geology/terrain-11-1881-1232.png",
+    "bytes": 56234,
+    "sha256": "b000145b81120aea95ba56b49ffcdf2ad7d59e897c19ea27c454b1d88758babb"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1881/1233.png",
+    "file": "cache/geology/terrain-11-1881-1233.png",
+    "bytes": 52466,
+    "sha256": "a50566c3b4a8007e81d08d8df22d2a8f0b2b4bfce1c1e37fa441f62901b39cef"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1882/1230.png",
+    "file": "cache/geology/terrain-11-1882-1230.png",
+    "bytes": 51378,
+    "sha256": "8d46089a5b5710689aa1ba0b3d6980bcbe7848cb3976fcef7f10a92feec9ea4d"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1882/1231.png",
+    "file": "cache/geology/terrain-11-1882-1231.png",
+    "bytes": 48287,
+    "sha256": "b59e8ccbe79d7e5deddd957529a630e0a2d9fde671ee733d7ba7f3bd8198a0a8"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1882/1232.png",
+    "file": "cache/geology/terrain-11-1882-1232.png",
+    "bytes": 32110,
+    "sha256": "16b06d05cd89faa1e3943ce4e52b90d24dbf0d294a21f701d81e519152393022"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1882/1233.png",
+    "file": "cache/geology/terrain-11-1882-1233.png",
+    "bytes": 25273,
+    "sha256": "50c62f419a9cdb0f02be6dd24826e947bd35f07ac61c0f4d62456688c2d6e888"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1883/1230.png",
+    "file": "cache/geology/terrain-11-1883-1230.png",
+    "bytes": 51032,
+    "sha256": "a50e2f27b6320583be2e65e235ce6cb2e8dca39e554a815856e640c5c84e20c9"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1883/1231.png",
+    "file": "cache/geology/terrain-11-1883-1231.png",
+    "bytes": 12203,
+    "sha256": "c0fe644457e9d678e001e4f1cb9ae0a2e81a4d8c53de5d31a87b53e17068ab6e"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1883/1232.png",
+    "file": "cache/geology/terrain-11-1883-1232.png",
+    "bytes": 757,
+    "sha256": "4fcfdd8fbc702879e491242fc08d77e6305ca6c6847fb360c6e0994e40adf9bc"
+  },
+  {
+    "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/11/1883/1233.png",
+    "file": "cache/geology/terrain-11-1883-1233.png",
+    "bytes": 757,
+    "sha256": "4fcfdd8fbc702879e491242fc08d77e6305ca6c6847fb360c6e0994e40adf9bc"
+  }
+]
