@@ -84,7 +84,7 @@ GSNSW NSW Seamless Geology and mine records: CC BY 4.0, Geological Survey of New
 
 The isolated Yarra Bay peak (826 m) and a Hawkesbury water-area pit (−1,284 m) were replaced with zero-valued samples checked against Geoscience Australia’s DEM service. `dist/data/terrain-corrections.json` preserves coordinates, original values, responses and attribution. Zero represents the DEM water surface, not measured seabed depth. `scripts/terrain_quality.py` applies this reviewed ledger during acquisition and rejects new isolated extremes for review. It does not smooth the terrain.
 
-Run `python3 scripts/test_terrain.py` and `node scripts/verify_terrain.mjs` for the targeted regression checks. The Blender scene and regional movie were regenerated after correction. The complete current verification set contains 96 checks.
+Run `python3 scripts/test_terrain.py` and `node scripts/verify_terrain.mjs` for the targeted regression checks. The Blender scene and regional movie were regenerated after correction. The terrain increment brought the verification set to 96 checks; the commercial increment below brings the retained total to 120.
 
 ## Commercial insights — version 2.2
 
@@ -95,3 +95,5 @@ Select up to four inventory rows and choose **Open comparison**. The shortlist s
 **Revenue lab** calculates gross revenue from saleable volume (Mt), an assumed realised price (USD/t) and FX (USD per AUD). Load a published complex volume or enter your own. The 3×3 matrix varies price and FX; CSV export includes assumptions and source context. Defaults are illustrative, not live quotes. Costs, royalties, taxes and hedging are excluded.
 
 Run `node scripts/test_commercial.mjs` and `npm run verify:commercial`. The 30-idea evaluation and 15 actionable plans are in `docs/COMMERCIAL-IDEAS.md`; `docs/COMMERCIAL-BACKLOG.md` indexes the br records. The first five features are implemented; ten remain future commercial work. No extra scientific-validation programme was added.
+
+The original [private hosted viewer](https://nsw-coal-underground-atlas.post-12-5421.chatgpt.site) now serves the corrected terrain and commercial increment. Sites confirmed publication of commercial commit `cc87972`; `evidence/commercial-deployment.json` retains the deployment receipt.

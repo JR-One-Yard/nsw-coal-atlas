@@ -53,7 +53,7 @@ Desktop and mobile screenshots plus fresh Blender chapter renders are retained. 
 
 ## Delivery status
 
-Use `launch.command` for the upgraded local viewer. The private hosted URL in the original handover was published for version 1; this upgrade has not been deployed there. `START-HERE.md` makes that distinction explicit.
+Use `launch.command` for the upgraded local viewer, or the original private hosted URL for the published commercial increment. Sites confirmed successful publication on 12 September 2026; see the deployment receipt below and `START-HERE.md`.
 
 The updated Blender download includes the published surface map and source metadata, with separate fault edges initially hidden. The MP4 is a silent recording of the regional tour; the new five-step guide is available interactively, with text explanations.
 
@@ -87,3 +87,11 @@ The pure commercial model and browser reports each contain 12 checks. Together w
 Finished the comparison destination wording browser verification. The twelve commercial browser scenarios now also exercise denied storage, shortlist removal, keyboard operator filtering and all three mobile tabs. All 52 model/unit checks pass; the retained overall suite count remains 120. Refreshed the 29-file artifact manifest and closed the first five br features plus their ten child tasks. Ten later commercial features remain planned.
 
 The configured original Sites project is accessible again in this session with owner-only access. The earlier NOT_FOUND blocker no longer reproduces. Publication success must be confirmed by a terminal Sites deployment result; account access alone is not deployment.
+
+## Publication verified — 12 September 2026
+
+Commercial commit `cc879725c56136330b1a457ad5962891752ab384` was committed on `feat/commercial-insights`, fast-forward merged into `main`, and pushed to both GitHub branches and the original Sites source repository. The configured project ID was preserved; no replacement site was created and owner-only access was retained. Sites version 2 completed with terminal status `succeeded` at 2026-09-11T18:11:22Z (12 September in Sydney).
+
+Live URL: https://nsw-coal-underground-atlas.post-12-5421.chatgpt.site
+
+`evidence/commercial-deployment.json` records the source commit, exact project/version/deployment IDs, URL and terminal result. All 29 manifest assets were checked against the deployment archive. Browser verification ran on the matching local assets; deployment verification is the Sites terminal result. This publication includes both terrain commit `62cbe56` and the five commercial features. A subsequent documentation-only commit records this receipt; it does not change deployed assets.
