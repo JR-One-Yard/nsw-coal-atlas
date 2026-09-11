@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-11",
+  "url": "https://d28rz98at9flks.cloudfront.net/149324/149324_01_0.zip",
+  "archiveSHA256": "9bb348d36f142e27919949081fa50cac8cd0ea24be8dad566952128349946730",
+  "members": [
+    "ABSUC_BOREHOLE_v2.txt",
+    "ABSUC_TOP_v2.txt",
+    "ABSUC_BASE_v2.txt"
+  ],
+  "bounds": [
+    150.45,
+    -34.65,
+    152.05,
+    -32.45
+  ],
+  "stats": {
+    "bores": 569,
+    "preferredTops": 4955,
+    "preferredBases": 4479,
+    "uniqueRecords": 5105
+  },
+  "metadataUrl": "https://d28rz98at9flks.cloudfront.net/149324/149324_00_1.pdf"
+}

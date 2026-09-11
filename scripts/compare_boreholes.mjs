@@ -1,0 +1,7 @@
+// Diagnostic differences only: the illustrative model datum has not been reconciled to AHD.
+import fs from 'node:fs';import {geo} from '../dist/model.js';import {meshHeight} from '../dist/geology-model.js';import {PICK_SEAMS} from '../dist/borehole-model.js';
+const a=JSON.parse(fs.readFileSync('dist/data/atlas.json')),b=JSON.parse(fs.readFileSync('dist/data/borehole-picks.json')),rows=[];
+for(const bore of b.bores){if(/horizontal|deviated|directional|inclined/i.test(bore.comment))continue;const p=geo(bore.lon,bore.lat);
+ for(const pick of bore.picks){const seam=a.seams.find(s=>s.id===PICK_SEAMS[pick.unit]);if(!seam||!pick.preferredTop||!Number.isFinite(pick.topAHD))continue;const h=meshHeight(seam.mesh,p[0],p[2]);if(h===null)continue;rows.push({bore:bore.name,boreId:bore.id,pickId:pick.id,seam:seam.id,lon:bore.lon,lat:bore.lat,datumName:bore.datumName,reportedTopAHD:pick.topAHD,illustrativeModelElevation:h,modelMinusReported:h-pick.topAHD,source:pick.source});}
+}
+const out={created:new Date().toISOString(),notice:'Diagnostic comparison, not a validated error estimate. Model sea-level reference is not reconciled with AHD; reported picks are not deviation-corrected, and original logs/correlations require review. No geometry was fitted or altered.',rows};fs.writeFileSync('evidence/borehole-model-comparison.json',JSON.stringify(out,null,2));console.log(rows.length,'diagnostic comparisons');console.log(rows.find(r=>r.bore==='Cordeaux River 1'&&r.seam==='bulli'));

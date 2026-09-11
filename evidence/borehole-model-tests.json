@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-11T07:56:42.335Z",
+  "checks": [
+    {
+      "name": "Regional ABSUC subset preserves all source records and original identifiers",
+      "passed": true
+    },
+    {
+      "name": "Known source pick preserves MD, AHD and drilling reference rather than treating MD as depth below ground",
+      "passed": true
+    },
+    {
+      "name": "Suspect, missing and independently selected bases never become accepted interval ends",
+      "passed": true
+    },
+    {
+      "name": "Section projection uses perpendicular distance, respects ends and excludes known horizontal holes",
+      "passed": true
+    },
+    {
+      "name": "Real Illawarra section exposes reported coal evidence without altering the illustrative model",
+      "passed": true
+    }
+  ]
+}

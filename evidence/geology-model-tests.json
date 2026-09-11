@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-11T07:56:42.213Z",
+  "checks": [
+    {
+      "name": "Triangle interpolation returns the known planar height and preserves outside gaps",
+      "passed": true
+    },
+    {
+      "name": "Terrain sampling uses metres, correct north/south orientation, and explicit no coverage",
+      "passed": true
+    },
+    {
+      "name": "Mapped feature index matches dimensions and every nonzero ID exists",
+      "passed": true
+    },
+    {
+      "name": "Mapped lookup respects bounds and exposes source unit attributes",
+      "passed": true
+    },
+    {
+      "name": "Each preset produces finite increasing distances without filling missing seam coverage",
+      "passed": true
+    },
+    {
+      "name": "Section southern seam elevations retain the shared model order",
+      "passed": true
+    },
+    {
+      "name": "Fine terrain spans exactly the mapped geology extent and has complete finite heights",
+      "passed": true
+    },
+    {
+      "name": "Every downloaded coal registry record appears once in the industry inventory",
+      "passed": true
+    },
+    {
+      "name": "Industry links and metrics retain resolvable citations, periods and aggregation basis",
+      "passed": true
+    },
+    {
+      "name": "Stratigraphic exposure matching uses published parentage and keeps missing units explicit",
+      "passed": true
+    },
+    {
+      "name": "Fault intersections retain source evidence, direction and distinct crossings without vertex duplicates",
+      "passed": true
+    }
+  ]
+}
