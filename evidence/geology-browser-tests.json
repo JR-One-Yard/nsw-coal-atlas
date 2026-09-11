@@ -1,0 +1,71 @@
+{
+  "date": "2026-09-11T08:01:24.164Z",
+  "checks": [
+    {
+      "name": "Detailed mapped geology and local elevation load",
+      "passed": true
+    },
+    {
+      "name": "Selecting a filtered-out mine reveals it and its connections",
+      "passed": true
+    },
+    {
+      "name": "Five-step field guide opens the linked section and stratigraphy",
+      "passed": true
+    },
+    {
+      "name": "Section selection highlights the same seam in 3D and the column",
+      "passed": true
+    },
+    {
+      "name": "Stratigraphy highlights published exposures and honestly reports absent mapping",
+      "passed": true
+    },
+    {
+      "name": "Mapped section fault crossings expose their actual source description",
+      "passed": true
+    },
+    {
+      "name": "Borehole evidence preserves reference depths, searchable logs and source flags",
+      "passed": true
+    },
+    {
+      "name": "Section overlays show source pick diamonds and open the corresponding borehole",
+      "passed": true
+    },
+    {
+      "name": "True-scale view and exported SVG include model limitations and source attribution",
+      "passed": true
+    },
+    {
+      "name": "Custom sections validate endpoints and retain coverage gaps",
+      "passed": true
+    },
+    {
+      "name": "Faults and display separation are explicit independent controls",
+      "passed": true
+    },
+    {
+      "name": "Statewide inventory contains every downloaded coal record and supports search",
+      "passed": true
+    },
+    {
+      "name": "Unknown search has an empty state; CSV exports the filtered records",
+      "passed": true
+    },
+    {
+      "name": "Mobile lesson, section and strata remain accessible without horizontal page overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile borehole search, reference and log remain readable",
+      "passed": true
+    },
+    {
+      "name": "All new datasets and modules loaded without browser errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "bad": []
+}

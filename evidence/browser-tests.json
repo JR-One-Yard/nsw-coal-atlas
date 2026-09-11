@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-11T00:18:52.999Z",
+  "date": "2026-09-11T07:58:42.402Z",
   "checks": [
     {
       "name": "WebGL renders a populated scene",
@@ -119,8 +119,18 @@
       "rixscreek-newcastleport",
       "chainvalley-vales"
     ],
-    "frameCount": 142,
-    "triangles": 252652,
+    "frameCount": 187,
+    "camera": [
+      22.989899903569494,
+      43.85,
+      127.11640000000034
+    ],
+    "target": [
+      -28.760100096430506,
+      -0.15,
+      85.71640000000035
+    ],
+    "triangles": 514796,
     "renderedSeams": [
       "central",
       "wallarah",
