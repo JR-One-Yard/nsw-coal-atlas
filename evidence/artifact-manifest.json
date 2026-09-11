@@ -1,15 +1,15 @@
 {
-  "created": "2026-09-11T16:55:07.940Z",
+  "created": "2026-09-11T23:01:39.634Z",
   "files": [
     {
       "file": "dist/app.js",
-      "bytes": 26279,
-      "sha256": "b75b5a9894957811a77db6e6543b7902fdbcd73f8f755bddf3c7cf0a505e50c1"
+      "bytes": 25516,
+      "sha256": "2703e44b94174c07be74ac9eb7ad04ded62afc0e18feee0662670e383c7d8095"
     },
     {
       "file": "dist/atlas-v2.css",
-      "bytes": 13075,
-      "sha256": "e83b6c4e3fe63774186158c934791866f161d741cc7c0f26f3481ce136530909"
+      "bytes": 5859,
+      "sha256": "5536cd875b57da9e834e4219fb3fc86e70a7bd5470fd4a4e8e638016db328533"
     },
     {
       "file": "dist/borehole-model.js",
@@ -18,23 +18,13 @@
     },
     {
       "file": "dist/boreholes.js",
-      "bytes": 7514,
-      "sha256": "4cc6a14f992737b54dea15e522cc1d583db0187c50d425b06d39626ba3bc3af6"
+      "bytes": 7288,
+      "sha256": "7354c2892d0a019afa8a031704fd734074104c864ade296573f222897fd4b62a"
     },
     {
       "file": "dist/commercial-model.js",
       "bytes": 4703,
       "sha256": "6bbf6d4cbb9a76d9ae652e14e82624621519cc2a056bc785e1c5842723722559"
-    },
-    {
-      "file": "dist/commercial.css",
-      "bytes": 7161,
-      "sha256": "8925936b89c1a2e92522996be920fb7038a32babe37de9029fdc98054bc99ecb"
-    },
-    {
-      "file": "dist/commercial.js",
-      "bytes": 15241,
-      "sha256": "fb81732d4a64ade2a723882050be791536a391eb4fd5f8026e84847625f1dc8e"
     },
     {
       "file": "dist/data/atlas.json",
@@ -103,28 +93,33 @@
     },
     {
       "file": "dist/geology.js",
-      "bytes": 36878,
-      "sha256": "48594157f448caf87807329021e73365c70f30cc46334325d5477d8dbbefa2a9"
+      "bytes": 29263,
+      "sha256": "68e3aa47825effde0c9bb8bb9f2c882ba9947e7f557ddcec1cec8f582451fd23"
     },
     {
       "file": "dist/index.html",
-      "bytes": 5736,
-      "sha256": "6a5b78a57e3a233375bfd187ce445bad47af5e8d06ea3f507ffccc26e3e5bd55"
+      "bytes": 4262,
+      "sha256": "7e9c4f4dcb2f4721b12b9421a183cd69659fb05107b3720061fa0d3cc148aea2"
     },
     {
       "file": "dist/industry.js",
-      "bytes": 9955,
-      "sha256": "2ce7f82611933025db602c7bd757b0718b0e454b9a14c846d0a4b4e41d325ad5"
+      "bytes": 8172,
+      "sha256": "a73a3bc1803cb2a9981c95e26cc89bc375e3b1d966ca77f5a644ccfa7310da73"
     },
     {
       "file": "dist/model.js",
-      "bytes": 1665,
-      "sha256": "c9533e48f996d044e68e22e7f5abbc7b35d5949375fa0c083ef32f5b3cdb6e65"
+      "bytes": 1618,
+      "sha256": "2fd5c6f7a486b38638d358662d496e0b2bc7a64048649583a92bbdd25dab1d71"
+    },
+    {
+      "file": "dist/navigation.js",
+      "bytes": 1525,
+      "sha256": "354e3ffec853bc5df01e330ea739096a57dad1813a2ef676db5be810821f4e52"
     },
     {
       "file": "dist/style.css",
-      "bytes": 8409,
-      "sha256": "0c058c1b266a6b2778f99bcef20cdc4cf4571c177c303c1043e250f602d0d478"
+      "bytes": 7204,
+      "sha256": "b5b773a2daa7531e2306812d122e481c450623e860a617df3c1513c1f753b252"
     },
     {
       "file": "dist/vendor/OrbitControls.js",

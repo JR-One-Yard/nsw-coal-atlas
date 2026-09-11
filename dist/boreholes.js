@@ -3,20 +3,20 @@ const $=id=>document.getElementById(id),esc=value=>String(value??'').replace(/[&
 const number=v=>Number.isFinite(v)?v.toFixed(1):'—';
 export async function initBoreholes(api){
  const response=await fetch('./data/borehole-picks.json');if(!response.ok)throw Error('Borehole evidence unavailable');const data=await response.json();let current=null;
- $('openStrata').parentElement.insertAdjacentHTML('afterend','<button id="openBoreholes" class="bore-launch">Borehole evidence ↗</button>');
+
  $('sectionCoordinates').insertAdjacentHTML('beforebegin','<label class="pick-control"><input id="sectionPicks" type="checkbox"> Reported coal tops within 1 km of section</label><p id="pickWarning" class="micro" hidden>Diamonds are reported AHD picks projected onto the line. Depths are not deviation-corrected; known horizontal/deviated holes are excluded. Model height references have not been reconciled to AHD. These picks have not been used to fit the model.</p>');
  $('sectionPicks').onchange=()=>{$('pickWarning').hidden=!$('sectionPicks').checked;api.renderSection();};
  $('sourceBody').insertAdjacentHTML('afterbegin',`<h3>Borehole stratigraphic evidence · ABSUC 2024 v2</h3><p>${data.stats.bores} boreholes and ${data.stats.preferredTops.toLocaleString()} preferred top picks fall inside the atlas. They retain measured depth, AHD elevation, drill reference, compiler flags and source identifiers. The collection includes coal and non-coal units.</p><p>${esc(data.warning)}</p><p>${esc(data.citation)} CC BY 4.0. <a href="${data.url}" target="_blank" rel="noopener">Dataset</a> · <a href="${data.metadataUrl}#page=5" target="_blank" rel="noopener">Method and limitations (p. 5)</a> · <a href="./data/borehole-picks.json" download>Download regional picks</a></p>`);
  function open(id){
-  current=data.bores.find(b=>b.id===id)||data.bores.find(b=>b.name==='Cordeaux River 1')||data.bores[0];api.showPanel();$('details').classList.add('bore-active');$('details').scrollTop=0;
-  $('detailBody').innerHTML=`<span class="evidence-badge mapped">PUBLISHED BOREHOLE INTERPRETATIONS</span><h2>Read a borehole</h2><p class="micro">${data.stats.bores} locations · ${data.stats.preferredTops.toLocaleString()} preferred formation tops</p><label for="boreSearch" class="sr-only">Search boreholes</label><input id="boreSearch" type="search" placeholder="Search borehole or unit…"><label class="sr-only" for="boreSelect">Choose a borehole</label><select id="boreSelect"></select><p id="boreCount" class="micro" aria-live="polite"></p><div id="boreProfile"></div>`;
+  current=data.bores.find(b=>b.id===id)||data.bores.find(b=>b.name==='Cordeaux River 1')||data.bores[0];api.showPanel();$('detailHeading').textContent='Borehole logs';$('details').scrollTop=0;
+  $('detailBody').innerHTML=`<p class="micro">${data.stats.bores} locations · ${data.stats.preferredTops.toLocaleString()} preferred formation tops</p><label for="boreSearch" class="sr-only">Search boreholes</label><input id="boreSearch" type="search" placeholder="Search borehole or unit…"><label class="sr-only" for="boreSelect">Choose a borehole</label><select id="boreSelect"></select><p id="boreCount" class="micro" aria-live="polite"></p><div id="boreProfile"></div>`;
   $('boreSearch').oninput=filter;filter();profile();
  }
  function filter(){
   const q=$('boreSearch').value.toLowerCase().trim(),bores=data.bores.filter(b=>[b.name,b.uwi,...b.picks.map(p=>p.unit)].join(' ').toLowerCase().includes(q));
   $('boreSelect').innerHTML=bores.map(b=>`<option value="${esc(b.id)}">${esc(b.name)}</option>`).join('');$('boreCount').textContent=`${bores.length} matching boreholes`;
   $('boreSelect').disabled=!bores.length;
-  if(bores.some(b=>b.id===current?.id))$('boreSelect').value=current.id;
+  if(bores.some(b=>b.id===current?.id)){$('boreSelect').value=current.id;profile();}
   else if(bores.length){current=bores[0];profile();}else{$('boreProfile').innerHTML='<p>No matching borehole. Try a name or formation.</p>';}
   $('boreSelect').onchange=()=>{current=data.bores.find(b=>b.id===$('boreSelect').value);profile();};
  }

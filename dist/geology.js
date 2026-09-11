@@ -1,3 +1,4 @@
+import {openPanel,closePanels} from './navigation.js';
 import {initBoreholes} from './boreholes.js';
 import {TRANSECTS,STRATIGRAPHY,GEOLOGY_SOURCES,terrainHeight,sampleSection,mappedUnitAt,within,matchesStratigraphy,faultCrossings} from './geology-model.js';
 
@@ -14,7 +15,7 @@ export async function initGeology(api) {
   ]);
   const dv=new DataView(indexBuffer),index=Uint16Array.from({length:indexBuffer.byteLength/2},(_,i)=>dv.getUint16(i*2,true));
   texture.colorSpace=THREE.SRGBColorSpace;
-  const gs={surface:true,faults:false,colour:'unit',open:false,explode:0,transect:0,step:-1,draw:false,points:[],inspect:false};
+  const gs={surface:true,faults:false,open:false,transect:0,inspect:false};
   let section,lastSectionKey='',lastSyncKey='',selectedUnit=null,curtain=null,sectionLine=null,cursorMarker=null,surfaceFocus=null,crossings=[],boreholes=null,boreMarker=null;
 
   // Replace the coarse surface inside the local tile, so the two meshes do not overlap.
@@ -28,7 +29,7 @@ export async function initGeology(api) {
   for(let j=0;j<localTerrain.ny;j++)for(let i=0;i<localTerrain.nx;i++){
     const h=localTerrain.elevations[j*localTerrain.nx+i];
     positions.push(...geo(w+(e-w)*i/(localTerrain.nx-1),n-(n-s)*j/(localTerrain.ny-1),Math.max(0,h)));
-    const c=new THREE.Color(h<=0?'#143d53':h<20?'#73897a':h<150?'#648278':h<400?'#59776c':'#819783');
+    const c=new THREE.Color(h<=0?'#143d53':h<20?'#73897a':h<150?'#648278':h<400?'#59776c':'#81${W-R}3');
     colors.push(c.r,c.g,c.b);uv.push(i/(localTerrain.nx-1),1-j/(localTerrain.ny-1));
   }
   for(let j=0;j<localTerrain.ny-1;j++)for(let i=0;i<localTerrain.nx-1;i++){
@@ -59,22 +60,16 @@ export async function initGeology(api) {
   const fg=new THREE.BufferGeometry().setAttribute('position',new THREE.Float32BufferAttribute(faultPositions,3));
   const faultMesh=new THREE.LineSegments(fg,new THREE.LineBasicMaterial({color:'#fb6477',transparent:true,opacity:.9,clippingPlanes:[clipPlane]}));scene.add(faultMesh);
 
-  $('controls').insertAdjacentHTML('afterbegin',`<section class="lab-intro"><span class="eyebrow">GEOLOGY FIELD GUIDE</span><h2>Read the landscape</h2><p>Start above the escarpment. Follow the evidence underground.</p><button id="startLesson" class="primary">Explore Illawarra <span>↗</span></button></section><div class="geo-controls"><label><input id="surfaceMap" type="checkbox" checked> Mapped surface geology <span class="evidence-dot mapped" title="Published geological interpretation"></span></label><div id="surfaceFocus" hidden><p id="surfaceFocusText" class="micro" aria-live="polite"></p><button id="clearSurfaceFocus">Show all surface rocks</button></div><label><input id="mappedFaults" type="checkbox"> Mapped fault traces</label><div class="button-pair"><button id="openSection">Cross-section</button><button id="openStrata">Rock sequence</button></div><label class="range-label" for="colourMode">Underground colours</label><select id="colourMode"><option value="unit">Geological unit</option><option value="use">Coal use</option><option value="evidence">Evidence level</option></select><label class="range-label" for="explode">Separate coal layers <output id="explodeValue">Off</output></label><input id="explode" type="range" min="0" max="100" value="0"><p class="micro">Separation is a display aid. Cross-section elevations always show the original model.</p></div><div class="divider"></div>`);
-  $('stage').insertAdjacentHTML('beforeend',`<div id="geoToolbar"><button id="inspectSurface" aria-pressed="false">Inspect surface</button><button id="sectionShortcut">Section ↗</button><button id="hideUI" aria-pressed="false">Focus view</button></div><div id="geoNotice"><span class="evidence-dot mapped"></span> Illawarra surface: published mapping <span class="evidence-dot illustrative"></span> Underground: illustrative</div><section id="sectionPanel" hidden aria-label="Linked geological cross-section"><div class="section-heading"><div><span class="eyebrow">CUT THROUGH THE LANDSCAPE</span><h2 id="sectionTitle">Plateau to coast</h2></div><button id="closeSection" aria-label="Close cross-section">×</button></div><div class="section-tools"><label class="sr-only" for="transect">Cross-section location</label><select id="transect">${TRANSECTS.map((t,i)=>`<option value="${i}">${t.name}</option>`).join('')}<option value="custom">Custom line</option></select><button id="drawSection">Draw line on terrain</button><button id="sectionScale" aria-pressed="false">True scale</button><button id="exportSection">Export SVG</button></div><details id="sectionCoordinates"><summary>Set endpoints by coordinates</summary><div>${['aLon','aLat','bLon','bLat'].map((id,i)=>`<label>${['A longitude','A latitude','B longitude','B latitude'][i]}<input id="${id}" type="number" step="0.001" value="${[150.66,-34.30,151.02,-34.30][i]}"></label>`).join('')}<button id="applySection">Apply</button></div></details><p id="sectionMessage" class="micro" aria-live="polite"></p><div id="sectionChart"></div><details id="sectionFaults" hidden><summary id="sectionFaultCount"></summary><div id="sectionFaultList"></div></details><p id="sectionReadout" class="micro" aria-live="off">Move across the section to inspect model elevations. Click a seam to select it.</p></section><article id="lesson" hidden><div><span id="lessonNumber" class="eyebrow"></span><button id="endLesson" aria-label="Close geological lesson">×</button></div><h2 id="lessonTitle"></h2><details id="lessonExplanation" open><summary>Read the explanation</summary><p id="lessonText"></p></details><div class="lesson-nav"><button id="previousLesson">← Back</button><div id="lessonDots"></div><button id="nextLesson" class="primary">Continue →</button></div></article>`);
-  $('details').insertAdjacentHTML('afterbegin',`<div class="detail-tabs"><button id="featureTab" aria-pressed="true">Feature</button><button id="strataTab" aria-pressed="false">Stratigraphy</button><button id="closeGeoDetails" aria-label="Close feature panel">×</button></div><section id="strataPanel" hidden></section>`);
-  $('sourceBody').insertAdjacentHTML('afterbegin',`<div class="geology-source-note"><h3>New · Illawarra geological mapping</h3><p>${surface.units.length.toLocaleString()} rock-unit polygons and ${surface.faults.length.toLocaleString()} fault segments from GSNSW Seamless Geology, downloaded ${surface.date}. CC BY 4.0, Geological Survey of New South Wales. Local elevation uses Mapzen Terrarium z11 at 257 × 257 samples.</p><p>Mapped geology is a published interpretation. Fault traces are draped on the terrain; their underground dip and throw have not been inferred. The linked sections intersect the actual illustrative seam meshes. Published borehole picks are available in the evidence viewer and section overlay. They have not been used to fit the illustrative seams.</p><ul>${links()}</ul><a href="./data/surface-geology.json" download>Download mapped unit metadata and fault traces</a></div>`);
+  $('stage').insertAdjacentHTML('beforeend',`<section id="sectionPanel" hidden aria-label="Linked geological cross-section"><div class="section-heading"><div><h2 id="sectionTitle">Plateau to coast</h2></div><button id="closeSection" aria-label="Close cross-section">×</button></div><div class="section-tools"><label class="sr-only" for="transect">Cross-section location</label><select id="transect">${TRANSECTS.map((t,i)=>`<option value="${i}">${t.name}</option>`).join('')}<option value="custom">Custom line</option></select><button id="sectionScale" aria-pressed="false">True scale</button><button id="exportSection">Export SVG</button></div><details id="sectionCoordinates"><summary>Set endpoints by coordinates</summary><div>${['aLon','aLat','bLon','bLat'].map((id,i)=>`<label>${['A longitude','A latitude','B longitude','B latitude'][i]}<input id="${id}" type="number" step="0.001" value="${[150.66,-34.30,151.02,-34.30][i]}"></label>`).join('')}<button id="applySection">Apply</button></div></details><p id="sectionMessage" class="micro" aria-live="polite"></p><div id="sectionChart" tabindex="0" role="region" aria-label="Cross-section chart, scroll horizontally on small screens"></div><details id="sectionFaults" hidden><summary id="sectionFaultCount"></summary><div id="sectionFaultList"></div></details><p id="sectionReadout" class="micro" aria-live="off"></p></section>`);
+  $('sourceBody').insertAdjacentHTML('afterbegin',`<div class="geology-source-note"><h3>Illawarra geological mapping</h3><p>${surface.units.length.toLocaleString()} rock-unit polygons and ${surface.faults.length.toLocaleString()} fault segments from GSNSW Seamless Geology, downloaded ${surface.date}. CC BY 4.0, Geological Survey of New South Wales. Local elevation uses Mapzen Terrarium z11 at 257 × 257 samples.</p><p>Mapped geology is a published interpretation. Fault traces are draped on the terrain; their underground dip and throw have not been inferred. The linked sections intersect the actual illustrative seam meshes. Published borehole picks are available in the evidence viewer and section overlay. They have not been used to fit the illustrative seams.</p><ul>${links()}</ul><a href="./data/surface-geology.json" download>Download mapped unit metadata and fault traces</a></div>`);
 
+  $('stage').insertAdjacentHTML('beforeend','<div id="inspectHint" hidden role="status">Select a surface rock in Illawarra. <button id="stopInspect">Done</button></div>');
+  $('sectionPanel').insertAdjacentHTML('beforeend','<details id="sectionOptions"><summary>Section options</summary><div id="sectionOptionsBody"></div></details>');
+  $('sectionOptionsBody').append($('sectionCoordinates'),$('sectionFaults'));
+  $('sectionChart').before($('sectionOptions'));
   let trueScale=false,custom=null;
-  const lessons=[
-    {title:'Begin with the rocks you can see',text:'The coloured surface comes from NSW geological mapping. Inspect a patch to read its formation, rock type and age. The detailed elevation reveals the escarpment and the dissected plateau.',surface:true,opacity:100,section:false},
-    {title:'A landscape built from layers',text:'Read the younger sandstone and shale above the older coal measures. The rock sequence gives their order, not a universal thickness. Surface exposures change as valleys cut through the succession.',surface:true,opacity:85,section:false,strata:true},
-    {title:'Cut from the plateau to the coast',text:'The line on the landscape and the section below are linked. Ground height comes from elevation data; the coal lines intersect the same illustrative meshes you see in 3D. Their depths are model values.',surface:true,opacity:32,section:true},
-    {title:'Follow a seam—and its evidence',text:'Select Bulli, Balgownie or Wongawilli in the section. Compare reported borehole tops with the illustrative sheets using the section’s pick overlay. Open a diamond to inspect its depth reference and source. Mapped faults show structural context; they do not establish underground fault planes.',surface:false,opacity:15,section:true,faults:true},
-    {title:'From a coal seam to a working mine',text:'Dendrobium works the Wongawilli Seam. Follow the documented connections toward Port Kembla, then compare mines across NSW in the industry inventory. Supply links are schematic.',surface:false,opacity:30,section:false,mine:'dendrobium'},
-  ];
   function showStrata(show=true){
-    $('details').classList.remove('bore-active');
-    $('strataPanel').hidden=!show;$('strataTab').setAttribute('aria-pressed',String(show));$('featureTab').setAttribute('aria-pressed',String(!show));$('details').classList.toggle('strata-active',show);$('details').classList.add('open');
+    $('strataPanel').hidden=!show;$('detailBody').hidden=show;$('detailHeading').textContent=show?'Rock sequence':'Details';openPanel('details');
     if(!show)return;
     const id=surfaceFocus?.strataId||getSelected();
     const regional=gs.transect===2||gs.transect===3;
@@ -90,16 +85,17 @@ export async function initGeology(api) {
   }
   function setSection(open){
     gs.open=open;$('sectionPanel').hidden=!open;document.body.classList.toggle('section-open',open);
-    if(open){$('story').hidden=true;buildSection();}else{gs.draw=false;gs.points=[];}
+    if(open){closePanels();buildSection();}
     if(sectionLine)sectionLine.visible=open;if(curtain)curtain.visible=open;
-    $('openSection').setAttribute('aria-pressed',String(open));
+    $('openSection').setAttribute('aria-expanded',String(open));
+    if(!open)$('openSection').focus();
     requestAnimationFrame(()=>window.dispatchEvent(new Event('resize')));
   }
   function chosen(){return custom&&$('transect').value==='custom'?custom:TRANSECTS[gs.transect];}
   function buildSection(){
     const t=chosen(),key=JSON.stringify([t.a,t.b]);
     if(key!==lastSectionKey){section=sampleSection(data,terrain,localTerrain,t.a,t.b);lastSectionKey=key;crossings=faultCrossings(surface,t.a,t.b);rebuildCurtain();}
-    $('sectionTitle').textContent=t.name;
+    $('sectionTitle').textContent='Cross-section';
     [t.a[0],t.a[1],t.b[0],t.b[1]].forEach((v,i)=>$( ['aLon','aLat','bLon','bLat'][i]).value=v.toFixed(4));
     renderSection();
   }
@@ -116,7 +112,7 @@ export async function initGeology(api) {
   }
   function renderSection(){
     if(!section)return;
-    const state=getState(),selected=getSelected(),W=1000,H=234,L=63,R=22,top=28,bottom=194;
+    const state=getState(),selected=getSelected(),W=1000,H=234,L=88,R=48,top=28,bottom=194;
     const active=data.seams.filter(s=>state[s.tags[0]]||s.tags.some(t=>state[t])).filter(s=>state.seam==='all'||state.seam===s.id);
     const picks=(boreholes?.getSectionPicks(chosen().a,chosen().b)||[]).filter(p=>active.some(s=>s.id===p.seamId));
     const values=[...picks.map(p=>p.pick.topAHD),...section.samples.flatMap(s=>[s.ground,...active.map(f=>s.seams[f.id]).filter(v=>v!==null)])];
@@ -124,12 +120,12 @@ export async function initGeology(api) {
     const xScale=(W-L-R)/section.length,ve=trueScale?1:(bottom-top)/((max-min)/1000*xScale);
     const px=km=>L+km*xScale,py=h=>top+(max-h)/1000*xScale*ve;
     const path=values=>{let pen=false;return values.map((h,i)=>{if(h===null){pen=false;return '';}const command=pen?'L':'M';pen=true;return `${command}${px(section.samples[i].km).toFixed(2)},${py(h).toFixed(2)}`;}).join(' ');};
-    let content=`<rect width="${W}" height="${H}" fill="#0d202a"/><text x="${L}" y="14" fill="#9ab4c1" font-size="10">A · ${esc(chosen().labels?.[0]||'Start')}</text><text x="978" y="14" text-anchor="end" fill="#9ab4c1" font-size="10">${esc(chosen().labels?.[1]||'End')} · B</text>`;
+    let content=`<rect width="${W}" height="${H}" fill="#0d202a"/><text x="${L}" y="18" fill="#9ab4c1" font-size="16">A · ${esc(chosen().labels?.[0]||'Start')}</text><text x="${W-R}" y="18" text-anchor="end" fill="#9ab4c1" font-size="16">${esc(chosen().labels?.[1]||'End')} · B</text>`;
     for(let i=0;i<=4;i++){
       const h=min+(max-min)*i/4,y=py(h);
-      if(!trueScale||i===0||i===4)content+=`<path d="M${L},${y}H978" stroke="#29404b" stroke-width=".6"/><text x="54" y="${y+3}" text-anchor="end" fill="#9ab4c1" font-size="10">${Math.round(h)} m</text>`;
+      if(!trueScale||i===0||i===4)content+=`<path d="M${L},${y}H${W-R}" stroke="#29404b" stroke-width=".6"/><text x="${L-10}" y="${y+3}" text-anchor="end" fill="#9ab4c1" font-size="16">${Math.round(h)} m</text>`;
     }
-    content+=`<path d="${path(section.samples.map(s=>s.ground))} L978,${py(min)} L${L},${py(min)} Z" fill="#667b722b"/><path d="M${L},${py(0)}H978" stroke="#547f91" stroke-dasharray="4 4"/>`;
+    content+=`<path d="${path(section.samples.map(s=>s.ground))} L${W-R},${py(min)} L${L},${py(min)} Z" fill="#667b722b"/><path d="M${L},${py(0)}H${W-R}" stroke="#547f91" stroke-dasharray="4 4"/>`;
     section.samples.slice(0,-1).forEach((p,i)=>{
       const unit=mappedUnitAt(surface,index,p.lon,p.lat);
       if(unit)content+=`<path d="M${px(p.km)},${py(p.ground)} L${px(section.samples[i+1].km)},${py(section.samples[i+1].ground)}" stroke="${esc(unit.colour_rgb)}" stroke-width="5"/>`;
@@ -141,15 +137,15 @@ export async function initGeology(api) {
     }
     for(const seam of active){
       const d=path(section.samples.map(p=>p.seams[seam.id]));if(!d.trim())continue;
-      const color=gs.colour==='evidence'?'#b4a0cf':gs.colour==='use'?useColour(seam.tags):seam.color;
+      const color=seam.color;
       content+=`<g data-seam="${seam.id}" role="button" tabindex="0" aria-label="Select ${esc(seam.name)}"><title>${esc(seam.name)} · illustrative geometry</title><path d="${d}" fill="none" stroke="transparent" stroke-width="15"/><path d="${d}" fill="none" stroke="${color}" stroke-width="${seam.id===selected?3.5:2}" ${seam.id===selected?'':'stroke-dasharray="5 2"'}/></g>`;
     }
     for(const p of picks){const x=px(p.km),y=py(p.pick.topAHD),color=data.seams.find(s=>s.id===p.seamId).color;
       content+=`<g data-pick="${esc(p.pick.id)}" role="button" tabindex="0" aria-label="Inspect ${esc(p.bore.name)} reported ${esc(p.pick.unit)} top"><title>${esc(p.bore.name)} · ${esc(p.pick.unit)} · ${p.pick.topAHD.toFixed(1)} m AHD · ${p.offsetKm.toFixed(2)} km off section; not deviation-corrected</title><path d="M${x},${y-5}l5,5 -5,5 -5,-5Z" fill="#0d202a" stroke="${color}" stroke-width="2"/></g>`;
     }
-    if(picks.length)content+=`<text x="500" y="14" text-anchor="middle" fill="#d5e4e7" font-size="9">◇ ${picks.length} reported coal tops · projected ≤1 km · AHD, uncorrected</text>`;
-    for(let i=0;i<=4;i++){const km=section.length*i/4;content+=`<text x="${px(km)}" y="214" text-anchor="middle" fill="#9ab4c1" font-size="10">${km.toFixed(1)} km</text>`;}
-    content+=`<text x="63" y="230" fill="#9ab4c1" font-size="9">Elevations relative to sea level · ${trueScale?'True scale 1:1':ve.toFixed(1)+'× vertical exaggeration'} · Coal strokes are symbols, not thickness</text><path id="sectionCursor" stroke="#fff" stroke-width="1" stroke-dasharray="3 3" d=""/>`;
+
+    for(let i=0;i<=4;i++){const km=section.length*i/4;content+=`<text x="${px(km)}" y="214" text-anchor="middle" fill="#9ab4c1" font-size="16">${km.toFixed(1)} km</text>`;}
+    content+=`<text x="${L}" y="230" fill="#9ab4c1" font-size="14">ASL · ${trueScale?'True scale 1:1':ve.toFixed(1)+'× vertical scale'} · Coal lines are illustrative</text><path id="sectionCursor" stroke="#fff" stroke-width="1" stroke-dasharray="3 3" d=""/>`;
     $('sectionChart').innerHTML=`<svg id="sectionSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(chosen().name)}: sampled terrain and illustrative coal surfaces"><title>${esc(chosen().name)}</title><desc>Section of the browser model. Terrain sampled from Mapzen; surface colours from GSNSW mapping; coal seam geometry illustrative. Diamonds are ABSUC 2024 v2 preferred top picks projected from within 1 km, not corrected for borehole deviation. Known horizontal/deviated boreholes excluded. Model vertical references have not been reconciled to AHD. Pick source: https://doi.org/10.26186/149324 . Exported ${surface.date}. Vertical exaggeration ${ve.toFixed(2)}. Sources: ${GEOLOGY_SOURCES.map(s=>s.url).join(' ; ')}</desc>${content}</svg>`;
     $('sectionSvg').querySelectorAll('[data-pick]').forEach(el=>{const action=()=>boreholes.open(picks.find(p=>p.pick.id===el.dataset.pick).bore.id);el.onclick=action;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();action();}};});
     $('sectionFaults').hidden=!gs.faults;
@@ -171,17 +167,7 @@ export async function initGeology(api) {
   function setTransect(i,focus=true){
     gs.transect=i;custom=null;$('sectionMessage').textContent='';$('sectionPanel').scrollTop=0;$('transect').value=String(i);lastSectionKey='';buildSection();
     if(focus){pause();const t=TRANSECTS[i],target=new THREE.Vector3(...geo((t.a[0]+t.b[0])/2,(t.a[1]+t.b[1])/2,-100));api.setCamera(target,new THREE.Vector3(24,28,30));}
-    if(!$('strataPanel').hidden)showStrata(true);
-  }
-  function lesson(i){
-    clearSurfaceFocus();
-    if(i<0||i>=lessons.length){gs.step=-1;$('lesson').hidden=true;return;}
-    pause();gs.step=i;const l=lessons[i];$('lesson').hidden=false;$('story').hidden=true;
-    $('lessonNumber').textContent=`ILLAWARRA FIELD GUIDE · ${i+1} / ${lessons.length}`;$('lessonTitle').textContent=l.title;$('lessonText').textContent=l.text;
-    $('previousLesson').disabled=i===0;$('nextLesson').textContent=i===lessons.length-1?'Finish ✓':'Continue →';$('lessonDots').innerHTML=lessons.map((_,j)=>`<i class="${j===i?'active':''}"></i>`).join('');
-    $('surfaceMap').checked=gs.surface=l.surface;$('mappedFaults').checked=gs.faults=!!l.faults;$('opacity').value=l.opacity;$('exaggeration').value=6;$('explode').value=gs.explode=0;$('slice').value=100;
-    if(i===0){for(const t of ['met','thermal','unknown'])$(t).checked=true;$('seamSelect').value='all';setTransect(0);}
-    setSection(l.section);$('lessonExplanation').open=!(l.section&&matchMedia('(max-width:720px)').matches);if(l.strata)showStrata(true);if(l.mine){showStrata(false);select(l.mine);$('showRoutes').checked=true;api.focusFeature(l.mine);}update();
+    if(!$('details').hidden&&!$('strataPanel').hidden)showStrata(true);
   }
   function focusSurface(predicate,label,strataId=null){
     const ids=new Set(surface.units.flatMap((u,i)=>predicate(u)&&displayedIds.has(i+1)?[i+1]:[]));
@@ -198,53 +184,42 @@ export async function initGeology(api) {
     showStrata(false);$('detailBody').innerHTML=`<span class="evidence-badge mapped">PUBLISHED SURFACE FAULT TRACE</span><h2>${esc(f.structure_name||'Unnamed mapped fault')}</h2><dl><dt>Crossing</dt><dd>${f.km.toFixed(2)} km from A</dd><dt>Map description</dt><dd>${esc(f.descriptn)}</dd><dt>Exposure</dt><dd>${esc(f.exposure||'Not specified')}</dd></dl><p>${esc(f.reference||f.source_dataset)}</p><p class="notice">The arrow marks where this section meets the mapped surface trace. It supplies no underground fault dip, throw or seam displacement.</p><p class="micro">GSNSW feature ${esc(f.feature_id)} · ${esc(f.id)} · CC BY 4.0</p><ul>${links()}</ul>`;
   }
   function showUnit(unit,lon,lat){
-    selectedUnit=unit.id;focusSurface(u=>u.nsw_code===unit.nsw_code,unit.unit_name);showStrata(false);$('details').classList.add('open');
+    selectedUnit=unit.id;focusSurface(u=>u.nsw_code===unit.nsw_code,unit.unit_name);showStrata(false);openPanel('details');
     $('detailBody').innerHTML=`<span class="evidence-badge mapped">PUBLISHED GEOLOGICAL MAPPING</span><h2>${esc(unit.unit_name)}</h2><p>${esc(unit.descriptn)}</p><dl><dt>Rock type</dt><dd>${esc(unit.dominant_lithology)}</dd><dt>Age</dt><dd>${esc(unit.age_range)}</dd><dt>Depositional setting</dt><dd>${esc(unit.depositional_environment||'Not specified')}</dd><dt>Unit code</dt><dd>${esc(unit.nsw_code)}</dd><dt>Location</dt><dd>${lat.toFixed(4)}°, ${lon.toFixed(4)}°</dd></dl><p class="micro">${esc(unit.all_stratigraphy?.split('/').filter(Boolean).join(' → '))}</p><p class="notice">This is the published interpretation of the surface rock unit. It does not establish an underground coal seam or its depth.</p><details open><summary>Source evidence</summary><p class="micro">GSNSW NSW Seamless Geology · feature ${esc(unit.feature_id)} · snapshot ${surface.date} · CC BY 4.0.</p><ul>${links()}</ul></details>`;
   }
   function handleSceneClick(event,ray){
-    if(!gs.draw&&!gs.inspect)return false;
+    if(!gs.inspect)return false;
     const hit=ray.intersectObjects([localMesh,terrainMesh]).find(h=>h.point.x<=clipPlane.constant&&!(h.object===terrainMesh&&h.point.x>low[0]&&h.point.x<high[0]&&h.point.z>low[2]&&h.point.z<high[2]));
     if(!hit)return true;
     const lon=hit.point.x/(111.32*Math.cos(-33.55*Math.PI/180))+151.15,lat=-33.55-hit.point.z/111.32;
-    if(gs.draw){
-      gs.points.push([lon,lat]);
-      if(gs.points.length===2){custom={a:gs.points[0],b:gs.points[1],name:'Custom geological section',labels:['A','B']};gs.draw=false;gs.points=[];$('transect').value='custom';lastSectionKey='';buildSection();$('sectionMessage').textContent='Custom section. Gaps indicate no model surface; they are not filled by interpolation.';}
-      else $('sectionMessage').textContent='Start point set. Click the second point on the terrain.';
-    }else{
-      const unit=mappedUnitAt(surface,index,lon,lat);
-      if(unit)showUnit(unit,lon,lat);else{$('details').classList.add('open');showStrata(false);$('detailBody').innerHTML='<h2>No mapped unit here</h2><p>The detailed surface map covers Illawarra. An empty result is not a geological classification.</p>';}
-    }
+    const unit=mappedUnitAt(surface,index,lon,lat);
+    if(unit)showUnit(unit,lon,lat);else{showStrata(false);$('detailBody').innerHTML='<h2>No mapped unit here</h2><p>The detailed surface map covers Illawarra. An empty result is not a geological classification.</p>';}
     return true;
   }
 
   $('clearSurfaceFocus').onclick=()=>{clearSurfaceFocus();update();};
   $('surfaceMap').onchange=()=>{gs.surface=$('surfaceMap').checked;update();};$('mappedFaults').onchange=()=>{gs.faults=$('mappedFaults').checked;update();};
-  $('colourMode').onchange=()=>{gs.colour=$('colourMode').value;update();renderSection();};$('explode').oninput=()=>{gs.explode=+$('explode').value;$('explodeValue').textContent=gs.explode?`${gs.explode}% · diagram`:'Off';update();};
-  $('openSection').onclick=$('sectionShortcut').onclick=()=>setSection(!gs.open);$('closeSection').onclick=()=>setSection(false);
-  $('openStrata').onclick=$('strataTab').onclick=()=>showStrata(true);$('featureTab').onclick=()=>showStrata(false);
-  $('closeGeoDetails').onclick=()=>{$('details').classList.remove('strata-active','open');$('strataPanel').hidden=true;};
-  $('inspectSurface').onclick=()=>{gs.inspect=!gs.inspect;$('inspectSurface').setAttribute('aria-pressed',String(gs.inspect));$('inspectSurface').textContent=gs.inspect?'Click a rock unit…':'Inspect surface';if(gs.inspect){$('opacity').value=100;gs.surface=$('surfaceMap').checked=true;update();}};
-  $('hideUI').onclick=()=>{const hide=document.body.classList.toggle('focus-view');$('hideUI').textContent=hide?'Show controls':'Focus view';$('hideUI').setAttribute('aria-pressed',String(hide));};
-  $('transect').onchange=()=>{if($('transect').value==='custom'){if(!custom){$('sectionCoordinates').open=true;$('sectionMessage').textContent='Enter endpoints below or draw a line on the terrain.';}else buildSection();}else setTransect(+$('transect').value);};
+  $('openSection').onclick=()=>setSection(!gs.open);$('closeSection').onclick=()=>setSection(false);
+  $('openStrata').onclick=()=>showStrata(true);
+  $('inspectSurface').onclick=()=>{gs.inspect=!gs.inspect;$('inspectSurface').setAttribute('aria-pressed',String(gs.inspect));$('inspectSurface').textContent=gs.inspect?'Stop inspecting':'Inspect surface rock';$('inspectHint').hidden=!gs.inspect;if(gs.inspect){$('opacity').value=100;gs.surface=$('surfaceMap').checked=true;closePanels();update();}};
+  $('stopInspect').onclick=()=>{gs.inspect=false;$('inspectSurface').setAttribute('aria-pressed','false');$('inspectSurface').textContent='Inspect surface rock';$('inspectHint').hidden=true;};
+  $('transect').onchange=()=>{if($('transect').value==='custom'){if(!custom){$('sectionOptions').open=true;$('sectionCoordinates').open=true;$('sectionMessage').textContent='Enter the start and end coordinates in Section options.';}else buildSection();}else setTransect(+$('transect').value);};
   $('sectionScale').onclick=()=>{trueScale=!trueScale;$('sectionScale').setAttribute('aria-pressed',String(trueScale));$('sectionScale').textContent=trueScale?'Fit vertically':'True scale';renderSection();};
-  $('drawSection').onclick=()=>{pause();gs.draw=!gs.draw;gs.points=[];if(gs.draw){$('slice').value=100;$('opacity').value=70;update();}$('sectionMessage').textContent=gs.draw?'Click two points on the terrain to draw a section. Dragging still orbits.':'Drawing cancelled.';};
   $('applySection').onclick=()=>{
     const values=['aLon','aLat','bLon','bLat'].map(id=>$(id).value.trim()===''?NaN:Number($(id).value));const a=values.slice(0,2),b=values.slice(2);
     if(values.some(v=>!Number.isFinite(v))||!within(terrain.bounds,...a)||!within(terrain.bounds,...b)||Math.hypot(a[0]-b[0],a[1]-b[1])<.001){$('sectionMessage').textContent='Use two distinct points inside the regional model: 150.45–152.05°E, 34.65–32.45°S.';return;}
     custom={a,b,name:'Custom geological section',labels:['A','B']};$('transect').value='custom';lastSectionKey='';buildSection();$('sectionMessage').textContent='Custom section applied. Underground gaps are preserved.';
   };
   $('exportSection').onclick=()=>{const blob=new Blob([$('sectionSvg').outerHTML],{type:'image/svg+xml'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='NSW-geological-section.svg';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
-  $('startLesson').onclick=()=>lesson(0);$('nextLesson').onclick=()=>lesson(gs.step+1);$('previousLesson').onclick=()=>lesson(gs.step-1);$('endLesson').onclick=()=>lesson(-1);
+
 
   function sync(state,selected){
     if(boreMarker){const b=boreMarker.userData;boreMarker.position.set(...geo(b.lon,b.lat,(b.height+10)*state.exaggeration));}
     localMesh.scale.y=faultMesh.scale.y=state.exaggeration;localMesh.visible=state.opacity>0;material.opacity=state.opacity/100;material.depthWrite=state.opacity>=98;geologyUniform.value=gs.surface?1:0;faultMesh.visible=gs.faults;
     if(curtain)curtain.scale.y=state.exaggeration;if(sectionLine)sectionLine.scale.y=state.exaggeration;if(cursorMarker&&!gs.open)cursorMarker.visible=false;
-    data.seams.forEach((s,i)=>{const o=seamObjects.get(s.id),color=gs.colour==='use'?useColour(s.tags):gs.colour==='evidence'?'#b4a0cf':s.color;o.mesh.material.color.set(color);o.mesh.material.emissive.set(color);o.edges.material.color.set(color);for(const object of [o.mesh,o.edges,o.wire])object.position.y=gs.explode*(data.seams.length-i)*.018;});
-    const key=JSON.stringify([state.met,state.thermal,state.unknown,state.seam,selected,gs.colour,gs.faults]);
+    const key=JSON.stringify([state.met,state.thermal,state.unknown,state.seam,selected,gs.faults]);
     if(gs.open&&key!==lastSyncKey){lastSyncKey=key;renderSection();}
-    const legend=gs.colour==='use'?[['#f7b967','Met'],['#58d8de','Thermal'],['#dfa4ef','Both'],['#9da8c7','Unknown']]:gs.colour==='evidence'?[['#9dd8cf','Surface: published mapping'],['#b4a0cf','Coal: illustrative']]:data.seams.filter(s=>seamObjects.get(s.id).mesh.visible).map(s=>[s.color,s.name.replace(' Coal Seam','').replace(' Coal Measures',' CM')]);
-    $('legend').dataset.label=gs.colour==='unit'?'Coal colours: geological units':gs.colour==='use'?'Coal colours: end use':'Surface: published mapping · Coal: illustrative';
+    const legend=data.seams.filter(s=>seamObjects.get(s.id).mesh.visible).map(s=>[s.color,s.name.replace(' Coal Seam','').replace(' Coal Measures',' CM')]);
     $('legend').innerHTML=legend.map(([color,name])=>`<span><i class="swatch" style="background:${color}"></i>${esc(name)}</span>`).join('');
   }
   function animate(){
@@ -252,16 +227,15 @@ export async function initGeology(api) {
     const angle=Math.atan2(camera.position.x-controls.target.x,camera.position.z-controls.target.z)*180/Math.PI;
     const north=document.querySelector('.north');if(north){north.textContent='N ↑';north.style.transform=`rotate(${angle}deg)`;}
   }
-  function reset(){boreholes?.reset();if(boreMarker)boreMarker.visible=false;clearSurfaceFocus();gs.surface=true;gs.faults=false;$('surfaceMap').checked=true;$('mappedFaults').checked=false;$('inspectSurface').setAttribute('aria-pressed','false');$('inspectSurface').textContent='Inspect surface';gs.explode=0;gs.draw=false;gs.inspect=false;gs.step=-1;gs.colour='unit';$('colourMode').value='unit';$('explode').value=0;$('explodeValue').textContent='Off';$('lesson').hidden=true;setSection(false);showStrata(false);$('details').classList.remove('open');}
-  function onChapter(i){clearSurfaceFocus();const n=TRANSECTS.findIndex(t=>t.chapter===i||(i===3&&t.chapter===2));if(n>=0)setTransect(n,false);}
+  function reset(){trueScale=false;$('sectionScale').textContent='True scale';$('sectionScale').setAttribute('aria-pressed','false');$('sectionOptions').open=false;$('sectionCoordinates').open=false;boreholes?.reset();if(boreMarker)boreMarker.visible=false;clearSurfaceFocus();gs.surface=true;gs.faults=false;gs.inspect=false;$('surfaceMap').checked=true;$('mappedFaults').checked=false;$('inspectSurface').setAttribute('aria-pressed','false');$('inspectSurface').textContent='Inspect surface rock';$('inspectHint').hidden=true;setSection(false);closePanels();}
+  function onChapter(i){$('stopInspect').click();clearSurfaceFocus();const n=TRANSECTS.findIndex(t=>t.chapter===i||(i===3&&t.chapter===2));if(n>=0)setTransect(n,false);}
   window.coalGeology={getState:()=>({...gs,ready:true,selectedUnit,surfaceFocus,crossings:crossings.map(f=>({id:f.id,km:f.km})),surfaceUnits:surface.units.length,faultSegments:surface.faults.length,localVertices:positions.length/3,sectionLength:section?.length,trueScale}),sampleSection:(a,b)=>sampleSection(data,terrain,localTerrain,a,b),mappedUnitAt:(lon,lat)=>mappedUnitAt(surface,index,lon,lat)};
   boreholes=await initBoreholes({seams:data.seams,showPanel:()=>showStrata(false),renderSection,locate:b=>{
-    pause();const height=Math.max(0,terrainHeight(localTerrain,b.lon,b.lat)??terrainHeight(terrain,b.lon,b.lat)??0),target=new THREE.Vector3(...geo(b.lon,b.lat,(height+10)*getState().exaggeration));
+    pause();closePanels();const height=Math.max(0,terrainHeight(localTerrain,b.lon,b.lat)??terrainHeight(terrain,b.lon,b.lat)??0),target=new THREE.Vector3(...geo(b.lon,b.lat,(height+10)*getState().exaggeration));
     if(!boreMarker){boreMarker=new THREE.Mesh(new THREE.SphereGeometry(.4,16,12),new THREE.MeshBasicMaterial({color:'#ffffff',depthTest:false}));boreMarker.renderOrder=12;scene.add(boreMarker);}
     boreMarker.userData={lon:b.lon,lat:b.lat,height};boreMarker.position.copy(target);boreMarker.visible=true;api.setCamera(target,new THREE.Vector3(12,15,18));
   }});
   return {sync,animate,reset,onChapter,handleSceneClick};
 }
 
-function useColour(tags){return tags.includes('met')&&tags.includes('thermal')?'#dfa4ef':tags.includes('met')?'#f7b967':tags.includes('thermal')?'#58d8de':'#9da8c7';}
 async function checkJSON(response){if(!response.ok)throw Error('Geological dataset unavailable');return response.json();}

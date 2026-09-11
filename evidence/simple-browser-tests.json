@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-11T23:01:59.208Z",
+  "checks": [
+    {
+      "name": "Map opens with no modal or sidebar and only seven interactive controls",
+      "passed": true
+    },
+    {
+      "name": "Every region and the whole-basin view are reachable from one picker",
+      "passed": true
+    },
+    {
+      "name": "Layer controls change rendered geometry and reset restores defaults",
+      "passed": true
+    },
+    {
+      "name": "Finding a feature replaces layers with details and connections toggle both ways",
+      "passed": true
+    },
+    {
+      "name": "Rock sequence selects a seam and highlights sourced surface exposures",
+      "passed": true
+    },
+    {
+      "name": "Surface inspection has a visible exit and returns published unit evidence",
+      "passed": true
+    },
+    {
+      "name": "Cross-section opens independently, supports presets and selects the same 3D seam",
+      "passed": true
+    },
+    {
+      "name": "Cross-section validates coordinates, retains source picks and exports attributed SVG",
+      "passed": true
+    },
+    {
+      "name": "Borehole search, source references, log picks and empty results function",
+      "passed": true
+    },
+    {
+      "name": "Mines opens directly on all 35 records without a dashboard or empty detail panel",
+      "passed": true
+    },
+    {
+      "name": "Mine search, profiles and Back to list preserve query and provenance",
+      "passed": true
+    },
+    {
+      "name": "Mine filters intersect, empty state recovers and CSV matches visible results",
+      "passed": true
+    },
+    {
+      "name": "Mine profile links into the map, and About is a normal page with downloads",
+      "passed": true
+    },
+    {
+      "name": "Phone layout keeps panels exclusive, provides close controls and has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "Keyboard, small phones and landscape layouts retain navigation",
+      "passed": true
+    },
+    {
+      "name": "WebGL remains populated after responsive resizes; assets and scripts report no errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "badResponses": [],
+  "failure": null,
+  "passed": true
+}

@@ -1,16 +1,9 @@
-# NSW Coal Atlas — start here
+# Open the simplified NSW Coal Atlas
 
-**The geology and commercial-insights upgrade is live privately and ready locally.** Double-click `launch.command` inside `nsw-coal-atlas`, then choose **Explore Illawarra**.
+Double-click `launch.command` in this folder. Keep the server window open while viewing.
 
-Explore published surface geology, inspect mapped rock units, follow the stratigraphic sequence and open linked cross-sections. **Borehole evidence** opens the new source-linked logs; in a section, enable the reported-coal-top overlay to compare source picks with the illustrative sheets. **NSW mines** opens the commercial overview and statewide inventory. Use **Compare** for a four-operation shortlist or **Revenue lab** for editable price, volume and currency scenarios.
+The map opens immediately. Choose a region at the top. Use Layers for rock units, mine markers and borehole logs; Cross-section for a section through the model. Mines opens the statewide list. About contains sources and downloads.
 
-- Editable scene: `dist/downloads/NSW-Coal-Atlas.blend`.
-- Recorded regional tour: `dist/downloads/NSW-Coal-Flythrough.mp4`.
-- Controls and source coverage: `README.md`.
-- Completed work, scientific gaps and verification: `HANDOVER.md`.
+The simplified interface is available locally and in the v3 ZIP. The existing private website has not been updated because the current Sites connection cannot find its saved project.
 
-The underground coal surfaces remain illustrative. Real surface mapping and model-linked sections improve the geological presentation; validated local coal depths require additional geological observations.
-
-The [private hosted viewer](https://nsw-coal-underground-atlas.post-12-5421.chatgpt.site) now includes the corrected terrain and commercial insights. Sites confirmed successful publication on 12 September 2026 (Sydney time); the receipt is in `evidence/commercial-deployment.json`.
-
-Version 2.2: 120 model, terrain, commercial, browser and Blender checks passed. Use the files in this repository for the corrected terrain and downloads; the older ZIP in the parent folder predates the correction.
+Read `docs/UI-HANDOVER.md` for completed work, workarounds, remaining decisions and verification evidence.

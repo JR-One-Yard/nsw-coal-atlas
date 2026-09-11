@@ -1,3 +1,11 @@
+# Current handover
+
+The UI simplification supersedes the navigation and delivery instructions below. See [UI-HANDOVER.md](docs/UI-HANDOVER.md) for the current result and evidence, or [START-HERE.md](START-HERE.md) to open it.
+
+The following notes are retained as the history of the previous geology, terrain and commercial work.
+
+---
+
 # NSW Coal Atlas — version 2.2 handover
 
 11 September 2026. The local project now leads with geology: published Illawarra surface mapping, finer terrain, a five-step field guide, a stratigraphic column and sections linked to the displayed underground meshes. The statewide industry inventory complements this presentation.
