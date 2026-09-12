@@ -49,3 +49,7 @@ terrain = corrected_terrain({'bounds':[west,south,east,north],'nx':nx,'ny':ny,'e
 (D/'terrain.json').write_text(json.dumps(terrain,separators=(',',':')))
 (ROOT/'evidence/downloads.json').write_text(json.dumps(receipts,indent=2))
 print('Terrain complete:',len(heights),'samples',min(heights),max(heights),flush=True)
+
+# Preserve the reviewed corridor, then build its aligned statewide extension.
+import subprocess, sys
+subprocess.run([sys.executable, str(ROOT/"scripts/expand_terrain.py")], check=True)

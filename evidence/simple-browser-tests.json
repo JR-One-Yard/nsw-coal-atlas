@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-12T01:13:24.596Z",
+  "date": "2026-09-12T17:17:47.797Z",
   "checks": [
     {
       "name": "Map opens with no modal or sidebar and only seven interactive controls",
@@ -35,6 +35,18 @@
     },
     {
       "name": "Borehole search, source references, log picks and empty results function",
+      "passed": true
+    },
+    {
+      "name": "All registry mines render and fit the statewide view, including Gunnedah and Western",
+      "passed": true
+    },
+    {
+      "name": "Borehole location layer is visible by default and can be toggled",
+      "passed": true
+    },
+    {
+      "name": "New mine markers link to full profiles and colocated records remain reachable",
       "passed": true
     },
     {

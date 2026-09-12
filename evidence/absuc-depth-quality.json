@@ -1,0 +1,1667 @@
+{
+  "rawCount": 569,
+  "depthBasis": "m MD, original per-record datum retained in borehole-picks.json",
+  "displayCounts": {
+    "schematic-md": 431,
+    "missing": 2,
+    "directional": 136
+  },
+  "withheld": [
+    {
+      "id": "{1da13ad1-3712-4977-98fb-388a92505574}",
+      "name": "Cut Hill  3",
+      "totalMD": null,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "missing",
+        "reason": "No finite positive reported total depth."
+      }
+    },
+    {
+      "id": "{7256df70-c47f-4906-8ade-18214232602c}",
+      "name": "Glenlee 14",
+      "totalMD": 1994.78,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{2548959d-5563-4149-afd6-8455044a0071}",
+      "name": "Glenlee 14 Branch 1",
+      "totalMD": 1430.16,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{0f29810d-d640-4e4c-aac3-97d61e0fb59d}",
+      "name": "Glenlee 14 Branch 2",
+      "totalMD": 1499,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{9807cd66-8899-4237-9dd9-2100fa3fe996}",
+      "name": "Glenlee 14 Branch 3",
+      "totalMD": 1868.44,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{91859f58-542c-43b7-8819-85fe6c385d3c}",
+      "name": "Glenlee 14 Branch 4",
+      "totalMD": 1917.14,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{cf67e21a-a7e7-497d-a430-d49425a00e38}",
+      "name": "Glenlee 14 Branch 5",
+      "totalMD": 1946.35,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{35067d63-20bd-439d-a6c3-a0fdcf68b8c1}",
+      "name": "Glenlee 14 Branch 6",
+      "totalMD": 1994.78,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{a737ecd5-755a-4587-85f0-3932b82cd8ba}",
+      "name": "Glenlee 15",
+      "totalMD": 2031.94,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{49434ef5-03e2-44a0-9abc-01f379bfedf2}",
+      "name": "Glenlee 15 Branch 1",
+      "totalMD": 1012.26,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{71c0165d-c495-4366-90b0-53ca2d156dc3}",
+      "name": "Glenlee 15 Branch 4",
+      "totalMD": 1636.04,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{addd0e32-e605-433c-83ca-b1169b92f555}",
+      "name": "Glenlee 15 Branch 5",
+      "totalMD": 2031.94,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{c695412e-4eec-4510-a3c2-4674187dfe6a}",
+      "name": "Glenlee 15 S/T Branch 1",
+      "totalMD": 1109.36,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{f5a4bdc8-ddb8-43d4-a139-6cda48d44856}",
+      "name": "Glenlee 15 S/T Branch 2",
+      "totalMD": 1326.86,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{b25a40c8-86cd-44a9-881b-4cc79698a304}",
+      "name": "Glenlee 17",
+      "totalMD": 2705,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{1dcbf1e9-5dd1-4416-aa50-90b7d138b1e7}",
+      "name": "Glenlee 17 Branch 1",
+      "totalMD": 891.57,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{5c77e9be-4d4b-4aaa-ba5d-d07f355212f7}",
+      "name": "Glenlee 17 Branch 2",
+      "totalMD": 859,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{bc1ef295-dc14-449b-87dc-800733dfc4a9}",
+      "name": "Glenlee 17 Branch 3",
+      "totalMD": 965,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{f858c327-71ab-4c9d-ac0b-49a28f255074}",
+      "name": "Glenlee 17 Branch 3 Inseam",
+      "totalMD": 1373.09,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{c5492d7b-4c47-4e11-a120-7f64c9c1cf02}",
+      "name": "Glenlee 17 Branch 4 Inseam",
+      "totalMD": 1606,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{6291e423-7787-4555-b16f-b7dce19a58c4}",
+      "name": "Glenlee 17 Branch 5 Inseam",
+      "totalMD": 1591,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{24359d80-c1ef-4556-b457-fbd76a4ed47a}",
+      "name": "Glenlee 17 Branch 6 Inseam",
+      "totalMD": 1712.5,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{c565af1e-aa0e-470e-8718-63c9a2b69983}",
+      "name": "Glenlee 17 Branch 7 Inseam",
+      "totalMD": 2704.97,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{3a48acb4-4914-403a-9717-5614b54df201}",
+      "name": "Kay Park 5",
+      "totalMD": 2877.31,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{ec3ea6a5-6b40-4a5f-958c-5e695aee006e}",
+      "name": "Kay Park 5 Branch 3",
+      "totalMD": 1621.32,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{15ded800-72b7-439e-8c2a-ed3c5f39faeb}",
+      "name": "Kay Park 5 Branch 4",
+      "totalMD": 1844.48,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{50e162e5-5a65-4292-8619-0a3242f756d1}",
+      "name": "Kay Park 6",
+      "totalMD": 3044,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{fb2c6c02-1a72-432b-bd79-811212ec86ba}",
+      "name": "Kay Park 6 Build ST1",
+      "totalMD": 1019.8,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{74c2b659-2492-48e8-894b-8ed6e993084c}",
+      "name": "Kay Park 6 Bulli Leg 1",
+      "totalMD": 2704,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{5cd2d920-6888-431e-ad7e-ea7edce75413}",
+      "name": "Kay Park 6 Bulli Leg 2",
+      "totalMD": 1257.01,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{de24cd5a-e5d1-48a1-862f-f6d7293eb9b7}",
+      "name": "Kay Park 6 Bulli Leg 2 ST1",
+      "totalMD": 2665.27,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{0da19e51-aea5-40c4-a524-5d5a28ed5801}",
+      "name": "Kay Park 6 Bulli Leg 3",
+      "totalMD": 2886.48,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{c5bf0644-a24a-4ad3-b984-7debea4223a8}",
+      "name": "Kay Park 6 Bulli Leg 3 ST1",
+      "totalMD": 2898,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{7db5b38f-bded-44b1-b095-e4663ecfac5b}",
+      "name": "Kay Park 6 Bulli Leg 3 ST2",
+      "totalMD": 2863.09,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{1817a0fc-eccc-4232-b4e8-d0c576f947e0}",
+      "name": "Kay Park 6 Bulli Leg 3 ST3",
+      "totalMD": 3044,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{6b5d6f03-602c-4cbf-9ddb-83a46fa5811c}",
+      "name": "Menangle Park 03 Balgownie",
+      "totalMD": 1557,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{fe69fad5-e7b3-4c97-9a90-75ce5317e5bb}",
+      "name": "Menangle Park 03 Balgownie ST1",
+      "totalMD": 1567,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{33a22a6e-c943-4092-94a0-471b1b80d499}",
+      "name": "Menangle Park 05",
+      "totalMD": 2637,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{e8a73ec9-0ff5-4680-aaf9-a1301e3d7347}",
+      "name": "Menangle Park 05 Branch 01",
+      "totalMD": 1019,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{a9a70b32-f8ea-426b-90b3-497c03547840}",
+      "name": "Menangle Park 05 Branch 02",
+      "totalMD": 888,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{2f2518f8-3767-4515-aba3-92ae8b294cbb}",
+      "name": "Menangle Park 05 Branch 03",
+      "totalMD": 1260,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{bb19129b-70b4-41a6-8fc8-4693a832906b}",
+      "name": "Menangle Park 05 Branch 04",
+      "totalMD": 1260,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{34c48eb5-91fa-4370-b82a-e7a4ba747df8}",
+      "name": "Menangle Park 05 Branch 05",
+      "totalMD": 1832,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{6d1e43ab-c304-4754-b112-b0ab303af4a0}",
+      "name": "Menangle Park 05 Branch 06",
+      "totalMD": 1769,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{c7c62b70-0859-439c-846b-eebca3b5b8c9}",
+      "name": "Menangle Park 05 Branch 07",
+      "totalMD": 2123,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{92f0bd52-7714-4bd7-abc7-d017917ffe80}",
+      "name": "Menangle Park 05 Branch 08",
+      "totalMD": 2425,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{f59cc208-8938-421c-b16e-61885acc7564}",
+      "name": "Menangle Park 05 Branch 09",
+      "totalMD": 2455,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{7261b002-38f1-49ad-946d-10cd132fef82}",
+      "name": "Menangle Park 05 Branch 10",
+      "totalMD": 2637,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{658ebebe-5785-4bc3-be7b-b93ac360fc94}",
+      "name": "Menangle Park 05A Bulli 1 ST 1",
+      "totalMD": 1824,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{3d8455de-140f-4ea3-ba3c-7ccba4507fce}",
+      "name": "Menangle Park 05A Bulli 1 ST 2",
+      "totalMD": 2592,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{82e9af34-1065-418b-b1c7-6cc0264c15c0}",
+      "name": "Menangle Park 07 Branch 02",
+      "totalMD": 1570,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{5b8261cb-6e30-422b-952a-3538c597dda3}",
+      "name": "Menangle Park 07 Branch 03",
+      "totalMD": 1899,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{f908033a-ea59-4958-b0fe-563c9fcf2936}",
+      "name": "Menangle Park 07 Branch 04",
+      "totalMD": 2319,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{8dac64a9-41e3-4792-9cef-1c18c59687c1}",
+      "name": "Menangle Park 07 Branch 05",
+      "totalMD": 2326,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{5a63162d-edc7-4079-88a9-3e2157e8a043}",
+      "name": "Menangle Park 07 Branch 06",
+      "totalMD": 2701,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{735dd4e4-fa4c-4d31-8320-9ee0f3a89202}",
+      "name": "Menangle Park 07 Branch 07",
+      "totalMD": 1213,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{2ecac16d-20e0-42eb-95ee-939c3db015ca}",
+      "name": "Menangle Park 07 Branch 08",
+      "totalMD": 1501,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{2a78c112-b317-4f70-babd-6eea837037f4}",
+      "name": "Menangle Park 07 Branch 09",
+      "totalMD": 1570,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{566fd984-405d-42a6-8991-4ed6494b0e3a}",
+      "name": "Menangle Park 07 Branch 10",
+      "totalMD": 1603,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{67d1b60e-57b6-4412-aafb-680c25c4b727}",
+      "name": "Menangle Park 07 Branch 11",
+      "totalMD": 1637,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{5c321728-dc37-41f4-b6e2-8e37003da0e9}",
+      "name": "Menangle Park 07 Branch 12",
+      "totalMD": 1657,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{193ab374-a7cf-4fcd-a175-862d4944065a}",
+      "name": "Menangle Park 07 Branch 13",
+      "totalMD": 1637.24,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{d0fcef77-f2a9-466c-9453-66d59054c3b7}",
+      "name": "Menangle Park 07 Branch 14",
+      "totalMD": 1710,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{e43b5147-1624-4b64-ac0d-5d0ef2b3d2d4}",
+      "name": "Menangle Park 07 Branch 15",
+      "totalMD": 2200,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{e7c46d77-4d70-47ed-963e-5e9f1d9b14a9}",
+      "name": "Menangle Park 07 Branch 16",
+      "totalMD": 2249,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{2a425bf4-4fb0-4927-ac34-f2b3f2d01149}",
+      "name": "Menangle Park 07 Branch 17",
+      "totalMD": 2277.63,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{9c5eb470-fd73-4005-b9f8-8783f84dd865}",
+      "name": "Menangle Park 07 Branch 18",
+      "totalMD": 2444,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{5ce92f71-26f6-4d06-bb76-ff7c2ebd4ef2}",
+      "name": "Menangle Park 07 Branch 19",
+      "totalMD": 2483,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{fa5db9f5-291f-48fc-8476-1a083a928431}",
+      "name": "Menangle Park 07 Branch 20",
+      "totalMD": 2512,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{eefb722e-6a6f-4939-83d8-f3f9accbda86}",
+      "name": "Menangle Park 09 Balgownie",
+      "totalMD": 2009.69,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{86e0db92-b0ce-46f8-ab23-f79b1935aa41}",
+      "name": "Menangle Park 09 Balgownie ST1",
+      "totalMD": 2077.8,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{e678f457-739e-4295-94b6-4188e847a7eb}",
+      "name": "Menangle Park 09 Balgownie ST2",
+      "totalMD": 2133.7,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{0b96a012-286c-4fe7-aadd-dcdb976a171b}",
+      "name": "Menangle Park 09 Balgownie ST3",
+      "totalMD": 1620.32,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{8cd78916-9229-4de5-b8a3-b5e9762bbed6}",
+      "name": "Menangle Park 12 Build",
+      "totalMD": 776,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{23ab3f05-8306-44bb-aab4-741e8fa781b0}",
+      "name": "Menangle Park 12 Build ST1",
+      "totalMD": 1005,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{b858684f-af5b-4b9b-9eed-8ddfd84fb15e}",
+      "name": "Menangle Park 12 Build ST2",
+      "totalMD": 1062,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{845db29b-a34d-4a8a-81b1-598096835def}",
+      "name": "Menangle Park 12 Build ST3",
+      "totalMD": 844.4,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{ca5c44b3-f062-4ef4-bf9b-8fd9c4326ab6}",
+      "name": "Menangle Park 12 Bulli L1",
+      "totalMD": 901.57,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{832f9fdd-8b1e-4f83-adfe-76bbb221c980}",
+      "name": "Menangle Park 12 Bulli L1 ST1",
+      "totalMD": 978,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{b4aaa8e5-ef94-404e-a253-263c3caca1a0}",
+      "name": "Menangle Park 12 Bulli L1 ST2",
+      "totalMD": 1180.37,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{8ffad493-4375-453f-832f-64726b1d525a}",
+      "name": "Menangle Park 12 Bulli L1 ST3",
+      "totalMD": 1737,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{aac1d1a6-8e6c-4fad-be9b-ee3b4233b8d8}",
+      "name": "Menangle Park 12 Bulli L1 ST4",
+      "totalMD": 2090,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{cdf7ea7b-60af-4dc4-8d29-afc643869cca}",
+      "name": "Menangle Park 22",
+      "totalMD": 2701,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{909a7360-1b5e-473e-8068-60c72d3e514d}",
+      "name": "Menangle Park 22 Balgownie",
+      "totalMD": 1850,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{cf96df28-2cc0-4cb8-ae19-600229a45246}",
+      "name": "Menangle Park 22 Balgownie ST1",
+      "totalMD": 2001.8,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{ef043fcb-d92a-4bdc-a3e6-379944693365}",
+      "name": "Menangle Park 22 Balgownie ST2",
+      "totalMD": 1971,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{65dec3f1-e5ac-4251-8c92-b3316c5d61b3}",
+      "name": "Menangle Park 22 Build",
+      "totalMD": 916.8,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{3e1b2d90-0387-4e4b-b1b9-162d207bd78f}",
+      "name": "Menangle Park 22 Build ST1",
+      "totalMD": 931.5,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{6694a296-beed-498d-8050-58664f9b4ac3}",
+      "name": "Menangle Park 22 Bulli ST1",
+      "totalMD": 1959,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{e0d8e1bd-1106-4119-a3cf-f9dcee184542}",
+      "name": "Menangle Park 22 Bulli ST2",
+      "totalMD": 2403.9,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{5434e1c0-674e-4f64-9031-e243cc3ef8ab}",
+      "name": "Menangle Park 23 Build",
+      "totalMD": 920.33,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{033ff5eb-c145-4b63-82b9-70544771044e}",
+      "name": "Menangle Park 23 Build ST1",
+      "totalMD": 531.72,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{9509f154-62fd-4ef5-8375-2c0dd6712483}",
+      "name": "Menangle Park 23 Build ST2",
+      "totalMD": 1079.88,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{de0e8add-fd39-4846-9bb8-14288d27b5c3}",
+      "name": "Menangle Park 23 Build ST3",
+      "totalMD": 998.32,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{e137e3f0-89c3-4a87-b877-c6e3deb3d3e7}",
+      "name": "Menangle Park 25",
+      "totalMD": 2508,
+      "datum": "SRTM_HE",
+      "comment": "horizontal",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{14a15938-9ba5-4217-bd40-d2c69e9e60aa}",
+      "name": "Menangle Park 25 Leg 1",
+      "totalMD": 1284.9,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{f9db67ea-0350-4580-9e51-a0330b87464f}",
+      "name": "Menangle Park 25 Leg 1 ST1",
+      "totalMD": 1317.76,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{e356ad76-c245-499b-abcf-53e19c27a116}",
+      "name": "Menangle Park 25 Leg 1 ST2",
+      "totalMD": 1275.97,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{9f63738b-116f-4bc8-89e6-179035ca6da8}",
+      "name": "Menangle Park 25 Leg 1 ST3",
+      "totalMD": 1421.7,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{774800e3-4a4c-437f-b060-ae21c9a8da4b}",
+      "name": "Menangle Park 25 Leg 1 ST4",
+      "totalMD": 2403.27,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{9a2341cd-f8df-496f-92f4-a9c951a401e1}",
+      "name": "Menangle Park 25 Leg 1 ST5",
+      "totalMD": 2508,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{b307c608-ff92-4ddf-a144-bed457897b77}",
+      "name": "Menangle Park 25 Leg 2",
+      "totalMD": 1413.79,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{139b2ae9-e2c3-4264-89c2-ffadaf2cb3c1}",
+      "name": "Menangle Park 25 Leg 2 ST1",
+      "totalMD": 1306.28,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{00fa4afa-315f-4e79-8425-48a557565bb9}",
+      "name": "Menangle Park 25 Leg 2 ST2",
+      "totalMD": 1764.7,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{5a47e0bd-7bc8-4633-99fc-ab476e210c66}",
+      "name": "Menangle Park 25 Leg 2 ST3",
+      "totalMD": 1624.32,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{9eada863-cf0b-4db1-a5c0-4fa83ce6f1be}",
+      "name": "Menangle Park 25 Leg 2 ST4",
+      "totalMD": 2487.19,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{4a568ccc-e314-4742-9a07-a1eb635bb682}",
+      "name": "Menangle Park 30",
+      "totalMD": 2619.3,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{4e3de905-36d1-4b80-b177-d75ae77fc449}",
+      "name": "Menangle Park 30 Branch 1",
+      "totalMD": 746.4,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{7ca74365-fd3c-49f5-bfa9-34bbfb31f811}",
+      "name": "Menangle Park 30 Branch 2",
+      "totalMD": 641.47,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{8241b594-a88c-493e-80ac-77f60cc2124e}",
+      "name": "Menangle Park 30 Branch 3",
+      "totalMD": 814.16,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{deffb1e9-b19a-49fe-b638-2daa9149ea85}",
+      "name": "Menangle Park 30 Branch 4",
+      "totalMD": 911.02,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{919082ea-d72b-46c6-8d8e-f1c7fca98626}",
+      "name": "Menangle Park 30 Branch 5",
+      "totalMD": 1160,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{03e18ef6-2bd6-4e44-b256-7a3e74a88ef2}",
+      "name": "Menangle Park 7",
+      "totalMD": 2701,
+      "datum": "SRTM_HE",
+      "comment": "horizontal",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{f90b4b74-5a34-479b-91eb-7fd8f52860e1}",
+      "name": "Menangle Park 9",
+      "totalMD": 2350,
+      "datum": "SRTM_HE",
+      "comment": "horizontal",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{82866769-7ad6-40e0-b146-9203f7de9b80}",
+      "name": "Penrith 1",
+      "totalMD": null,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "missing",
+        "reason": "No finite positive reported total depth."
+      }
+    },
+    {
+      "id": "{d67875d1-b6f7-45cb-918e-b93d5e9ba5f2}",
+      "name": "Spring Farm 5",
+      "totalMD": 2510,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{255cb921-f1e0-47f0-97ab-1cf60f7a1fd5}",
+      "name": "Spring Farm 5 Bulli B3 ST1",
+      "totalMD": 2200,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{855db47f-5b5a-45b1-a206-beef605bacc9}",
+      "name": "Spring Farm 5 Bulli B3 ST2",
+      "totalMD": 2345.88,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{bc9a814d-ee58-4765-9efe-deedbcf45425}",
+      "name": "Spring Farm 5 Bulli Branch 2",
+      "totalMD": 2358.6,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{66cc97da-f512-45f1-9c2f-83fde5605667}",
+      "name": "Spring Farm 5 Bulli Branch 3",
+      "totalMD": 2184.5,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{75106d79-1893-4ea2-b7b5-e38cd381e3a9}",
+      "name": "Spring Farm 5 Bulli Branch 3ST",
+      "totalMD": 2229.5,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{68d73b73-1eff-4c29-a795-745d396f097a}",
+      "name": "Spring Farm 5 Bulli L1",
+      "totalMD": 923.38,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{b7548ed2-2d75-4316-9311-b6a873a7742c}",
+      "name": "Spring Farm 5 Bulli L1 ST2",
+      "totalMD": 1280,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{d3f90955-a39e-4918-9ea4-90b0e0d7091d}",
+      "name": "Spring Farm 5 Bulli L1 ST3",
+      "totalMD": 2205,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{8e0bc637-85eb-42be-8d8e-fda38411736f}",
+      "name": "Spring Farm 5 Bulli L1 ST4",
+      "totalMD": 2190,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{f4fd1e31-61aa-4024-92a0-66cd83367679}",
+      "name": "Spring Farm 5 Bulli L1 ST5",
+      "totalMD": 2510,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{43744e50-6cb1-466f-9ec6-34366ce2c953}",
+      "name": "Spring Farm 7",
+      "totalMD": 3042,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{39f35462-61d3-4168-8a62-75e35d9a8554}",
+      "name": "Spring Farm 7 Bulli ST1",
+      "totalMD": 1989,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{20f26d73-ade2-40f0-aadc-63abd4bfc967}",
+      "name": "Spring Farm 7 Bulli ST2",
+      "totalMD": 3042,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{477ff1be-9d21-4313-b704-9508905d9e84}",
+      "name": "Spring Farm 8",
+      "totalMD": 2368.28,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{55421314-926f-4061-8811-aa19cb16ec34}",
+      "name": "Spring Farm 8 Balgownie ST1",
+      "totalMD": 2368,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{668da717-ee97-41c4-aad2-41540a5fe4ce}",
+      "name": "Spring Farm 8 Bulli ST1",
+      "totalMD": 1063.68,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{a9c3e579-b8af-40e8-876e-a4c1133fce2e}",
+      "name": "Spring Farm 8 Bulli ST2",
+      "totalMD": 1171.84,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{c5a402ec-aaf6-439b-9d8d-f29757a04ea2}",
+      "name": "Spring Farm 8 Bulli ST3",
+      "totalMD": 2775.82,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{52f03afa-e8e2-42af-addf-a57a909e8154}",
+      "name": "Spring Farm 9 Balgownie L1",
+      "totalMD": 2150,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{644c4f6f-20f0-45e4-8c15-936d9b007abe}",
+      "name": "Spring Farm 9 Balgownie L1 ST1",
+      "totalMD": 2524.17,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{97273708-fe29-47ef-afd8-12a50b4f5705}",
+      "name": "Spring Farm 9 Bulli L1",
+      "totalMD": 2280.83,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    },
+    {
+      "id": "{b361b34d-ac92-4c14-8132-fc1baf9abfa1}",
+      "name": "Spring Farm 9 Bulli L1 ST1",
+      "totalMD": 2600,
+      "datum": "SRTM_HE",
+      "comment": "",
+      "quality": {
+        "eligible": false,
+        "status": "directional",
+        "reason": "Directional or branched drilling indicated. No surveyed trajectory is supplied; vertical trace withheld."
+      }
+    }
+  ]
+}

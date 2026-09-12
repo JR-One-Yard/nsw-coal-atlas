@@ -1,6 +1,7 @@
 """Curated educational model. All subsurface meshes are conceptual, NOT fitted to boreholes."""
 from pathlib import Path
 import json, math, hashlib
+from bore_quality import depth_quality, select_bores
 R=Path(__file__).resolve().parents[1];D=R/'dist/data'
 def write(name,data): (D/name).write_text(json.dumps(data,separators=(',',':')))
 S=[
@@ -96,12 +97,8 @@ places=[('WOLLONGONG',150.894,-34.425),('SYDNEY',151.209,-33.869),('NEWCASTLE',1
 places=[dict(name=n,lon=x,lat=y,position=xyz(x,y,height(x,y)),major=n.isupper()) for n,x,y in places]
 b=json.load(open(R/'cache/coal-bores.geojson'));bf=b.get('features',[])
 # Keep full filtered source locally; browser points spatially thin to avoid overdraw.
-bycell={}
-for f in bf:
- x,y=f['geometry']['coordinates'];key=(round(x/0.02),round(y/0.02))
- if key not in bycell or (f['properties'].get('end_depth') or 0)>(bycell[key]['properties'].get('end_depth') or 0):bycell[key]=f
 bores=[]
-for f in bycell.values():
- x,y=f['geometry']['coordinates'];p=f['properties'];bores.append(dict(id=p['gsnsw_drill_id'],name=p.get('hole_name') or p['gsnsw_drill_id'],position=xyz(x,y,height(x,y)),depth=p.get('end_depth'),year=p.get('year_drilled')))
+for f in select_bores(bf):
+ x,y=f['geometry']['coordinates'];p=f['properties'];bores.append(dict(id=p['gsnsw_drill_id'],name=p.get('hole_name') or p['gsnsw_drill_id'],position=xyz(x,y,height(x,y)),depth=p.get('end_depth'),year=p.get('year_drilled'),lon=x,lat=y,program=p.get('program'),sourceFeature=f['id'],units='m',datum='Not supplied in GSNSW WFS subset',trajectory='Not supplied',quality=depth_quality(p.get('end_depth'),p.get('hole_name') or '',suspect=p['gsnsw_drill_id']=='COAL_004298')))
 write('atlas.json',dict(title='Beneath the coast',date='2026-09-11',origin=[151.15,-33.55],sources=S,seams=seams,mines=mines,destinations=dests,routes=routes,chapters=chapters,places=places,bores=bores,boreTotal=len(bf),boreDisplayed=len(bores),modelNotice='All subsurface sheets are conceptual educational reconstructions. Boreholes are location/depth context only and were not used to fit seam surfaces.'))
 print('Built',len(seams),'layers,',len(mines),'mines,',len(routes),'connections,',len(bores),'of',len(bf),'boreholes')

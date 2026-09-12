@@ -1,5 +1,7 @@
 # Current handover
 
+**Next agent: read [Map coverage and borehole quality plan](docs/MAP-COVERAGE-HANDOVER.md) first.** It records the user's latest requirements, confirmed depth anomaly, 20 mines without terrain, implementation priorities, sources and the uncommitted working-tree state. The corrective plan is documented but not yet implemented.
+
 The UI simplification supersedes the navigation and delivery instructions below. See [UI-HANDOVER.md](docs/UI-HANDOVER.md) for the current result and evidence, or [START-HERE.md](START-HERE.md) to open it.
 
 The following notes are retained as the history of the previous geology, terrain and commercial work.

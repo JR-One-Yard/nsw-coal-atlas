@@ -1,3 +1,4 @@
+from bore_quality import depth_quality, mark_directional_families
 """Build the editable Blender scene from exactly the browser's JSON geometry.
 Run: blender --background --factory-startup --python scripts/build_blender.py
 Optional --render-stills / --render-animation after --.
@@ -6,7 +7,7 @@ import bpy, json, math, sys, re
 from pathlib import Path
 from mathutils import Vector
 R=Path(__file__).resolve().parents[1];D=R/'dist/data';OUT=R/'blender';OUT.mkdir(exist_ok=True)
-a=json.loads((D/'atlas.json').read_text());t=json.loads((D/'terrain.json').read_text());EX=12
+a=json.loads((D/'atlas.json').read_text());t=json.loads((D/'terrain-wide.json').read_text());EX=12
 bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
 scene=bpy.context.scene;scene.render.engine='CYCLES';scene.cycles.samples=12;scene.cycles.use_denoising=True
 # Cycles provides consistent transparent-layer rendering for stills and optional offline animation.
@@ -106,7 +107,7 @@ for r in a['routes']:
 # Recorded total-depth sticks; not seam intercepts or mapped borehole deviation.
 bores=[]
 for b in a['bores']:
- if b['depth'] and b['depth']>0:
+ if depth_quality(b.get('depth'), b.get('name',''), suspect=b['id']=='COAL_004298')['eligible']:
   p=xyz(b['position']);q=(p[0],p[1],p[2]-b['depth']/1000*EX);bores.extend([p,q])
 if bores:
  me=bpy.data.meshes.new('Borehole traces');me.from_pydata(bores,[(i,i+1) for i in range(0,len(bores),2)],[]);o=bpy.data.objects.new('Spatially thinned recorded boreholes',me);collections['70 Recorded boreholes'].objects.link(o);o['note']='Straight schematic traces of recorded total depth. Not used to construct seams.'
@@ -116,8 +117,8 @@ pick_data=json.loads((D/'borehole-picks.json').read_text())
 collection('75 Compiled coal top picks · uncorrected')
 pick_names={'Bulli Coal','Balgownie Coal','Balgownie Coal Member','Wongawilli Coal','Wallarah Coal','Great Northern Coal','Fassifern Coal'}
 vs=[];fs=[];pick_records=[]
-for bore in pick_data['bores']:
- if re.search('horizontal|deviated|directional|inclined',bore['comment'],re.I):continue
+for bore in mark_directional_families(pick_data['bores']):
+ if depth_quality(bore.get('totalMD'),bore['name'],bore['comment'],family=bore['directionalFamily'])['status']=='directional':continue
  for pick in bore['picks']:
   if not pick['preferredTop'] or pick['unit'] not in pick_names or pick['topAHD'] is None:continue
   point=geo(bore['lon'],bore['lat'],pick['topAHD']);q=len(vs);radius=.16

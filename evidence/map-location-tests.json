@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "date": "2026-09-12T17:18:14.210Z",
+  "checks": [
+    "Borehole marker opens measured-depth profile",
+    "Mine nearby-log link opens borehole profile",
+    "All 35 registry locations fit desktop and mobile statewide cameras"
+  ]
+}

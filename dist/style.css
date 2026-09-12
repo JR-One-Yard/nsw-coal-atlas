@@ -10,3 +10,5 @@ aside>.panel-heading{position:sticky;top:-20px;z-index:2;background:var(--panel)
 @media(max-width:760px){aside>.panel-heading{top:-18px;margin:-18px -20px 20px;padding:14px 16px}}
 .layer-key{margin-top:4px}.layer-key #legend{margin:0 0 12px}
 @media(max-width:760px){.map-toolbar select{width:calc(100% - 126px)}.map-toolbar #regionInfo{width:120px;white-space:nowrap}}
+
+.deposit-profile{margin-block:1.2rem;padding-top:1rem;border-top:1px solid #95b6d033}.deposit-column{border-left:2px solid #e3bb76;display:grid;gap:4px;margin-top:12px}.deposit-unit{padding:8px 12px;background:#e3bb7612;font-size:.88rem}.deposit-profile details{font-size:.85rem}

@@ -1,0 +1,1229 @@
+{
+  "title": "Mine geological coverage register",
+  "reviewedAt": "2026-09-13",
+  "records": [
+    {
+      "id": "airly-underground-mine",
+      "name": "Airly underground mine",
+      "region": "Western",
+      "units": [
+        "Illawarra Coal Measures"
+      ],
+      "summary": "Regional economic coal units include Lithgow Coal, Ulan Coal and Katoomba Coal Member. Seam splitting and erosion prevent a single flat layer from representing the coalfield.",
+      "scope": "Regional context only",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12113-western-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "airly"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "appin",
+      "name": "Appin",
+      "region": "Southern",
+      "units": [
+        "Bulli Seam"
+      ],
+      "summary": "Bulli Seam coal, processed through associated facilities including West Cliff. These existing atlas references do not supply validated deposit surfaces.",
+      "scope": "Existing site reference",
+      "sourceUrl": "https://gm3.au/appin-mine/",
+      "sourceTitle": "Existing atlas site reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Illawarra detailed tile",
+      "boreholeIdsWithin10km": [
+        "{2d463a3f-8698-4ccb-ac48-c23da2768d8a}",
+        "{4e7f5d54-79a1-4e36-bc9c-6dc9d7295581}",
+        "{80b44c9e-8162-4b40-a598-6b12234d57a3}",
+        "{b92773cd-7c9a-4ed9-aa90-5076b47618fa}",
+        "{d78dd3bb-bb2b-4e8c-bb35-cb7e7b258f75}",
+        "{029805ba-c962-4137-905a-d891282dfa73}",
+        "{f873b9f8-cd5e-4b90-9dd5-39565a419269}",
+        "{87401ebb-c8c4-448f-8db2-d9baa670bc70}",
+        "{5aee2200-8786-45b6-96fc-4d431e76bd86}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "appin",
+        "southtransport"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "ashton",
+      "name": "Ashton",
+      "region": "Hunter",
+      "units": [
+        "Hunter coal-bearing horizons"
+      ],
+      "summary": "Produces semi-soft coking coal and thermal products. Export through Newcastle is documented. These existing atlas references do not supply validated deposit surfaces.",
+      "scope": "Existing site reference",
+      "sourceUrl": "https://www.yancoal.com.au/our-sites/ashton/",
+      "sourceTitle": "Existing atlas site reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{adf2df1c-c969-431e-8c3f-e6d40644c620}",
+        "{f697121e-c889-4669-a63b-5a0ebf5f3e2d}",
+        "{a3bb98bd-c384-43ab-bc8d-467d1b6ef7f6}",
+        "{2b8c7c9a-2c57-422d-84e5-5eb738288070}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "ashton",
+        "yancoalsites"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "bengalla-open-cut-mine",
+      "name": "Bengalla open cut mine",
+      "region": "Hunter",
+      "units": [
+        "Wittingham Coal Measures",
+        "Greta Coal Measures"
+      ],
+      "summary": "The regional coal succession includes the Wittingham and Greta coal measures. Individual seams split and change thickness; regional unit names do not establish the target at this mine.",
+      "scope": "Regional context only",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12111-hunter-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "bengalla"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "bloomfield",
+      "name": "Bloomfield",
+      "region": "Newcastle",
+      "units": [
+        "Newcastle Coal Measures",
+        "Tomago Coal Measures",
+        "Greta Coal Measures"
+      ],
+      "summary": "The coalfield contains several coal-bearing successions. Wallarah, Great Northern and Fassifern are notable upper Newcastle seams. This regional sequence does not establish their presence beneath every marker.",
+      "scope": "Regional context only",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12112-newcastle-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{b7f1c864-86e9-4b7c-8e12-a04521f5b8cf}",
+        "{20f73ac7-8e3a-4871-b88b-ee660128a353}",
+        "{9d45e0b8-e469-49ae-886e-7a5baca28097}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "bloomfield",
+        "rixscreek"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "boggabri-open-cut-mine",
+      "name": "Boggabri open cut mine",
+      "region": "Gunnedah",
+      "units": [
+        "Maules Creek Formation"
+      ],
+      "summary": "The Namoi assessment lists Braymont, Merriowen and Jeralong as target coal members, with a minor basal seam from the underlying Leard Formation.",
+      "scope": "Published site description",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/23-conceptual-modelling-namoi-subregion/2322-geology-and-hydrogeology",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "bulga",
+      "name": "Bulga",
+      "region": "Hunter",
+      "units": [
+        "Hunter coal-bearing horizons"
+      ],
+      "summary": "Operator identifies both metallurgical and thermal coal products. These existing atlas references do not supply validated deposit surfaces.",
+      "scope": "Existing site reference",
+      "sourceUrl": "https://www.glencore.com.au/operations-and-projects/coal/current-operations/bulga-coal",
+      "sourceTitle": "Existing atlas site reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{5e853d90-205f-4160-81c9-e6879a90d36f}",
+        "{1212e576-b49b-4f27-adc2-02bdfecad6c1}",
+        "{faec65ba-9620-471c-bdac-6851a063ec03}",
+        "{613cb989-5b6b-4300-811c-28947d9fe178}",
+        "{558b3258-7ff8-4cd2-8515-799a0ae8fe5d}",
+        "{f0330b1b-b085-4dca-b375-1e59e71cccbb}",
+        "{bdf39524-bd90-4e42-b17d-b249b0b45ff4}",
+        "{0db94529-4088-4179-9394-0091d58b6b83}",
+        "{f7b44505-3d4a-437a-b54a-c3b7c2cae32c}",
+        "{663b198d-7122-4701-9df2-400a2aeb636a}",
+        "{3fffee34-a157-43b7-bf53-611e401adb33}",
+        "{00d801cb-3cdf-4d19-be42-bc395d337e6f}",
+        "{3cfa07c9-a58a-414b-a4c9-824f826ddd05}",
+        "{4b8f4ebb-a959-44cb-bfc1-cc1e2e1d5d78}",
+        "{ab2bd4ac-cda5-466f-93ff-cdfa335f970f}",
+        "{212344c4-1332-4bc8-82fb-48a73e803038}",
+        "{8c4780f4-173d-474c-9728-ad39be52fef2}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "bulga",
+        "glencore"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "chainvalley",
+      "name": "Chain Valley",
+      "region": "Newcastle",
+      "units": [
+        "Newcastle Coal Measures",
+        "Tomago Coal Measures",
+        "Greta Coal Measures"
+      ],
+      "summary": "The coalfield contains several coal-bearing successions. Wallarah, Great Northern and Fassifern are notable upper Newcastle seams. This regional sequence does not establish their presence beneath every marker.",
+      "scope": "Regional context only",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12112-newcastle-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{b59689c5-ad97-4be3-836a-9e997f782dd8}",
+        "{a51a89aa-ea0f-40d5-87f0-1f6076a89355}",
+        "{7684dad0-abaa-4b8c-8985-a24834be1203}",
+        "{f7e5051d-7f1b-4376-9afd-4086be0acff0}",
+        "{964aee4a-1f60-42b2-b335-5b5fdfb2b96c}",
+        "{d2876430-1ffa-4206-916e-e18d09995825}",
+        "{6748826e-6372-4cb4-9587-9ba2356c2f25}",
+        "{360383d5-eebf-46e1-832a-2327b9536aab}",
+        "{a2cb3437-de2b-4b0d-9a24-5a36b100cafb}",
+        "{eab34659-5d75-408f-8133-eda88d38a371}",
+        "{309124f6-9dfa-474f-8d35-fa0edbf0f437}",
+        "{53ae389b-5082-4136-8f8c-be9de9dcf815}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "chainvalley"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "clarence-underground-mine",
+      "name": "Clarence underground mine",
+      "region": "Western",
+      "units": [
+        "Illawarra Coal Measures"
+      ],
+      "summary": "Regional economic coal units include Lithgow Coal, Ulan Coal and Katoomba Coal Member. Seam splitting and erosion prevent a single flat layer from representing the coalfield.",
+      "scope": "Regional context only",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12113-western-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "centennial"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "dendrobium",
+      "name": "Dendrobium",
+      "region": "Southern",
+      "units": [
+        "Wongawilli Seam"
+      ],
+      "summary": "Metallurgical coal; preparation and steelmaking/export connections at Port Kembla. These existing atlas references do not supply validated deposit surfaces.",
+      "scope": "Existing site reference",
+      "sourceUrl": "https://www.bioregionalassessments.gov.au/assessments/12-resource-assessment-sydney-basin-bioregion/1211-coal",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Illawarra detailed tile",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "dendrobium",
+        "southern",
+        "southtransport",
+        "appin"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "glendell-open-cut-mine",
+      "name": "Glendell open cut mine",
+      "region": "Hunter",
+      "units": [
+        "Foybrook Formation"
+      ],
+      "summary": "The assessment identifies Pikes Gully, Arties, Upper, Middle and Lower Liddell, and Barrett seams, with reported thicknesses of 0.3\u20133.5 m. The mapped mine point does not define their geometry.",
+      "scope": "Published site description",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/122122-mount-owen-complex",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{a3bb98bd-c384-43ab-bc8d-467d1b6ef7f6}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "glencore"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "hvo",
+      "name": "Hunter Valley Operations",
+      "region": "Hunter",
+      "units": [
+        "Hunter coal-bearing horizons"
+      ],
+      "summary": "Thermal and semi-soft coking products are documented by the operator. These existing atlas references do not supply validated deposit surfaces.",
+      "scope": "Existing site reference",
+      "sourceUrl": "https://www.yancoal.com.au/our-sites/hunter-valley-operations/",
+      "sourceTitle": "Existing atlas site reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{adf2df1c-c969-431e-8c3f-e6d40644c620}",
+        "{b6749ff0-e1d5-4ab6-94a5-20b7f3e807ce}",
+        "{a3bb98bd-c384-43ab-bc8d-467d1b6ef7f6}",
+        "{77afddfd-b986-4edd-a1e4-75ba4df32881}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "hvo",
+        "yancoalsites",
+        "glencore"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "mandalong",
+      "name": "Mandalong",
+      "region": "Newcastle",
+      "units": [
+        "Newcastle Coal Measures",
+        "Tomago Coal Measures",
+        "Greta Coal Measures"
+      ],
+      "summary": "The coalfield contains several coal-bearing successions. Wallarah, Great Northern and Fassifern are notable upper Newcastle seams. This regional sequence does not establish their presence beneath every marker.",
+      "scope": "Regional context only",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12112-newcastle-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{e977b3ee-bb63-481d-a32b-052b1e3e2576}",
+        "{964aee4a-1f60-42b2-b335-5b5fdfb2b96c}",
+        "{d2876430-1ffa-4206-916e-e18d09995825}",
+        "{6748826e-6372-4cb4-9587-9ba2356c2f25}",
+        "{360383d5-eebf-46e1-832a-2327b9536aab}",
+        "{a2cb3437-de2b-4b0d-9a24-5a36b100cafb}",
+        "{eab34659-5d75-408f-8133-eda88d38a371}",
+        "{53ae389b-5082-4136-8f8c-be9de9dcf815}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "mandalong"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "mangoola-open-cut-mine",
+      "name": "Mangoola open cut mine",
+      "region": "Hunter",
+      "units": [
+        "Great Northern coal seam",
+        "Awaba Tuff",
+        "Fassifern coal seam"
+      ],
+      "summary": "Published site description places Awaba Tuff between Great Northern and Fassifern. The tuff is typically 9\u201310 m thick. Conglomerate and sandstone overburden is described as 15\u201390 m thick.",
+      "scope": "Published site description",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/122119-mangoola-coal-mine",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "glencore"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": true
+    },
+    {
+      "id": "maules-creek-open-cut-mine",
+      "name": "Maules Creek open cut mine",
+      "region": "Gunnedah",
+      "units": [
+        "Maules Creek Formation"
+      ],
+      "summary": "The Namoi assessment describes 15 target members, from Herndale to Templemore. The mine exploits a succession of seams rather than one continuous coal sheet.",
+      "scope": "Published site description",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/23-conceptual-modelling-namoi-subregion/2322-geology-and-hydrogeology",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "whitehaven"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "maxwell-underground",
+      "name": "Maxwell Underground",
+      "region": "Hunter",
+      "units": [
+        "Wittingham Coal Measures",
+        "Greta Coal Measures"
+      ],
+      "summary": "The regional coal succession includes the Wittingham and Greta coal measures. Individual seams split and change thickness; regional unit names do not establish the target at this mine.",
+      "scope": "Regional context only",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12111-hunter-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{af585829-8411-4e7f-8caa-506f1865ed7b}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "maxwell"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "metropolitan",
+      "name": "Metropolitan",
+      "region": "Southern",
+      "units": [
+        "Bulli Seam"
+      ],
+      "summary": "Coking coal exported through Port Kembla. These existing atlas references do not supply validated deposit surfaces.",
+      "scope": "Existing site reference",
+      "sourceUrl": "https://www.bioregionalassessments.gov.au/assessments/12-resource-assessment-sydney-basin-bioregion/1211-coal",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Illawarra detailed tile",
+      "boreholeIdsWithin10km": [
+        "{ed2a391c-6a6d-4605-8902-2396bae683a9}",
+        "{2f09a154-20d8-4055-9fdd-81c4b9136494}",
+        "{2c101042-1b29-45da-bfff-d68f9104184a}",
+        "{13cb6438-95e4-4ace-844f-f21f98a2e905}",
+        "{6f3117f2-7374-4b73-953f-e7c94790e35b}",
+        "{69a20489-30d7-450d-989c-b32b8e891396}",
+        "{c668d0ca-b955-4d48-9c7d-efa1778ef62e}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "metro",
+        "southern"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "moolarben-open-cut-mine",
+      "name": "Moolarben open cut mine",
+      "region": "Western",
+      "units": [
+        "Ulan Coal"
+      ],
+      "summary": "The assessment reports a mean Ulan seam thickness of about 12 m at Moolarben. This is a deposit-scale historical reference shared by the complex, not a measurement at either registry point.",
+      "scope": "Published site description",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12113-western-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "yancoalsites"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "moolarben-underground-mine",
+      "name": "Moolarben underground mine",
+      "region": "Western",
+      "units": [
+        "Ulan Coal"
+      ],
+      "summary": "The assessment reports a mean Ulan seam thickness of about 12 m at Moolarben. This is a deposit-scale historical reference shared by the complex, not a measurement at either registry point.",
+      "scope": "Published site description",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12113-western-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "yancoalsites"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "mount-arthur-open-cut-mine",
+      "name": "Mount Arthur open cut mine",
+      "region": "Hunter",
+      "units": [],
+      "summary": "The historical assessment describes extraction from 15 seams at Mount Arthur North. It does not provide a seam-level 3D surface for this atlas.",
+      "scope": "Published site description",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/122121-mount-arthur-coal-mine-complex",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "mtarthur"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "mount-owen-open-cut-mine",
+      "name": "Mount Owen open cut mine",
+      "region": "Hunter",
+      "units": [
+        "Wittingham Coal Measures"
+      ],
+      "summary": "The deposit lies between the Hunter and Hebden thrusts. The assessment identifies 22 mineable intervals within 11 seams and local dips up to 45\u00b0. These structural constraints rule out a defensible flat-sheet reconstruction.",
+      "scope": "Published site description",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/122122-mount-owen-complex",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "Published thrust constraints; no geometry digitised",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "glencore"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "mount-pleasant-open-cut-mine",
+      "name": "Mount Pleasant open cut mine",
+      "region": "Hunter",
+      "units": [
+        "Wittingham Coal Measures",
+        "Greta Coal Measures"
+      ],
+      "summary": "The regional coal succession includes the Wittingham and Greta coal measures. Individual seams split and change thickness; regional unit names do not establish the target at this mine.",
+      "scope": "Regional context only",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12111-hunter-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "mountpleasant"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "mtw",
+      "name": "Mount Thorley Warkworth",
+      "region": "Hunter",
+      "units": [
+        "Hunter coal-bearing horizons"
+      ],
+      "summary": "Thermal and semi-soft coking coal. These existing atlas references do not supply validated deposit surfaces.",
+      "scope": "Existing site reference",
+      "sourceUrl": "https://www.yancoal.com.au/wp-content/uploads/2026/04/Yancoal-P4-Report-2025.pdf",
+      "sourceTitle": "Existing atlas site reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{5e853d90-205f-4160-81c9-e6879a90d36f}",
+        "{613cb989-5b6b-4300-811c-28947d9fe178}",
+        "{558b3258-7ff8-4cd2-8515-799a0ae8fe5d}",
+        "{f0330b1b-b085-4dca-b375-1e59e71cccbb}",
+        "{bdf39524-bd90-4e42-b17d-b249b0b45ff4}",
+        "{00d801cb-3cdf-4d19-be42-bc395d337e6f}",
+        "{3cfa07c9-a58a-414b-a4c9-824f826ddd05}",
+        "{4b8f4ebb-a959-44cb-bfc1-cc1e2e1d5d78}",
+        "{ab2bd4ac-cda5-466f-93ff-cdfa335f970f}",
+        "{8c4780f4-173d-474c-9728-ad39be52fef2}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "mtw",
+        "port",
+        "yancoalsites"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "myuna",
+      "name": "Myuna",
+      "region": "Newcastle",
+      "units": [
+        "Wallarah Seam",
+        "Great Northern Seam",
+        "Fassifern Seam"
+      ],
+      "summary": "Power-station coal from beneath the Lake Macquarie area; supply to Eraring. These existing atlas references do not supply validated deposit surfaces.",
+      "scope": "Existing site reference",
+      "sourceUrl": "https://www.bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/122125-myuna-colliery",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{a2cb3437-de2b-4b0d-9a24-5a36b100cafb}",
+        "{eab34659-5d75-408f-8133-eda88d38a371}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "myuna",
+        "myunaproduct",
+        "mandalong"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "narrabri-underground-mine",
+      "name": "Narrabri underground mine",
+      "region": "Gunnedah",
+      "units": [
+        "Black Jack Group",
+        "Maules Creek Formation"
+      ],
+      "summary": "Coal resources occur in the Gunnedah Basin. Hoskissons Coal and the Maules Creek Formation are major targets. The Boggabri Ridge separates sub-basins with substantially different burial and structure.",
+      "scope": "Regional context only",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/23-conceptual-modelling-namoi-subregion/2322-geology-and-hydrogeology",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "narrabri"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "ravensworth",
+      "name": "Ravensworth",
+      "region": "Hunter",
+      "units": [
+        "Hunter coal-bearing horizons"
+      ],
+      "summary": "Thermal and metallurgical coal exported through Newcastle. These existing atlas references do not supply validated deposit surfaces.",
+      "scope": "Existing site reference",
+      "sourceUrl": "https://www.glencore.com.au/operations-and-projects/coal/current-operations/ravensworth-operations",
+      "sourceTitle": "Existing atlas site reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{adf2df1c-c969-431e-8c3f-e6d40644c620}",
+        "{b6749ff0-e1d5-4ab6-94a5-20b7f3e807ce}",
+        "{a3bb98bd-c384-43ab-bc8d-467d1b6ef7f6}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "ravensworth",
+        "glencore"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "rixscreek",
+      "name": "Rixs Creek",
+      "region": "Hunter",
+      "units": [
+        "Hunter coal-bearing horizons"
+      ],
+      "summary": "Thermal and semi-soft coking coal, transported by rail to Newcastle. These existing atlas references do not supply validated deposit surfaces.",
+      "scope": "Existing site reference",
+      "sourceUrl": "https://www.bloomcoll.com.au/operations/rixs-creek",
+      "sourceTitle": "Existing atlas site reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{adf2df1c-c969-431e-8c3f-e6d40644c620}",
+        "{f697121e-c889-4669-a63b-5a0ebf5f3e2d}",
+        "{a3bb98bd-c384-43ab-bc8d-467d1b6ef7f6}",
+        "{2b8c7c9a-2c57-422d-84e5-5eb738288070}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "rixscreek"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "springvale-underground-mine",
+      "name": "Springvale underground mine",
+      "region": "Western",
+      "units": [
+        "Illawarra Coal Measures"
+      ],
+      "summary": "Regional economic coal units include Lithgow Coal, Ulan Coal and Katoomba Coal Member. Seam splitting and erosion prevent a single flat layer from representing the coalfield.",
+      "scope": "Regional context only",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12113-western-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "centennial"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "tarrawonga-open-cut-mine",
+      "name": "Tarrawonga open cut mine",
+      "region": "Gunnedah",
+      "units": [
+        "Maules Creek Formation"
+      ],
+      "summary": "The Namoi assessment lists Braymont, Bollol Creek and Jeralong as target coal members. No measured depths are assigned to this collar location.",
+      "scope": "Published site description",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/23-conceptual-modelling-namoi-subregion/2322-geology-and-hydrogeology",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "whitehaven"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "ulan-west-underground-mine",
+      "name": "Ulan West underground mine",
+      "region": "Western",
+      "units": [
+        "Ulan Coal"
+      ],
+      "summary": "The assessment distinguishes the thicker coal-bearing unit from the approximately 3 m lower working section at Ulan. A working section is not the full seam thickness.",
+      "scope": "Published site description",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12113-western-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "ulan"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "ulan-underground-mine",
+      "name": "Ulan underground mine",
+      "region": "Western",
+      "units": [
+        "Ulan Coal"
+      ],
+      "summary": "The assessment distinguishes the thicker coal-bearing unit from the approximately 3 m lower working section at Ulan. A working section is not the full seam thickness.",
+      "scope": "Published site description",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12113-western-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "ulan"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "unitedwambo",
+      "name": "United Wambo",
+      "region": "Hunter",
+      "units": [
+        "Hunter coal-bearing horizons"
+      ],
+      "summary": "The 2024 review reports thermal and metallurgical coal. Registry name: proposal. These existing atlas references do not supply validated deposit surfaces.",
+      "scope": "Existing site reference",
+      "sourceUrl": "https://www.glencore.com.au/.rest/api/v1/documents/7b5888d56616d0ea4df620724dfd6658/2024_DEV_UW_EXT_AREP_Review_App.pdf",
+      "sourceTitle": "Existing atlas site reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{613cb989-5b6b-4300-811c-28947d9fe178}",
+        "{77afddfd-b986-4edd-a1e4-75ba4df32881}",
+        "{00d801cb-3cdf-4d19-be42-bc395d337e6f}",
+        "{3cfa07c9-a58a-414b-a4c9-824f826ddd05}",
+        "{4b8f4ebb-a959-44cb-bfc1-cc1e2e1d5d78}",
+        "{ab2bd4ac-cda5-466f-93ff-cdfa335f970f}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "unitedwambo",
+        "glencore"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "vickery-open-cut-mine",
+      "name": "Vickery open cut mine",
+      "region": "Gunnedah",
+      "units": [
+        "Black Jack Group",
+        "Maules Creek Formation"
+      ],
+      "summary": "Coal resources occur in the Gunnedah Basin. Hoskissons Coal and the Maules Creek Formation are major targets. The Boggabri Ridge separates sub-basins with substantially different burial and structure.",
+      "scope": "Regional context only",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/23-conceptual-modelling-namoi-subregion/2322-geology-and-hydrogeology",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "whitehaven"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "wambo",
+      "name": "Wambo underground",
+      "region": "Hunter",
+      "units": [
+        "Hunter coal-bearing horizons"
+      ],
+      "summary": "Peabody identifies a thermal product. The point is the underground operation, distinct from United Wambo open cut. These existing atlas references do not supply validated deposit surfaces.",
+      "scope": "Existing site reference",
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1064728/000106472826000008/bmoconference-feb2026fin.htm",
+      "sourceTitle": "Existing atlas site reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [
+        "{613cb989-5b6b-4300-811c-28947d9fe178}",
+        "{77afddfd-b986-4edd-a1e4-75ba4df32881}",
+        "{4b8f4ebb-a959-44cb-bfc1-cc1e2e1d5d78}"
+      ],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs",
+        "wambo",
+        "metro"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    },
+    {
+      "id": "wilpinjong-open-cut-mine",
+      "name": "Wilpinjong open cut mine",
+      "region": "Western",
+      "units": [
+        "Ulan Coal"
+      ],
+      "summary": "Published regional notes describe the upper Ulan coal section at Wilpinjong as about 1.4\u20133.5 m thick. This range is not an interpolated surface.",
+      "scope": "Published site description",
+      "sourceUrl": "https://bioregionalassessments.gov.au/assessments/12-resource-assessment-hunter-subregion/12113-western-coalfield",
+      "sourceTitle": "Bioregional Assessment \u2014 geological reference",
+      "sourceBasis": "Historical geological reference; not current production or mine status",
+      "reviewedAt": "2026-09-13",
+      "terrain": "Regional DEM with continuous coverage",
+      "surfaceMapping": "Not acquired for this mine",
+      "boreholeIdsWithin10km": [],
+      "boreholeNote": "Proximity is not a seam correlation",
+      "publishedSection": "Source narrative; no section digitised",
+      "surfaces3D": "No validated mine-specific surfaces acquired",
+      "faults": "No mine-specific fault geometry acquired",
+      "minePlans": "Not acquired",
+      "commercialSourceIds": [
+        "gs"
+      ],
+      "gaps": [
+        "Surveyed seam geometry, datum and fault constraints required for a 3D deposit model",
+        "Mine-scale terrain detail outside the Illawarra tile remains to be acquired"
+      ],
+      "orderedProfile": false
+    }
+  ]
+}

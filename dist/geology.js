@@ -1,3 +1,4 @@
+import {depthQuality,markDirectionalFamilies} from './bore-quality.js';
 import {openPanel,closePanels} from './navigation.js';
 import {initBoreholes} from './boreholes.js';
 import {TRANSECTS,STRATIGRAPHY,GEOLOGY_SOURCES,terrainHeight,sampleSection,mappedUnitAt,within,matchesStratigraphy,faultCrossings} from './geology-model.js';
@@ -16,7 +17,7 @@ export async function initGeology(api) {
   const dv=new DataView(indexBuffer),index=Uint16Array.from({length:indexBuffer.byteLength/2},(_,i)=>dv.getUint16(i*2,true));
   texture.colorSpace=THREE.SRGBColorSpace;
   const gs={surface:true,faults:false,open:false,transect:0,inspect:false};
-  let section,lastSectionKey='',lastSyncKey='',selectedUnit=null,curtain=null,sectionLine=null,cursorMarker=null,surfaceFocus=null,crossings=[],boreholes=null,boreMarker=null;
+  let section,lastSectionKey='',lastSyncKey='',selectedUnit=null,curtain=null,sectionLine=null,cursorMarker=null,surfaceFocus=null,crossings=[],boreholes=null,boreMarker=null,boreLocations=null,boreDepths=null;
 
   // Replace the coarse surface inside the local tile, so the two meshes do not overlap.
   const [w,s,e,n]=localTerrain.bounds,low=geo(w,n),high=geo(e,s);
@@ -188,7 +189,10 @@ export async function initGeology(api) {
     $('detailBody').innerHTML=`<span class="evidence-badge mapped">PUBLISHED GEOLOGICAL MAPPING</span><h2>${esc(unit.unit_name)}</h2><p>${esc(unit.descriptn)}</p><dl><dt>Rock type</dt><dd>${esc(unit.dominant_lithology)}</dd><dt>Age</dt><dd>${esc(unit.age_range)}</dd><dt>Depositional setting</dt><dd>${esc(unit.depositional_environment||'Not specified')}</dd><dt>Unit code</dt><dd>${esc(unit.nsw_code)}</dd><dt>Location</dt><dd>${lat.toFixed(4)}°, ${lon.toFixed(4)}°</dd></dl><p class="micro">${esc(unit.all_stratigraphy?.split('/').filter(Boolean).join(' → '))}</p><p class="notice">This is the published interpretation of the surface rock unit. It does not establish an underground coal seam or its depth.</p><details open><summary>Source evidence</summary><p class="micro">GSNSW NSW Seamless Geology · feature ${esc(unit.feature_id)} · snapshot ${surface.date} · CC BY 4.0.</p><ul>${links()}</ul></details>`;
   }
   function handleSceneClick(event,ray){
-    if(!gs.inspect)return false;
+    if(!gs.inspect){
+      if(boreLocations?.visible){ray.params.Points.threshold=.35;ray.params.Line.threshold=.3;const collar=ray.intersectObject(boreLocations)[0],trace=ray.intersectObject(boreDepths)[0];if(collar||trace){boreholes.open(collar?boreholes.data.bores[collar.index].id:boreDepths.userData.ids[Math.floor(trace.index/2)]);return true;}}
+      return false;
+    }
     const hit=ray.intersectObjects([localMesh,terrainMesh]).find(h=>h.point.x<=clipPlane.constant&&!(h.object===terrainMesh&&h.point.x>low[0]&&h.point.x<high[0]&&h.point.z>low[2]&&h.point.z<high[2]));
     if(!hit)return true;
     const lon=hit.point.x/(111.32*Math.cos(-33.55*Math.PI/180))+151.15,lat=-33.55-hit.point.z/111.32;
@@ -214,6 +218,7 @@ export async function initGeology(api) {
 
 
   function sync(state,selected){
+    if(boreLocations){boreLocations.scale.y=state.exaggeration;boreLocations.visible=$('showBoreLogs').checked;boreDepths.scale.y=state.exaggeration;boreDepths.visible=boreLocations.visible;}
     if(boreMarker){const b=boreMarker.userData;boreMarker.position.set(...geo(b.lon,b.lat,(b.height+10)*state.exaggeration));}
     localMesh.scale.y=faultMesh.scale.y=state.exaggeration;localMesh.visible=state.opacity>0;material.opacity=state.opacity/100;material.depthWrite=state.opacity>=98;geologyUniform.value=gs.surface?1:0;faultMesh.visible=gs.faults;
     if(curtain)curtain.scale.y=state.exaggeration;if(sectionLine)sectionLine.scale.y=state.exaggeration;if(cursorMarker&&!gs.open)cursorMarker.visible=false;
@@ -227,15 +232,21 @@ export async function initGeology(api) {
     const angle=Math.atan2(camera.position.x-controls.target.x,camera.position.z-controls.target.z)*180/Math.PI;
     const north=document.querySelector('.north');if(north){north.textContent='N ↑';north.style.transform=`rotate(${angle}deg)`;}
   }
-  function reset(){trueScale=false;$('sectionScale').textContent='True scale';$('sectionScale').setAttribute('aria-pressed','false');$('sectionOptions').open=false;$('sectionCoordinates').open=false;boreholes?.reset();if(boreMarker)boreMarker.visible=false;clearSurfaceFocus();gs.surface=true;gs.faults=false;gs.inspect=false;$('surfaceMap').checked=true;$('mappedFaults').checked=false;$('inspectSurface').setAttribute('aria-pressed','false');$('inspectSurface').textContent='Inspect surface rock';$('inspectHint').hidden=true;setSection(false);closePanels();}
+  function reset(){$('showBoreLogs').checked=true;trueScale=false;$('sectionScale').textContent='True scale';$('sectionScale').setAttribute('aria-pressed','false');$('sectionOptions').open=false;$('sectionCoordinates').open=false;boreholes?.reset();if(boreMarker)boreMarker.visible=false;clearSurfaceFocus();gs.surface=true;gs.faults=false;gs.inspect=false;$('surfaceMap').checked=true;$('mappedFaults').checked=false;$('inspectSurface').setAttribute('aria-pressed','false');$('inspectSurface').textContent='Inspect surface rock';$('inspectHint').hidden=true;setSection(false);closePanels();}
   function onChapter(i){$('stopInspect').click();clearSurfaceFocus();const n=TRANSECTS.findIndex(t=>t.chapter===i||(i===3&&t.chapter===2));if(n>=0)setTransect(n,false);}
-  window.coalGeology={getState:()=>({...gs,ready:true,selectedUnit,surfaceFocus,crossings:crossings.map(f=>({id:f.id,km:f.km})),surfaceUnits:surface.units.length,faultSegments:surface.faults.length,localVertices:positions.length/3,sectionLength:section?.length,trueScale}),sampleSection:(a,b)=>sampleSection(data,terrain,localTerrain,a,b),mappedUnitAt:(lon,lat)=>mappedUnitAt(surface,index,lon,lat)};
+  window.coalGeology={getState:()=>({...gs,ready:true,boreDepthTraces:boreDepths?.visible?boreDepths.userData.ids.length:0,boreLocations:boreLocations?.visible?boreholes.data.bores.length:0,selectedUnit,surfaceFocus,crossings:crossings.map(f=>({id:f.id,km:f.km})),surfaceUnits:surface.units.length,faultSegments:surface.faults.length,localVertices:positions.length/3,sectionLength:section?.length,trueScale}),sampleSection:(a,b)=>sampleSection(data,terrain,localTerrain,a,b),mappedUnitAt:(lon,lat)=>mappedUnitAt(surface,index,lon,lat)};
   boreholes=await initBoreholes({seams:data.seams,showPanel:()=>showStrata(false),renderSection,locate:b=>{
     pause();closePanels();const height=Math.max(0,terrainHeight(localTerrain,b.lon,b.lat)??terrainHeight(terrain,b.lon,b.lat)??0),target=new THREE.Vector3(...geo(b.lon,b.lat,(height+10)*getState().exaggeration));
     if(!boreMarker){boreMarker=new THREE.Mesh(new THREE.SphereGeometry(.4,16,12),new THREE.MeshBasicMaterial({color:'#ffffff',depthTest:false}));boreMarker.renderOrder=12;scene.add(boreMarker);}
     boreMarker.userData={lon:b.lon,lat:b.lat,height};boreMarker.position.copy(target);boreMarker.visible=true;api.setCamera(target,new THREE.Vector3(12,15,18));
   }});
-  return {sync,animate,reset,onChapter,handleSceneClick};
+  const locations=boreholes.data.bores.flatMap(b=>geo(b.lon,b.lat,Math.max(0,terrainHeight(localTerrain,b.lon,b.lat)??terrainHeight(terrain,b.lon,b.lat)??0)+12));
+  const locationGeometry=new THREE.BufferGeometry();locationGeometry.setAttribute('position',new THREE.Float32BufferAttribute(locations,3));
+  boreLocations=new THREE.Points(locationGeometry,new THREE.PointsMaterial({color:'#95b6d0',size:2,sizeAttenuation:false,depthTest:true,depthWrite:false,transparent:true,opacity:.25}));scene.add(boreLocations);
+  markDirectionalFamilies(boreholes.data.bores);const depths=[],ids=[];for(let i=0;i<boreholes.data.bores.length;i++){const b=boreholes.data.bores[i];if(!depthQuality(b).eligible)continue;const p=locations.slice(i*3,i*3+3);p[1]-=.012;depths.push(...p,p[0],p[1]-b.totalMD/1000,p[2]);ids.push(b.id);}
+  const depthGeometry=new THREE.BufferGeometry();depthGeometry.setAttribute('position',new THREE.Float32BufferAttribute(depths,3));boreDepths=new THREE.LineSegments(depthGeometry,new THREE.LineBasicMaterial({color:'#95b6d0',transparent:true,opacity:.3,depthWrite:false,clippingPlanes:[clipPlane]}));boreDepths.userData.ids=ids;scene.add(boreDepths);
+  $('showBoreLogs').onchange=()=>update();
+  return {sync,animate,reset,onChapter,handleSceneClick,boreholes};
 }
 
 async function checkJSON(response){if(!response.ok)throw Error('Geological dataset unavailable');return response.json();}

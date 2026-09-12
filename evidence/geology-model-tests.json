@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-12T01:13:15.532Z",
+  "date": "2026-09-12T17:18:04.037Z",
   "checks": [
     {
       "name": "Triangle interpolation returns the known planar height and preserves outside gaps",

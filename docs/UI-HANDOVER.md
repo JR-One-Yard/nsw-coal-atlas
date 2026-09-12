@@ -63,3 +63,20 @@ The geometry, downloaded evidence and terrain corrections remain scientifically 
 ## Follow-up: connections and profile copy
 
 Connections are displayed with mine markers by default and survive Reset map. The Show connections button has been removed. Missing profile fields use “No data”. Repetitive explanations and stale filter references were removed from the mine descriptions; numerical observations and sources were preserved.
+
+## Map coverage and borehole restoration — 13 September 2026
+
+The live viewer now merges all 35 statewide industry records into its map at startup, retaining the historical Birchgrove marker. The All NSW mines camera fits their full extent on desktop and mobile. Existing terrain and seam coverage is unchanged: profiles explicitly identify locations outside the terrain model. Ulan's two colocated registry records link to each other without shifting either coordinate. All map mine profiles link to their full industry profile, and every industry profile can locate its mine on the map.
+
+The 569 ABSUC log locations are visible by default as blue points, selectable to open source-attributed measured-depth logs. Layers can hide them; Reset map restores them. Raw drilling sticks remain hidden. Mine profiles list up to three nearest compiled logs within 10 km with distances and a warning that proximity does not establish a mine/seam correlation. Absence of nearby records is explicitly limited to this dataset.
+
+No new production, ownership or underground mine geometry has been inferred. These additions use the previously downloaded registry and ABSUC evidence. Further mine-specific detail requires reviewing operator reports, mine plans, approvals and geological sources for each operation. Blender, the movie, prior ZIPs and the hosted site have not been updated by this increment.
+
+Verification: 52 data/model checks, 19 browser journeys in `scripts/verify_simple.mjs`, and additional real-browser location checks in `scripts/verify_locations.mjs`. Reports are in `evidence/simple-browser-tests.json` and `evidence/map-location-tests.json`. Statewide screenshots: `evidence/all-mines-desktop.png` and `evidence/all-mines-mobile.png`.
+
+
+## Default presentation correction — 13 September 2026
+
+The depth-line presentation supersedes the blue-point presentation above. Original 1,017 thinned drill traces are visible again, with 567 selectable ABSUC total-depth lines and two subdued collars whose records lack positive total depth. Lines are thin and translucent, start at display ground level and extend by recorded measured depth under the same vertical exaggeration as terrain. They remain schematic vertical representations, not surveyed trajectories or coal intervals.
+
+Initial load and Reset map now frame all 35 registry mines, show all coal layers, mine markers, connections and borehole depth lines, and keep panels closed. The statewide camera fits the actual projected mine extent with margin for desktop and narrow screens; fog is reduced to retain regional visibility. Layers and regional views remain optional exploration controls.

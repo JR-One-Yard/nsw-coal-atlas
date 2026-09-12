@@ -1,10 +1,10 @@
 {
-  "created": "2026-09-12T01:13:05.980Z",
+  "created": "2026-09-12T17:18:05.094Z",
   "files": [
     {
       "file": "dist/app.js",
-      "bytes": 24999,
-      "sha256": "839a286413209c7ebfd158f0131a98203e4f47412d16b1f9ca8b6f8588991507"
+      "bytes": 30195,
+      "sha256": "089731a46fc2d20d3d136303b7d32369abb3eff08d5f7cae507d0645e4c60ec6"
     },
     {
       "file": "dist/atlas-v2.css",
@@ -12,14 +12,19 @@
       "sha256": "5536cd875b57da9e834e4219fb3fc86e70a7bd5470fd4a4e8e638016db328533"
     },
     {
+      "file": "dist/bore-quality.js",
+      "bytes": 1385,
+      "sha256": "7783965e4cffd25ff10f81312d9d62ecd2474cacea5319c517f5ebec868a181c"
+    },
+    {
       "file": "dist/borehole-model.js",
-      "bytes": 1188,
-      "sha256": "f334f12c2675c8b5c009c3ab20bf45377d306e077b4e177769e882a1382dcbbf"
+      "bytes": 1264,
+      "sha256": "1ce40f0a0130cfbd1167b5eb9c99e6aab579e4cf0487f53fa26b491d7dd873cd"
     },
     {
       "file": "dist/boreholes.js",
-      "bytes": 7288,
-      "sha256": "7354c2892d0a019afa8a031704fd734074104c864ade296573f222897fd4b62a"
+      "bytes": 7367,
+      "sha256": "293e939d29ca260115f4590e579baa54f7555b546c10fd3a335ac605bc2e7c8d"
     },
     {
       "file": "dist/commercial-model.js",
@@ -28,13 +33,18 @@
     },
     {
       "file": "dist/data/atlas.json",
-      "bytes": 1137790,
-      "sha256": "3573dac549a12d7a5d913201589a7d26f8eca8bdab177cdf98ccd4a014f80f06"
+      "bytes": 1552665,
+      "sha256": "4422714aa27b6f7a5fa939e8aed6e1b0fd7e62bf177fca271958fa9f515a56f4"
     },
     {
       "file": "dist/data/borehole-picks.json",
       "bytes": 1907055,
       "sha256": "2036e492fd565d852ba2b310984a0de952d185f2baec7886bce6f73b8c58ddd4"
+    },
+    {
+      "file": "dist/data/borehole-quality.json",
+      "bytes": 197889,
+      "sha256": "506ad6679e573deb476dc3193f196ce3aac69fda86575540437f41d08583229d"
     },
     {
       "file": "dist/data/illawarra-surface-index.bin",
@@ -57,6 +67,11 @@
       "sha256": "58e35414c69f334e9aa4f5fbc24a55428da67c33a8046bcf87132507ae27d83c"
     },
     {
+      "file": "dist/data/mine-geology.json",
+      "bytes": 57184,
+      "sha256": "048699f08c54e9f7b243507b609d630cd0614accc2e234f1d894f97e63d25c1c"
+    },
+    {
       "file": "dist/data/nsw-operating-mines.geojson",
       "bytes": 22042,
       "sha256": "6e84cd7bab9bc651e26b4544d9b84d6474d931ddb02afc337cf49da064042897"
@@ -70,6 +85,11 @@
       "file": "dist/data/terrain-corrections.json",
       "bytes": 3107,
       "sha256": "45853df6e1c45bdae192cf021a7de5a1a811340395bb4972f1bb1ccc7e5ca698"
+    },
+    {
+      "file": "dist/data/terrain-wide.json",
+      "bytes": 1025555,
+      "sha256": "0138be6cbe31c00d5c17cea6ff60f489e062e97a6c6c34ecdf70b960db1ddd46"
     },
     {
       "file": "dist/data/terrain.json",
@@ -93,23 +113,28 @@
     },
     {
       "file": "dist/geology.js",
-      "bytes": 29263,
-      "sha256": "68e3aa47825effde0c9bb8bb9f2c882ba9947e7f557ddcec1cec8f582451fd23"
+      "bytes": 31291,
+      "sha256": "1640ca88f6f889cfbf83ba4404de71ba62167b04bbcbed122251070f8ea2ef54"
     },
     {
       "file": "dist/index.html",
-      "bytes": 4262,
-      "sha256": "7e9c4f4dcb2f4721b12b9421a183cd69659fb05107b3720061fa0d3cc148aea2"
+      "bytes": 4387,
+      "sha256": "f1c8fc16ba56537b359b38657e8c0ea04d56e02a54b43a8cb29f4039a7045889"
     },
     {
       "file": "dist/industry.js",
-      "bytes": 7775,
-      "sha256": "c6cb653d3265ce232eb793e7263b9188369bdcf35b85c7818a176a930dd77b49"
+      "bytes": 8629,
+      "sha256": "863f6ddd9e753da93499d7059ec2edd58f36e0b9167812d2c8389652659b3d97"
+    },
+    {
+      "file": "dist/mine-geology.js",
+      "bytes": 1282,
+      "sha256": "2334af3bcd0f0e666ab53e499f2fe013e340ec59386497c40fa7cef112b1afa8"
     },
     {
       "file": "dist/model.js",
-      "bytes": 1617,
-      "sha256": "28457e5e8314c71d54e74cec49060cb99cad915d7828b83ce4a192ed4a394b71"
+      "bytes": 1677,
+      "sha256": "213331d0ddb86836b801760dbda549435b34ae8f61a476faaa7913a8616c514b"
     },
     {
       "file": "dist/navigation.js",
@@ -118,8 +143,8 @@
     },
     {
       "file": "dist/style.css",
-      "bytes": 7204,
-      "sha256": "b5b773a2daa7531e2306812d122e481c450623e860a617df3c1513c1f753b252"
+      "bytes": 7485,
+      "sha256": "842375dc940a83e16b9b752d167d4df2353eb402fc3b3a936b8a866d05549513"
     },
     {
       "file": "dist/vendor/OrbitControls.js",
