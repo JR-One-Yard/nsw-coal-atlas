@@ -44,7 +44,7 @@ To update the original hosted URL, restore access to its original Sites workspac
 
 The final verification set contains 52 passing data/model checks and 16 passing browser journeys, plus static asset validation. Browser verification reported no JavaScript exceptions or failed asset responses.
 
-The browser journeys cover all five regions and Whole basin, layer controls and reset, feature selection and connection toggling, mapped rock inspection, rock sequence, all section presets, coordinate validation, reported coal tops, attributed SVG export, borehole source references, no-results recovery, all 35 mine records, intersecting filters, CSV export, mine-to-map navigation, downloads and About. Responsive checks cover 1440 × 960, 390 × 844, 320 × 568, 844 × 390 and 720 × 480. These checks do not constitute physical-device or screen-reader certification.
+The browser journeys cover all five regions and Whole basin, layer controls and reset, feature selection and automatic connections, mapped rock inspection, rock sequence, all section presets, coordinate validation, reported coal tops, attributed SVG export, borehole source references, no-results recovery, all 35 mine records, intersecting filters, CSV export, mine-to-map navigation, downloads and About. Responsive checks cover 1440 × 960, 390 × 844, 320 × 568, 844 × 390 and 720 × 480. These checks do not constitute physical-device or screen-reader certification.
 
 - [Browser results](../evidence/simple-browser-tests.json)
 - [Desktop map](../evidence/simple-desktop.png)
@@ -59,3 +59,7 @@ The browser journeys cover all five regions and Whole basin, layer controls and 
 Run `npm test` for the data/model checks. Run `ATLAS_URL=http://127.0.0.1:8765/ npm run verify:browser` against the server address printed by the launcher; substitute its port if different. `node scripts/validate_static.mjs` checks the static entrypoint, local links, asset sizes and downloadable Blender scene and writes the asset manifest.
 
 The geometry, downloaded evidence and terrain corrections remain scientifically unchanged. Underground surfaces are still illustrative; the UI work does not validate their depths or footprints.
+
+## Follow-up: connections and profile copy
+
+Connections are displayed with mine markers by default and survive Reset map. The Show connections button has been removed. Missing profile fields use “No data”. Repetitive explanations and stale filter references were removed from the mine descriptions; numerical observations and sources were preserved.

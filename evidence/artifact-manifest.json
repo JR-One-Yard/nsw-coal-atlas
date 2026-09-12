@@ -1,10 +1,10 @@
 {
-  "created": "2026-09-11T23:01:39.634Z",
+  "created": "2026-09-12T01:13:05.980Z",
   "files": [
     {
       "file": "dist/app.js",
-      "bytes": 25516,
-      "sha256": "2703e44b94174c07be74ac9eb7ad04ded62afc0e18feee0662670e383c7d8095"
+      "bytes": 24999,
+      "sha256": "839a286413209c7ebfd158f0131a98203e4f47412d16b1f9ca8b6f8588991507"
     },
     {
       "file": "dist/atlas-v2.css",
@@ -28,8 +28,8 @@
     },
     {
       "file": "dist/data/atlas.json",
-      "bytes": 1138362,
-      "sha256": "f2fce5f20ba8e3ba585f5158d7056b59ed2d9e0b103223a6eb0bc32de70f578c"
+      "bytes": 1137790,
+      "sha256": "3573dac549a12d7a5d913201589a7d26f8eca8bdab177cdf98ccd4a014f80f06"
     },
     {
       "file": "dist/data/borehole-picks.json",
@@ -53,8 +53,8 @@
     },
     {
       "file": "dist/data/industry.json",
-      "bytes": 36084,
-      "sha256": "676212436f75493b81998b2ce282fdbd632840b7ac75c4e975a6ece3c7acb16a"
+      "bytes": 33632,
+      "sha256": "58e35414c69f334e9aa4f5fbc24a55428da67c33a8046bcf87132507ae27d83c"
     },
     {
       "file": "dist/data/nsw-operating-mines.geojson",
@@ -103,13 +103,13 @@
     },
     {
       "file": "dist/industry.js",
-      "bytes": 8172,
-      "sha256": "a73a3bc1803cb2a9981c95e26cc89bc375e3b1d966ca77f5a644ccfa7310da73"
+      "bytes": 7775,
+      "sha256": "c6cb653d3265ce232eb793e7263b9188369bdcf35b85c7818a176a930dd77b49"
     },
     {
       "file": "dist/model.js",
-      "bytes": 1618,
-      "sha256": "2fd5c6f7a486b38638d358662d496e0b2bc7a64048649583a92bbdd25dab1d71"
+      "bytes": 1617,
+      "sha256": "28457e5e8314c71d54e74cec49060cb99cad915d7828b83ce4a192ed4a394b71"
     },
     {
       "file": "dist/navigation.js",

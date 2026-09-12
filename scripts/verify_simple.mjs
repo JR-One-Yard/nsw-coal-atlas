@@ -18,7 +18,7 @@ try{
  await page.goto(process.env.ATLAS_URL||'http://127.0.0.1:8766/',{waitUntil:'networkidle'});await page.waitForSelector('body[data-ready=true]');await page.waitForTimeout(1700);
  await check('Map opens with no modal or sidebar and only seven interactive controls',async()=>{
   assert(!await visible('controls'));assert(!await visible('details'));assert(!await visible('sectionPanel'));assert.equal(await page.locator('dialog').count(),0);
-  assert.equal(await page.locator('button:visible,select:visible,input:visible').count(),7);assert((await state()).triangles>100000);assert.equal((await state()).renderedSeams.length,8);assert(await noOverflow());
+  assert.equal(await page.locator('button:visible,select:visible,input:visible').count(),7);assert((await state()).triangles>100000);assert.equal((await state()).renderedSeams.length,8);assert((await state()).renderedRoutes.length>0);assert(await noOverflow());
  });await shot('desktop');
  await check('Every region and the whole-basin view are reachable from one picker',async()=>{
   for(let i=0;i<5;i++){await page.locator('#regionSelect').selectOption(String(i));assert.equal((await state()).chapter,i);assert(!await visible('details'));}
@@ -28,12 +28,12 @@ try{
  });
  await check('Layer controls change rendered geometry and reset restores defaults',async()=>{
   await layers();assert.equal(await page.locator('#toggleControls').getAttribute('aria-expanded'),'true');await range('opacity',0);assert.equal((await state()).groundOpacity,0);await range('exaggeration',20);assert.equal((await state()).state.exaggeration,20);
-  await page.locator('#seamSelect').selectOption('wongawilli');assert.deepEqual((await state()).renderedSeams,['wongawilli']);await page.locator('#showMines').uncheck();assert.equal((await state()).renderedMines.length,0);
-  await page.locator('#mappedFaults').check();assert((await geo()).faults);await page.locator('#reset').click();assert.equal((await state()).state.exaggeration,12);assert.equal((await state()).renderedSeams.length,8);assert(!await visible('controls'));
+  await page.locator('#seamSelect').selectOption('wongawilli');assert.deepEqual((await state()).renderedSeams,['wongawilli']);await page.locator('#showMines').uncheck();assert.equal((await state()).renderedMines.length,0);assert.equal((await state()).renderedRoutes.length,0);
+  await page.locator('#mappedFaults').check();assert((await geo()).faults);await page.locator('#reset').click();assert.equal((await state()).state.exaggeration,12);assert.equal((await state()).renderedSeams.length,8);assert(!await visible('controls'));assert((await state()).renderedRoutes.length>0);
  });
- await check('Finding a feature replaces layers with details and connections toggle both ways',async()=>{
+ await check('Finding a feature replaces layers with details and connections are already visible',async()=>{
   await layers();await page.locator('#featureSelect').selectOption('myuna');assert(!await visible('controls'));assert(await visible('details'));assert((await page.locator('#detailBody').innerText()).includes('Eraring'));
-  await page.locator('#showConnection').click();assert((await state()).renderedRoutes.includes('myuna-eraring'));await page.locator('#showConnection').click();assert.equal((await state()).renderedRoutes.length,0);await page.keyboard.press('Escape');
+  assert((await state()).renderedRoutes.includes('myuna-eraring'));assert.equal(await page.locator('#showConnection').count(),0);await page.keyboard.press('Escape');
  });
  await check('Rock sequence selects a seam and highlights sourced surface exposures',async()=>{
   await page.locator('#regionSelect').selectOption('0');await layers();await page.locator('#openStrata').click();assert(await visible('strataPanel'));assert(!await visible('controls'));
@@ -67,7 +67,7 @@ try{
   await page.locator('#boreSearch').fill('not-a-borehole');assert(await page.locator('#boreSelect').isDisabled());await page.locator('#boreSearch').fill('Cordeaux River 1');await page.locator('#locateBore').click();assert(!await visible('details'));
  });
  await check('Mines opens directly on all 35 records without a dashboard or empty detail panel',async()=>{
-  await page.locator('#industryToggle').click();assert.equal(await page.locator('#mineRows [data-mine]').count(),35);assert(!await visible('industryDetail'));assert.equal(await page.locator('#commercialHub').count(),0);assert(!await visible('mapPage'));assert(await noOverflow());await shot('mines');
+  await page.locator('#industryToggle').click();assert.equal(await page.locator('#mineRows [data-mine]').count(),35);assert(!await visible('industryDetail'));await page.locator('#mineRows [data-mine]').first().click();const profile=await page.locator('#industryDetail').innerText();assert(profile.includes('No data'));assert(!profile.includes('not yet been verified'));assert(!profile.includes('does not mean'));await page.locator('#closeMine').click();assert.equal(await page.locator('#commercialHub').count(),0);assert(!await visible('mapPage'));assert(await noOverflow());await shot('mines');
  });
  await check('Mine search, profiles and Back to list preserve query and provenance',async()=>{
   await page.locator('#mineSearch').fill('Narrabri');assert.equal(await page.locator('#mineRows [data-mine]').count(),1);await page.locator('#mineRows [data-mine]').click();assert((await page.locator('#industryDetail').innerText()).includes('77.5%'));assert((await page.locator('#industryDetail').innerText()).includes('not actual output'));await shot('mine-profile');await page.locator('#closeMine').click();assert.equal(await page.locator('#mineSearch').inputValue(),'Narrabri');

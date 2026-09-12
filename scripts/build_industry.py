@@ -63,7 +63,7 @@ for f in raw['features']:
         method='Underground' if 'underground' in name.lower() else 'Open cut' if 'open cut' in name.lower() else None,
         registryStatus=p['operation_state'],statusNote='Downloaded registry status; not independently confirmed current operation.',
         in3D=bool(old),seams=old['seams'] if old else [],
-        description=old['description'] if old else 'Source registry location. Detailed geological and commercial attributes are not yet populated.',
+        description=old['description'] if old else '',
         sources=list(dict.fromkeys((old['sources'] if old else ['gs'])+extra)),reviewedAt='2026-09-11',ownership=None,capacity=None))
 
 for r in records:

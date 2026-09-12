@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-11T23:01:59.208Z",
+  "date": "2026-09-12T01:13:24.596Z",
   "checks": [
     {
       "name": "Map opens with no modal or sidebar and only seven interactive controls",
@@ -14,7 +14,7 @@
       "passed": true
     },
     {
-      "name": "Finding a feature replaces layers with details and connections toggle both ways",
+      "name": "Finding a feature replaces layers with details and connections are already visible",
       "passed": true
     },
     {

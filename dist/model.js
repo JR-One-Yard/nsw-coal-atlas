@@ -1,4 +1,4 @@
-export const DEFAULTS = Object.freeze({met:true,thermal:true,unknown:true,opacity:35,exaggeration:12,slice:100,seam:'all',showMines:true,showRoutes:false,showBores:false,showLabels:true});
+export const DEFAULTS = Object.freeze({met:true,thermal:true,unknown:true,opacity:35,exaggeration:12,slice:100,seam:'all',showMines:true,showRoutes:true,showBores:false,showLabels:true});
 export const DURATION=150;
 export function matchesTags(tags,state){return tags.some(tag=>state[tag]===true);}
 export function visibleSeams(data,state){return data.seams.filter(s=>matchesTags(s.tags,state)&&(state.seam==='all'||s.id===state.seam));}
