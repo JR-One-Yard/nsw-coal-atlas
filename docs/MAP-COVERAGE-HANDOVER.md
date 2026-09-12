@@ -2,6 +2,16 @@
 
 Prepared 13 September 2026, Australia/Sydney.
 
+## Export checkpoint — 13 September 2026
+
+Continued from e4efc02. Usage began at 6% remaining; the next poll returned 2%, triggering a bounded commit.
+
+- Downloadable `atlas.json` now includes all 35 registry mines plus historical Birchgrove, with terrain-sampled positions and resolvable source references.
+- Browser and export use the same `dist/mine-inventory.js` merger. `npm run build:data` builds the corridor base, rebuilds industry evidence, then expands the export. Use this instead of calling `build_data.py` alone, which still intentionally builds the base inventory.
+- Updated filter expectations and added checks for every exported registry coordinate, elevation and source. `npm test` and static validation pass. Browser journeys were not rerun for this increment.
+- Removed stale region copy claiming Western and Gunnedah mines lie beyond the terrain.
+- Blender source now receives the complete inventory through atlas.json, but the Blender file, movie and ZIP still require rebuilding. Finer DEMs and defensible deposit models remain outstanding. Hosted site unchanged.
+
 ## Implementation checkpoint — 13 September 2026
 
 This checkpoint supersedes the original investigation below. Work continued locally under a user instruction to commit at 5% remaining in the five-hour usage window.

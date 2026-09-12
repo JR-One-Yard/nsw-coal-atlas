@@ -1,10 +1,10 @@
 {
-  "created": "2026-09-12T17:18:05.094Z",
+  "created": "2026-09-12T17:25:28.886Z",
   "files": [
     {
       "file": "dist/app.js",
-      "bytes": 30195,
-      "sha256": "089731a46fc2d20d3d136303b7d32369abb3eff08d5f7cae507d0645e4c60ec6"
+      "bytes": 29320,
+      "sha256": "ec34fbbff1b16ef10acc450fa900949ab98442b478ec6713c15c2c17e6f123b9"
     },
     {
       "file": "dist/atlas-v2.css",
@@ -33,8 +33,8 @@
     },
     {
       "file": "dist/data/atlas.json",
-      "bytes": 1552665,
-      "sha256": "4422714aa27b6f7a5fa939e8aed6e1b0fd7e62bf177fca271958fa9f515a56f4"
+      "bytes": 1573412,
+      "sha256": "edd1c22dbca53411ce9cf20c6b6d40afbfcbeb856a50dc3da19eb9cb7e4b3a42"
     },
     {
       "file": "dist/data/borehole-picks.json",
@@ -130,6 +130,11 @@
       "file": "dist/mine-geology.js",
       "bytes": 1282,
       "sha256": "2334af3bcd0f0e666ab53e499f2fe013e340ec59386497c40fa7cef112b1afa8"
+    },
+    {
+      "file": "dist/mine-inventory.js",
+      "bytes": 1186,
+      "sha256": "e35b8a3b3d2d140cf844deff30ad1d3b7022b006621bba3771da8c890ebe239f"
     },
     {
       "file": "dist/model.js",

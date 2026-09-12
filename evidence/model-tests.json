@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-12T17:18:03.753Z",
+  "date": "2026-09-12T17:25:34.264Z",
   "checks": [
     {
       "name": "Full model has all five journey chapters and eight geological layers",
       "passed": true
     },
     {
-      "name": "All-use filter includes sixteen mine records",
+      "name": "All-use filter includes all registry and historical mine records",
       "passed": true
     },
     {

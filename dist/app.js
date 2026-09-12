@@ -1,3 +1,4 @@
+import {mergeMineInventory} from './mine-inventory.js';
 import {geologicalProfile} from './mine-geology.js';
 import {depthQuality} from './bore-quality.js';
 import * as THREE from 'three';
@@ -91,7 +92,7 @@ const regionCopy=[
  'The Newcastle Coal Measures extend beneath the coastal coalfield. Borehole logs retain reported formation depths and their sources; the coloured surfaces remain illustrative.',
  'Mount Thorley Warkworth produces thermal and metallurgical coal. The Hunter surface represents a composite coal-bearing horizon, not a mine resource model.'
 ];
-function regionNotes(){if($('regionSelect').value==='all'){$('strataPanel').hidden=true;$('detailBody').hidden=false;$('detailHeading').textContent='Sydney Basin';$('detailBody').innerHTML='<h3>All NSW mine locations</h3><p>All 35 registry mines are mapped, plus historical Birchgrove. The five coalfield tour views cover the coastal terrain model; Western and Gunnedah mine locations extend beyond it.</p><p>The underground surfaces are illustrative. They do not form a continuous, verified seam model.</p>';openPanel('details');return;}const c=data.chapters[currentChapter];$('strataPanel').hidden=true;$('detailBody').hidden=false;$('detailHeading').textContent=c.name;$('detailBody').innerHTML=`<h3>${escape(c.title)}</h3><p>${escape(regionCopy[currentChapter])}</p><button id="regionSeam">Read about ${escape(data.seams.find(s=>s.id===c.seam).name)}</button>`;$('regionSeam').onclick=()=>select(c.seam);openPanel('details');}
+function regionNotes(){if($('regionSelect').value==='all'){$('strataPanel').hidden=true;$('detailBody').hidden=false;$('detailHeading').textContent='Sydney Basin';$('detailBody').innerHTML='<h3>All NSW mine locations</h3><p>All 35 registry mines are mapped, plus historical Birchgrove. Continuous regional terrain covers every registry location. The five coalfield tours focus on the coastal corridor.</p><p>The underground surfaces are illustrative. They do not form a continuous, verified seam model.</p>';openPanel('details');return;}const c=data.chapters[currentChapter];$('strataPanel').hidden=true;$('detailBody').hidden=false;$('detailHeading').textContent=c.name;$('detailBody').innerHTML=`<h3>${escape(c.title)}</h3><p>${escape(regionCopy[currentChapter])}</p><button id="regionSeam">Read about ${escape(data.seams.find(s=>s.id===c.seam).name)}</button>`;$('regionSeam').onclick=()=>select(c.seam);openPanel('details');}
 function setCamera(target,offset){pause();transition=null;controls.target.copy(target);camera.position.copy(target.clone().add(offset));controls.update();}
 function focusFeature(id){const f=[...data.seams,...data.mines,...data.destinations].find(x=>x.id===id);if(!f)return;pause();const p=f.center||f.position,target=new THREE.Vector3(p[0],p[1]*state.exaggeration,p[2]),d=f.mesh?52:25;transition={start:performance.now(),from:camera.position.clone(),to:target.clone().add(new THREE.Vector3(d*.75,d*.55,d*.6)),targetFrom:controls.target.clone(),targetTo:target};}
 function overview(){pause();closePanels();$('regionSelect').value='all';$('seamSelect').value='all';$('showMines').checked=true;update();
@@ -140,13 +141,7 @@ function registerTools(){
 }
 try{
  const responses=await Promise.all([fetch('./data/atlas.json'),fetch('./data/terrain-wide.json'),fetch('./data/industry.json'),fetch('./data/mine-geology.json')]);if(responses.some(r=>!r.ok))throw new Error('The local dataset could not be loaded.');[data,terrain,inventory,depositRegister]=await Promise.all(responses.map(r=>r.json()));
- for(const source of inventory.sources)if(!data.sources.some(s=>s.id===source.id))data.sources.push(source);
- for(const record of inventory.records){
-  const existing=data.mines.find(m=>m.id===record.id),height=terrainHeight(terrain,record.lon,record.lat),coverage=height===null?'Outside the terrain and underground model coverage. Marker shows registry coordinates only; elevation is not modelled.':'Registry location on sampled terrain; no mine workings are modelled.';
-  if(height===null)throw new Error(`Missing terrain for ${record.name}`);
-  if(existing){existing.position=geo(record.lon,record.lat,Math.max(0,height));existing.coverage=coverage;continue;}
-  data.mines.push({...record,kind:'mine',position:geo(record.lon,record.lat,Math.max(0,height??0)),confidence:'GSNSW point location',status:record.registryStatus,coverage,description:record.description||`${record.name} is a ${record.method?.toLowerCase()||'coal'} operation in the ${record.region} coalfield.`});
- }
+ mergeMineInventory(data,inventory,terrain,geo);
 
  initScene();setupUI();update();overview();registerTools();requestAnimationFrame(animate);
  geology=await initGeology({THREE,scene,camera,controls,renderer,data,terrain,terrainMesh,clipPlane,seamObjects,geo,select,focusFeature,setCamera,pause,update,getState:()=>state,getSelected:()=>selected});

@@ -10,7 +10,8 @@ for(const name of ['Dural South 1','East Maitland 1']){const b=bores.find(b=>b.n
 for(const name of ['Kay Park 6','Kay Park 6 Bulli Leg 3 ST3','Spring Farm 7'])assert.equal(depthQuality(bores.find(b=>b.name===name)).eligible,false);
 for(const depth of [null,0,-3,NaN,Infinity])assert.equal(depthQuality({depth}).eligible,false);
 assert.equal(register.records.length,35);
-for(const mine of inventory.records){const h=terrainHeight(wide,mine.lon,mine.lat);assert(Number.isFinite(h)&&h>0,`${mine.name}: valid land elevation`);assert(register.records.find(r=>r.id===mine.id)?.sourceUrl.startsWith('https://'));}
+assert.equal(atlas.mines.length,36);
+for(const mine of inventory.records){const exported=atlas.mines.find(m=>m.id===mine.id);assert(exported,`${mine.name}: exported`);assert.equal(exported.lon,mine.lon);assert.equal(exported.lat,mine.lat);assert(Math.abs(exported.position[1]*1000-terrainHeight(wide,mine.lon,mine.lat))<1e-8);for(const source of exported.sources)assert(atlas.sources.some(s=>s.id===source));const h=terrainHeight(wide,mine.lon,mine.lat);assert(Number.isFinite(h)&&h>0,`${mine.name}: valid land elevation`);assert(register.records.find(r=>r.id===mine.id)?.sourceUrl.startsWith('https://'));}
 for(let j=0;j<old.ny;j++)for(let i=0;i<old.nx;i++)assert.equal(wide.elevations[(j+288)*wide.nx+i+96],old.elevations[j*old.nx+i]);
 const ledger=read('borehole-quality');ledger.absuc={rawCount:bores.length,depthBasis:'m MD, original per-record datum retained in borehole-picks.json',displayCounts:bores.reduce((a,b)=>(a[depthQuality(b).status]=(a[depthQuality(b).status]||0)+1,a),{}),withheld:bores.filter(b=>!depthQuality(b).eligible).map(b=>({id:b.id,name:b.name,totalMD:b.totalMD,datum:b.datumName,comment:b.comment,quality:depthQuality(b)}))};
 // Audit artefact complements the Python raw-source inventory.
